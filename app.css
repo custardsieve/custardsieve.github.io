@@ -1,0 +1,403 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,100italic,400,900,900italic);
+@font-face {
+  font-family: 'GhostTown';
+  src: url('GhostTown.eot');
+  src: url('GhostTown.eot?#iefix') format('embedded-opentype'), url('GhostTown.woff') format('woff'), url('GhostTown.ttf') format('truetype'), url('GhostTown.svg#GhostTown') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal; }
+
+/* line 15, /Users/davidnewman/Google Drive/BIKE ABOUT/css/_variables.scss */
+body {
+  font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 100;
+  color: #333;
+  margin: 0;
+  padding: 0 10px;
+  background: url(../img/bkgrd1.gif); }
+
+/* line 19, /Users/davidnewman/Google Drive/BIKE ABOUT/css/_variables.scss */
+#page {
+  max-width: 1098px;
+  margin: 10px auto;
+  background-color: #DFD8C9;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+  position: relative; }
+
+/* line 22, /Users/davidnewman/Google Drive/BIKE ABOUT/css/_variables.scss */
+h1, h2 {
+  font-family: 'GhostTown', sans-serif;
+  color: #BF272D; }
+
+/* line 23, /Users/davidnewman/Google Drive/BIKE ABOUT/css/_variables.scss */
+h2.span {
+  font-family: 'GhostTown', sans-serif; }
+
+/* line 25, /Users/davidnewman/Google Drive/BIKE ABOUT/css/_variables.scss */
+h3, h4, h5, h6 {
+  color: #222;
+  font-weight: 600;
+  line-height: 1.3em; }
+
+/* line 31, /Users/davidnewman/Google Drive/BIKE ABOUT/css/_variables.scss */
+strong {
+  font-weight: 900;
+  font-size: 1em; }
+
+/* line 33, /Users/davidnewman/Google Drive/BIKE ABOUT/css/_variables.scss */
+a {
+  color: black; }
+
+/* line 35, /Users/davidnewman/Google Drive/BIKE ABOUT/css/_variables.scss */
+p {
+  font-weight: 400; }
+
+/* line 4, /Users/davidnewman/Google Drive/BIKE ABOUT/css/_main.scss */
+header .animation {
+  height: 270px;
+  width: 100%;
+  background-color: lightgoldenrodyellow; }
+
+/* line 5, /Users/davidnewman/Google Drive/BIKE ABOUT/css/_main.scss */
+header .subHeader {
+  height: 40px;
+  width: 100%;
+  background-color: #192817; }
+
+/* line 11, /Users/davidnewman/Google Drive/BIKE ABOUT/css/_main.scss */
+nav {
+  background-color: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: 310px;
+  left: 0px;
+  padding: 0px 0 0 0;
+  width: 100%; }
+
+/* line 16, /Users/davidnewman/Google Drive/BIKE ABOUT/css/_main.scss */
+nav::after {
+  content: '';
+  display: block;
+  clear: both; }
+
+/* line 18, /Users/davidnewman/Google Drive/BIKE ABOUT/css/_main.scss */
+nav .container {
+  max-width: 700px;
+  margin: 0 auto; }
+
+/* line 19, /Users/davidnewman/Google Drive/BIKE ABOUT/css/_main.scss */
+nav .container ul {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+/* line 20, /Users/davidnewman/Google Drive/BIKE ABOUT/css/_main.scss */
+nav .container ul li:hover {
+  background-color: darkred; }
+
+/* line 21, /Users/davidnewman/Google Drive/BIKE ABOUT/css/_main.scss */
+nav .container ul li:hover > ul {
+  display: block; }
+
+/* line 22, /Users/davidnewman/Google Drive/BIKE ABOUT/css/_main.scss */
+nav .container ul li a {
+  display: inline-block;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  width: 125px;
+  position: relative; }
+
+/* line 30, /Users/davidnewman/Google Drive/BIKE ABOUT/css/_main.scss */
+nav .container ul li a:visited {
+  color: #fff; }
+
+/* line 31, /Users/davidnewman/Google Drive/BIKE ABOUT/css/_main.scss */
+nav .container ul li a:hover {
+  background-color: red; }
+
+/* line 33, /Users/davidnewman/Google Drive/BIKE ABOUT/css/_main.scss */
+nav .container ul ul {
+  position: absolute;
+  top: 100%;
+  background-color: darkred;
+  display: none; }
+
+/* line 34, /Users/davidnewman/Google Drive/BIKE ABOUT/css/_main.scss */
+nav .container ul ul li {
+  position: relative; }
+
+/* line 41, /Users/davidnewman/Google Drive/BIKE ABOUT/css/_main.scss */
+nav > .container > ul > li {
+  float: left; }
+
+/* line 42, /Users/davidnewman/Google Drive/BIKE ABOUT/css/_main.scss */
+nav > .container > ul > li > a {
+  width: auto;
+  padding: 15px 20px 15px 20px; }
+
+/* line 49, /Users/davidnewman/Google Drive/BIKE ABOUT/css/_main.scss */
+.hero::after {
+  content: '';
+  display: block;
+  clear: both; }
+
+/* line 51, /Users/davidnewman/Google Drive/BIKE ABOUT/css/_main.scss */
+.hero {
+  margin-top: 100px;
+  max-width: 100%;
+  height: 500px; }
+
+/* line 52, /Users/davidnewman/Google Drive/BIKE ABOUT/css/_main.scss */
+.hero aside {
+  width: 50%;
+  height: 500px;
+  margin: 0;
+  float: left; }
+
+/* line 53, /Users/davidnewman/Google Drive/BIKE ABOUT/css/_main.scss */
+.hero aside h1 {
+  min-width: 250px;
+  margin: 0 auto auto 33%;
+  position: relative; }
+
+/* line 54, /Users/davidnewman/Google Drive/BIKE ABOUT/css/_main.scss */
+.hero aside h1 span {
+  position: absolute; }
+
+/* line 55, /Users/davidnewman/Google Drive/BIKE ABOUT/css/_main.scss */
+.hero aside h1 span.line1 {
+  color: #BF272D;
+  font-size: 3em; }
+
+/* line 56, /Users/davidnewman/Google Drive/BIKE ABOUT/css/_main.scss */
+.hero aside h1 span.line2 {
+  color: #81BB3F;
+  font-size: 2.5em;
+  top: 48px; }
+
+/* line 57, /Users/davidnewman/Google Drive/BIKE ABOUT/css/_main.scss */
+.hero aside h1 span.line3 {
+  color: #006838;
+  font-size: 8em;
+  letter-spacing: 4px;
+  top: 66px; }
+
+/* line 58, /Users/davidnewman/Google Drive/BIKE ABOUT/css/_main.scss */
+.hero aside h1 span.line4 {
+  color: #006838;
+  font-size: 5em;
+  letter-spacing: 2px;
+  top: 196px;
+  left: -15px; }
+
+/* line 59, /Users/davidnewman/Google Drive/BIKE ABOUT/css/_main.scss */
+.hero aside h1 span.line5 {
+  color: #008945;
+  font-size: 5.2em;
+  top: 270px; }
+
+/* line 60, /Users/davidnewman/Google Drive/BIKE ABOUT/css/_main.scss */
+.hero aside h3 {
+  width: 250px;
+  margin: 0 auto auto 33%;
+  padding-top: 382px; }
+
+/* line 61, /Users/davidnewman/Google Drive/BIKE ABOUT/css/_main.scss */
+.hero aside img {
+  width: 70%;
+  min-width: 350px;
+  transform: rotate(-3deg);
+  box-shadow: 7px 0px 10px rgba(0, 0, 0, 0.5); }
+
+/* line 71, /Users/davidnewman/Google Drive/BIKE ABOUT/css/_main.scss */
+.main {
+  display: inline-block;
+  width: 100%;
+  margin: 50px 0;
+  background-color: rgba(136, 196, 63, 0.2); }
+
+/* line 72, /Users/davidnewman/Google Drive/BIKE ABOUT/css/_main.scss */
+.main .row {
+  width: 100%;
+  margin: 0 auto;
+  padding: 40px 0; }
+
+/* line 73, /Users/davidnewman/Google Drive/BIKE ABOUT/css/_main.scss */
+.main .row aside {
+  padding: 40px 0;
+  width: 33.333333%;
+  float: left; }
+
+/* line 74, /Users/davidnewman/Google Drive/BIKE ABOUT/css/_main.scss */
+.main .row aside img {
+  width: 70%;
+  height: auto;
+  margin: 0 7%; }
+
+/* line 75, /Users/davidnewman/Google Drive/BIKE ABOUT/css/_main.scss */
+.main .row aside h2 {
+  width: 80%;
+  margin: 0 auto; }
+
+/* line 76, /Users/davidnewman/Google Drive/BIKE ABOUT/css/_main.scss */
+.main .row aside p {
+  width: 70%;
+  margin: 0 auto; }
+
+/* line 82, /Users/davidnewman/Google Drive/BIKE ABOUT/css/_main.scss */
+.who {
+  width: 100%;
+  margin: 50px 0; }
+
+/* line 83, /Users/davidnewman/Google Drive/BIKE ABOUT/css/_main.scss */
+.who .row {
+  width: 80%;
+  margin: 0 auto;
+  clear: both; }
+
+/* line 84, /Users/davidnewman/Google Drive/BIKE ABOUT/css/_main.scss */
+.who .row aside {
+  width: 50%;
+  float: left;
+  padding-bottom: 60px; }
+
+/* line 85, /Users/davidnewman/Google Drive/BIKE ABOUT/css/_main.scss */
+.who .row img {
+  width: 100%; }
+
+/* line 86, /Users/davidnewman/Google Drive/BIKE ABOUT/css/_main.scss */
+.who .row blockquote {
+  background-color: #B8A88C;
+  margin: 0 0 0 30px;
+  padding: 30px 20px; }
+
+/* line 87, /Users/davidnewman/Google Drive/BIKE ABOUT/css/_main.scss */
+.who .row blockquote h2 {
+  margin-bottom: 0;
+  font-size: 1.5em;
+  color: #BF272D; }
+
+/* line 88, /Users/davidnewman/Google Drive/BIKE ABOUT/css/_main.scss */
+.who .row blockquote p {
+  margin-top: 0;
+  line-height: 1.5em; }
+
+/* line 89, /Users/davidnewman/Google Drive/BIKE ABOUT/css/_main.scss */
+.who .row h2 {
+  font-size: 3em;
+  color: #008945;
+  letter-spacing: 2px; }
+
+/* line 90, /Users/davidnewman/Google Drive/BIKE ABOUT/css/_main.scss */
+.who .row aside.reserve {
+  width: 50%;
+  float: right; }
+
+/* line 91, /Users/davidnewman/Google Drive/BIKE ABOUT/css/_main.scss */
+.who .row aside.reserve blockquote {
+  background-color: #81BB3F;
+  margin: 0 0 0 100px;
+  padding: 30px 20px;
+  transform: rotate(-2deg);
+  box-shadow: 7px 0px 10px rgba(0, 0, 0, 0.4); }
+
+/* line 97, /Users/davidnewman/Google Drive/BIKE ABOUT/css/_main.scss */
+.who .row aside.reserve a.btn {
+  color: #fff;
+  padding: 15px 20px;
+  text-decoration: none;
+  width: 125px;
+  position: relative;
+  float: right;
+  text-align: center;
+  margin-top: 30px;
+  background-color: #008945;
+  text-transform: uppercase;
+  font-weight: 700;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  transition: background-color 0.3s; }
+
+/* line 113, /Users/davidnewman/Google Drive/BIKE ABOUT/css/_main.scss */
+.who .row aside.reserve a.btn:hover {
+  background-color: #BF272D; }
+
+/* line 119, /Users/davidnewman/Google Drive/BIKE ABOUT/css/_main.scss */
+footer {
+  background-color: #91CEAF;
+  clear: both;
+  position: relative;
+  padding: 3em 0; }
+
+/* line 120, /Users/davidnewman/Google Drive/BIKE ABOUT/css/_main.scss */
+footer .container {
+  position: relative;
+  width: auto;
+  margin-left: 15%;
+  margin-right: 15%;
+  background-color: #DFD8C9;
+  display: inline-block;
+  padding: 3em 3em 0 3em; }
+
+/* line 129, /Users/davidnewman/Google Drive/BIKE ABOUT/css/_main.scss */
+footer .container blockquote {
+  width: 45%;
+  float: left;
+  margin: 0;
+  background-color: #fff; }
+
+/* line 130, /Users/davidnewman/Google Drive/BIKE ABOUT/css/_main.scss */
+footer .container blockquote img {
+  width: 70%;
+  margin-left: 15%;
+  margin-top: 30px; }
+
+/* line 131, /Users/davidnewman/Google Drive/BIKE ABOUT/css/_main.scss */
+footer .container blockquote p {
+  font-size: 0.7em;
+  width: 70%;
+  text-align: center;
+  margin: 0 auto;
+  padding: 15px 0; }
+
+/* line 132, /Users/davidnewman/Google Drive/BIKE ABOUT/css/_main.scss */
+footer .container aside {
+  width: 50%;
+  float: left;
+  position: relative; }
+
+/* line 133, /Users/davidnewman/Google Drive/BIKE ABOUT/css/_main.scss */
+footer .container aside img {
+  position: absolute;
+  width: 85%;
+  margin-left: -2%;
+  margin-top: -1em;
+  border: 8px solid #fff;
+  box-shadow: 3px 0px 15px rgba(0, 0, 0, 0.4);
+  transform: rotate(-1deg); }
+
+/* line 142, /Users/davidnewman/Google Drive/BIKE ABOUT/css/_main.scss */
+footer .container p {
+  clear: both;
+  padding: 70px 0;
+  text-align: center;
+  font-size: 0.7em; }
+
+/* line 143, /Users/davidnewman/Google Drive/BIKE ABOUT/css/_main.scss */
+footer .container p a {
+  line-height: 1.8em;
+  letter-spacing: 0.5px; }
+
+@-webkit-keyframes colorize {
+  0% {
+    -webkit-filter: grayscale(100%); }
+  100% {
+    -webkit-filter: grayscale(0%); } }
+
+@keyframes colorize {
+  0% {
+    filter: grayscale(100%); }
+  100% {
+    filter: grayscale(0%); } }
+
+/*# sourceMappingURL=app.css.map */

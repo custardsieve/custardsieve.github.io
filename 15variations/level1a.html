@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Vertigo Poster</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <style>
+      
+/*      Iniciailize --------------------------------- */
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      
+/*      Variables --------------------------------- */
+      
+      .helvetica {
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-weight: 800;
+      }
+      
+      .black {
+        background-color: rgb(50,50,50);
+      }
+      
+      .red {
+        background-color: red;
+      }
+      
+      .blue {
+        background-color: aquamarine;
+      }
+      
+/*      Main Container --------------------------------- */
+      
+      .container-responsive {
+        width: 100%;
+        position: relative;
+        height: 100vh;
+        background-color: rgb(255,225,0);
+      }
+      
+/*      Directors Names  --------------------------------- */
+      
+      .directors {
+        position: absolute;
+        width: 300px;
+        color: ghostwhite;
+        right:10%;
+        text-align: right;
+        top: 120px;  
+        transform: rotate(270deg) translateY(80px);
+        z-index: 99;
+      }
+      
+      .directors .names {
+        font-size:30px;
+        line-height: 32px
+      }
+      
+/*      Main Black Box Style  --------------------------------- */
+      
+      .blackbox-container {
+        position: absolute;
+        right: 0;
+        width: 40%;
+        min-width: 200px;
+        margin-right: 10%;
+        margin-left: auto;
+      }
+      
+      .blackbox-container .block1 {
+        height: 40vh;
+      }
+      
+      .blackbox-container .block2 {
+        height: 2vh;
+        margin: .5vh 0;
+      }
+      
+      .blackbox-container .block3 {
+        height: 1vh;
+        margin: .7vh 0;
+      }
+      
+      .blackbox-container .block4 {
+        height: 0.5vh;
+        margin: 1vh 0;
+      }
+      .blackbox-container .vertigo {
+        transform: rotate(180deg) translateY(17%);
+        position: relative;
+      }
+      
+      
+/*      Repeated Red Box Container --------------------------------- */
+      
+      .redbox-container {
+        position: absolute;
+        right: 0;
+        width: 40%;
+        min-width: 200px;
+        margin-right: 10%;
+        margin-left: auto;
+        mix-blend-mode: multiply;
+        transform: translateX(5px)
+      }
+      
+      .redbox-container .directors {
+        position: absolute;
+        color: whitesmoke;
+        margin-right: 15%;
+        text-align: right;
+        top:10px;  
+        transform: rotate(270deg) translateX(-75px)
+      }
+      
+      .redbox-container .directors .names {
+        font-size:30px;
+        line-height: 32px
+      }
+      
+      .redbox-container .block1 {
+        height: 40vh;
+      }
+      
+      .redbox-container .block2 {
+        height: 2vh;
+        margin: .5vh 0;
+      }
+      
+      .redbox-container .block3 {
+        height: 1vh;
+        margin: .7vh 0;
+      }
+      
+      .redbox-container .block4 {
+        height: 0.5vh;
+        margin: 1vh 0;
+      }
+      
+      .redbox-container .vertigo {
+        transform: rotate(180deg) translateY(17%);
+        position: relative;
+      }    
+     
+
+      
+/*     Repeated Blue Container --------------------------------- */
+      
+      .bluebox-container {
+        position: absolute;
+        right: 0;
+        width: 40%;
+        min-width: 200px;
+        margin-right: 10%;
+        margin-left: auto;
+        mix-blend-mode: multiply;
+        transform: translateX(-5px)
+      }
+      
+      .bluebox-container .directors {
+        position: absolute;
+        color: whitesmoke;
+        margin-right: 15%;
+        text-align: right;
+        top:10px;  
+        transform: rotate(270deg) translateX(-75px)
+      }
+      
+      .bluebox-container .directors .names {
+        font-size:30px;
+        line-height: 32px
+      }
+      
+      .bluebox-container .block1 {
+        height: 40vh;
+      }
+      
+      .bluebox-container .block2 {
+        height: 2vh;
+        margin: .5vh 0;
+      }
+      
+      .bluebox-container .block3 {
+        height: 1vh;
+        margin: .7vh 0;
+      }
+      
+      .bluebox-container .block4 {
+        height: 0.5vh;
+        margin: 1vh 0;
+      }
+      
+      .bluebox-container .vertigo {
+        transform: rotate(180deg) translateY(17%);
+        position: relative;
+      }    
+      
+      
+/*      Vertigo Text Colores --------------------------------- */
+      
+      
+      .redbox-container .vertigo span.text-red {
+        font-size: 19.7vw;
+        color: red;
+      }
+      
+      .blackbox-container .vertigo span.text-black {
+        font-size: 19.7vw;
+        color: rgb(50,50,50);
+      } 
+      
+      .bluebox-container .vertigo span.text-blue {
+        font-size: 19.7vw;
+        color: aquamarine;
+      }
+      
+    
+    </style>
+  </head>
+  
+  
+  <body>
+    <div class="container-responsive">
+     
+<!--     Directors Names  -->
+     
+      <div class="directors helvetica">
+        <span class="names">james steward<br>kim novak<br>alfred hitchcock</span>
+      </div>
+      
+<!--     Main Black Graphic Container -->
+     
+      <div class="blackbox-container">
+        <div class="block1 black"></div>
+        <div class="block2 black"></div>
+        <div class="block2 black"></div>
+        <div class="block2 black"></div>
+        <div class="block2 black"></div>
+        <div class="block3 black"></div>
+        <div class="block3 black"></div>
+        <div class="block3 black"></div>
+        <div class="block3 black"></div>
+        <div class="block3 black"></div>
+        <div class="block3 black"></div>
+        <div class="block4 black"></div>
+        <div class="block4 black"></div>
+        <div class="block4 black"></div>
+        <div class="block4 black"></div>
+        <div class="vertigo helvetica"><span class="text-black">v&eacute;rtigo</span></div>
+      </div>
+
+<!--     Repeat Red Graphic Container --> 
+       
+      <div class="redbox-container">
+        <div class="block1 red"></div>
+        <div class="block2 red"></div>
+        <div class="block2 red"></div>
+        <div class="block2 red"></div>
+        <div class="block2 red"></div>
+        <div class="block3 red"></div>
+        <div class="block3 red"></div>
+        <div class="block3 red"></div>
+        <div class="block3 red"></div>
+        <div class="block3 red"></div>
+        <div class="block3 red"></div>
+        <div class="block4 red"></div>
+        <div class="block4 red"></div>
+        <div class="block4 red"></div>
+        <div class="block4 red"></div>
+        <div class="vertigo helvetica"><span class="text-red">v&eacute;rtigo</span></div>
+      </div>
+
+<!--     Repeat Blue Graphic Container --> 
+            
+      <div class="bluebox-container">
+        <div class="block1 blue"></div>
+        <div class="block2 blue"></div>
+        <div class="block2 blue"></div>
+        <div class="block2 blue"></div>
+        <div class="block2 blue"></div>
+        <div class="block3 blue"></div>
+        <div class="block3 blue"></div>
+        <div class="block3 blue"></div>
+        <div class="block3 blue"></div>
+        <div class="block3 blue"></div>
+        <div class="block3 blue"></div>
+        <div class="block4 blue"></div>
+        <div class="block4 blue"></div>
+        <div class="block4 blue"></div>
+        <div class="block4 blue"></div>
+        <div class="vertigo helvetica"><span class="text-blue">v&eacute;rtigo</span></div>
+      </div>                  
+    </div>
+  </body>
+</html>

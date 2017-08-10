@@ -1,0 +1,273 @@
+
+/* Google font Import */
+@import url('https://fonts.googleapis.com/css?family=UnifrakturMaguntia');
+
+/*Inicialize Browser settings*/
+* {
+  padding: 0;
+  margin: 0;
+  font-weight: 100;
+  box-sizing:border-box;
+}
+
+
+html {
+  font-size: 18px; /* -- setup the inicial em size -- */
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "kern";
+  font-kerning: normal;
+}
+
+/* -------------------- */
+/* -- Site Variables -- */
+/* -------------------- */
+
+/* -- Typography -- */
+h1 {
+  font-family: 'UnifrakturMaguntia', serif;
+  font-size: 20em;
+  line-height: 0em
+}
+
+h2 {
+  font-family: 'UnifrakturMaguntia', serif;
+  font-size: 8em;
+  line-height: 0.9em;
+  letter-spacing: -0.03em;
+  color: whitesmoke
+}
+
+h3 {
+  font-family: 'UnifrakturMaguntia', serif;
+  font-size: 2.9em;
+  padding-bottom: 1em;
+  padding-top: 2em;
+  color: red;
+}
+h3.title {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding:2em 0 0 0.5em;
+}
+
+h4 {
+  font-family: serif;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  font-size:1.1em;
+  color: whitesmoke;
+  text-transform: uppercase
+}
+
+p {
+
+  font-family: serif;
+  font-weight: 400;
+  font-size: 1.1em;
+  line-height: 1.3em;
+  padding-bottom: 0.5em;
+  color:rgb(20,20,20);
+}
+
+/* -- Image variables -- */
+
+figure{
+  width: 100%;
+  margin: 0em 0 1em 0;
+}
+
+img {
+  width:100%;
+}
+
+section {
+  padding: 4em 0;
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding: 4em 0;
+}
+
+/* -- Column Style Flexbox -- */
+
+.row {
+  display:flex;
+  flex-wrap:wrap;
+  width: 100%;
+  max-width: 1200px;
+  position: relative;
+  margin: 0 auto;
+  padding: 1em 0;
+}
+
+.col__1of3 {
+  flex:0 0 33.333%;
+  padding:0 1em;
+}
+
+.col__2of3 {
+  flex:0 0 66.66%;
+  padding:0 1em;
+}
+
+.col__3of3 {
+  flex:0 0 100%;
+  padding:0 1em;
+}
+
+/* -- Color Variables -- */
+
+.light {
+   background-color: whitesmoke;
+}
+
+.semi-light {
+   background-color: white;
+}
+
+.semi-light p {
+  color: dimgrey;
+}
+.image-embed {
+  width: 33%;
+  float:left;
+  padding: 1em 1em 1em 0;
+}
+
+
+/* -- Lightbox Variables -- */
+
+.lightbox {
+	/* -- Default lightbox to hidden -- */
+	display: none;
+
+	/* -- Position and style -- */
+	position: fixed;
+	z-index: 999;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	top: 0;
+	left: 0;
+	background: rgba(255,255,255,0.3);
+}
+
+.lightbox .container {
+  width: 60%;
+  z-index:999;
+}
+
+.lightbox:target {
+	/** Remove default browser outline */
+	outline: none;
+
+	/** Unhide lightbox **/
+	display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: url(img/close.svg), auto;
+}
+
+/* Hero Section ---------------------------------------------------- */
+
+section.hero {
+  z-index: 0;
+  position: relative;
+  width: 100%;
+  left: 0;
+  height: 100vh;
+  background: -webkit-linear-gradient(to right, #ef473a, #cb2d3e);  
+  background: linear-gradient(to right, #ef473a, #cb2d3e); /
+
+}
+
+section.hero .herotext-container {
+  display: flex;
+  position: fixed;
+  height: 100%;
+  align-items: center;
+  flex-flow: row wrap;
+  padding: 1em;
+}
+
+/* Main Content section ---------------------------------------------- */
+
+
+section.top .body-container {
+  width: 100%;
+  max-width: 1200px;
+  position: relative;
+  margin: 0 auto;
+  padding: 4em 0;
+}
+
+section.middle {
+  padding: 4em 0;
+}
+
+section.gotosite {
+  background-color: red;
+  text-align: center;
+}
+
+section.gotosite a {
+  text-decoration: none;
+  color: lightgray;
+  transition: all ease-in .2s
+}
+
+section.gotosite a:hover {
+  color: white;
+  border-bottom: 3px solid;
+}
+
+section.gotosite a:after {
+  top: 4px;
+  right: -15px;
+  position: relative;
+  content: "\2192";
+}
+
+/* Media Queries for different screens -------------------------------- */
+
+@media screen and (max-width: 1000px) {
+ 
+  html {
+    font-size: 22px;
+  }
+  .col__1of3 {
+    flex:0 0 100%;
+    padding:0 1em;
+  }
+  .col__2of3 {
+    flex:0 0 100%;
+    padding:0 1em;
+  }
+  .lightbox:target {
+    display: none;
+  }
+
+}
+
+@media screen and (max-width: 700px) {
+ 
+  html {
+    font-size: 22px;
+  }
+  h2 {
+    font-size: 5em;
+  }
+  h3 {
+    font-size: 2.4em;
+  }
+  figure {
+  margin: 2em 0;
+  }
+  section.hero .herotext-container {
+    height:auto;
+  }
+  
+}
+
+
+

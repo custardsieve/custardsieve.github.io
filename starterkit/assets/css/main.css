@@ -35,13 +35,7 @@ body {
   transform: translateY(-700px);
   transition: all ease-in-out 0.3s;
 }
-.type span.two:after {
-  content:"2";
-  position: relative;
-  top:-150px;
-  font-size: 880px;
-  color: white
-}
+
 
 h1 {
   font-family: DIN-Bold, serif;
@@ -105,6 +99,14 @@ h1 {
 
 .type span.one:after {
   content:"1";
+  position: relative;
+  top:-150px;
+  font-size: 880px;
+  color: white
+}
+
+.type span.two:after {
+  content:"2";
   position: relative;
   top:-150px;
   font-size: 880px;

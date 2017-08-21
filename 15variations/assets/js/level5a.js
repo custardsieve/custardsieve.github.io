@@ -1,42 +1,71 @@
       $(document).ready(function() {
 
-        var audioBell = document.createElement('audio');
-        audioBell.setAttribute('src', 'http://www.soundjay.com/misc/sounds/bell-ringing-01.mp3');
+        var justSmoke = document.createElement('audio');
+        justSmoke.setAttribute('src', '/assets/music/05 - Just Smoke.mp3');
         $.get();
-        audioBell.addEventListener("load", function() {
-          audioBell.play();
+        justSmoke.addEventListener("load", function() {
+          justSmoke.play();
         }, true);
 
-        var audioHorn = document.createElement('audio');
-        audioHorn.setAttribute('src', 'https://www.soundjay.com/misc/hohner-melodica-1.mp3');
+        var coldArms = document.createElement('audio');
+        coldArms.setAttribute('src', '/assets/music/09 - Cold Arms.mp3');
         $.get();
-        audioHorn.addEventListener("load", function() {
-          audioHorn.play();
+        coldArms.addEventListener("load", function() {
+          coldArms.play();
         }, true);
 
 
 
 
+        var playing = false;
+        
+        
+        $('.cold_arms').click(function() {
+          
+          if (playing == false) {
+            coldArms.play();
+            playing = true;
+            $('div.song').addClass('mouse_pause');
+            $('div.circle-one').addClass('translate');
+            $('div.circle-one').addClass('rotate');
+            $('div.circle-two').addClass('translate');
+            
+          } else {
+            playing = false;
+            coldArms.pause();
+            $('div.song').removeClass('mouse_pause');
+            $('div.circle-one').removeClass('translate');
+            $('div.circle-one').removeClass('rotate');
+            $('div.circle-two').removeClass('translate');
 
-        $('.play_bell').click(function() {
-          audioBell.play();
-        });
-
-
-        $('.pause_bell').click(function() {
-          audioBell.pause();
-        });
-
-
-        $(".hover_horn").hover(
-          function() {
-            audioHorn.play();
-          },
-          function() {
-            audioHorn.pause();
           }
-        );
+          
+        });
+        
+        $('.just_smoke').click(function() {
+          
+          if (playing == false) {
+            justSmoke.play();
+            playing = true;
+            $('div.song').addClass('mouse_pause');
+            $('div.circle-one').addClass('translate');
+            $('div.circle-one').addClass('rotate');
+            $('div.circle-two').addClass('translate');
+            
+          } else {
+            playing = false;
+            justSmoke.pause();
+            $('div.song').removeClass('mouse_pause');
+            $('div.circle-one').removeClass('translate');
+            $('div.circle-one').removeClass('rotate');
+            $('div.circle-two').removeClass('translate');
+          }
 
+          
+        });
+
+
+     
 
 
       });

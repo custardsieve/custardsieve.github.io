@@ -21,6 +21,12 @@
   color: white;
 }
 
+.mouse_play {
+  cursor: url(/assets/images/play.svg), auto;
+}
+.mouse_pause {
+  cursor: url(/assets/images/pause.svg), auto;
+}
 
 header {
   position: relative;
@@ -102,4 +108,81 @@ p {
 
 .song-name {
   padding-left: 20px; 
+}
+
+.player-container {
+  position:relative;
+  padding-top: 100%;
+  overflow: hidden
+}
+
+.circle-one {
+  position: absolute;
+  top: 0;
+  background: 
+linear-gradient(10deg, white 3%, transparent 3%) 7px 0, 
+linear-gradient(63deg, transparent 94%, white 18%), 
+linear-gradient(63deg, transparent 44%, white 18%, white 58%, transparent 62%), 
+transparent;
+  background-size: 16px 48px;
+  width: 100%;
+  padding-top: 100%; 
+  border-radius: 50%;
+  overflow:hidden;
+  transition: 1s;
+  transform:translateX(-50%);
+}
+
+.circle-two {
+  position: absolute;
+  top:0;
+  background: 
+linear-gradient(63deg, white 23%, transparent 23%) 7px 0, 
+linear-gradient(63deg, transparent 74%, white 78%), 
+linear-gradient(63deg, transparent 34%, white 38%, white 58%, transparent 62%), 
+transparent;
+  background-size: 16px 48px;
+  width: 100%;
+  padding-top: 100%; 
+  border-radius: 50%;
+  overflow:hidden;
+  transform:translateX(50%);
+  transition: 1s;
+/*  animation: rotate 20s linear infinite;*/
+
+}
+div.test {
+  width: 100px;
+  height: 200px;
+}
+
+.hero-container {
+  display: flex;
+  height: 100vh;
+  padding: 0 5%;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.rotate {
+  animation: rotate 20s linear infinite;
+}
+
+.rotate-reverse {
+  animation: rotate 20s linear infinite reverse
+}
+
+.translate {
+  transform:translateX(0);
+}
+
+@keyframes translate-left {
+  to {left:-50%;}
+  from {left:0;}
+}
+
+@keyframes rotate {
+  to {transform: rotate(0deg)}
+  from {transform: rotate(360deg)}
 }

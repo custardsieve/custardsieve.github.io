@@ -1,8 +1,11 @@
 $(document).ready(function () {
+  
+  
   var red;
   var green;
   var blue;
 
+  
   function bgcolor(red, green, blue) {
     var red = Math.floor(Math.random() * (255 - 0 + 1)) + 0;
     var green = Math.floor(Math.random() * (255 - 0 + 1)) + 0;
@@ -12,6 +15,7 @@ $(document).ready(function () {
     return blue;
   }
 
+  
   function txtcolor(red, green, blue) {
     var red = Math.floor(Math.random() * (255 - 0 + 1)) + 0;
     var green = Math.floor(Math.random() * (255 - 0 + 1)) + 0;
@@ -20,21 +24,34 @@ $(document).ready(function () {
     return green;
     return blue;
   }
+  
+  function colorChange() {
+    
   var txtRed = txtcolor(red);
   var txtGreen = txtcolor(green);
   var txtBlue = txtcolor(blue);
 
-  function colorChange() {
-    $('body').css('background-color', 'rgb(' + bgcolor(red) + ',' + bgcolor(green) + ',' + bgcolor(blue) + ')');
+  var bgRed = bgcolor(red);
+  var bgGreen = bgcolor(green);
+  var bgBlue = bgcolor(blue);
+    
+    $('body').css('background-color', 'rgb(' + bgRed + ',' + bgGreen + ',' + bgBlue + ')');
     $('body').css('color', 'rgb(' + txtRed + ',' + txtGreen + ',' + txtBlue + ')');
-    $('h2').css('border-bottom', '4px solid rgb(' + txtRed + ',' + txtGreen + ',' + txtBlue + ')');
+    $('.box1').css({'border-right':'15px solid rgb(' + txtRed + ',' + txtGreen + ',' + txtBlue + ')'});
+    $('.box2').css({'background-color':'rgb(' + txtRed + ',' + txtGreen + ',' + txtBlue + ')'});
+    $('.box3').css({'border-left':'15px solid rgb(' + txtRed + ',' + txtGreen + ',' + txtBlue + ')'});
+    $('span.nav').css({'color':'rgb(' + bgRed + ',' + bgGreen + ',' + bgBlue + ')'});
+    $('span.nav').css('border-bottom', '4px solid rgb(' + txtRed + ',' + txtGreen + ',' + txtBlue + ')');
   }
+  
   colorChange();
   
   
   
   
   $('#wheel').addClass('start');
+  $('aside.left').css({'display':'none'})
+  $('aside.right').css({'flex-basis':'100%'});
   $('div.body-container').addClass('height500');
   
   
@@ -42,7 +59,9 @@ $(document).ready(function () {
   
   $('#wheel').click(function () {
     $('#wheel').removeClass('start');
-    $('#wheel').css('transition','0.8s')
+    $('aside.left').css({'display':'flex'});
+    $('aside.right').css({'flex-basis':''});
+    $('#wheel').css('transition','1s');
     $('div.body-container').removeClass('height500');
   });
   
@@ -50,10 +69,9 @@ $(document).ready(function () {
   
   $('div.link').click(function () {
     $('#wheel').removeClass('start');
-        $('div.body-container').removeClass('height500');
-
-    $('body').css("transition", "all 1s ease-in-out ")
-    $('div#wheel').css("transition", "all 1s ease-in-out ")
+    $('div.body-container').removeClass('height500');
+    $('body').css("transition", "all .2s ease-in-out ")
+    $('div#wheel').css("transition", "all .6s ease-in-out ")
   });
   $('div.link-a').click(function () {
     $('#wheel').css("transform", "rotate(0deg)");

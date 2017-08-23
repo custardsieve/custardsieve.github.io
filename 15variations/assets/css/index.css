@@ -17,7 +17,7 @@ body {
   background-color: rgb(20, 20, 20);
   color: rgb(230, 230, 230);
   overflow: hidden;
-  width: 100%;
+  width: 100vw;
   /*  font-size: 20px;*/
   height: 100vh;
   font-weight: 200;
@@ -27,8 +27,20 @@ body {
 #wheel {
   width: 100%;
   height: 800vh;
-  /*  transition: all ease-in-out 1s;*/
 }
+
+.height500 {
+  height: 500vh!important;
+}
+
+.start {
+  height:300vh;
+  transform-origin: top;
+  transform: translateY(250px) scale(0.1);
+}
+
+  /*  transition: all ease-in-out 1s;*/
+
 
 
 /* ---------------------------------------- */
@@ -39,8 +51,23 @@ body {
 
 /* ---------------------------------------- */
 
-a {
+aside a {
   text-decoration: none;
+font-family: monospace;
+  color:white;
+    padding-bottom: 4px;
+
+  transition: all 0.4s;
+}
+
+aside a:after {
+  content:'\27F6';
+  letter-spacing: -2px;
+  padding-left: 10px;
+}
+
+aside a:hover {
+  border-bottom: 2px solid white;
 }
 
 .link-container a {
@@ -64,14 +91,20 @@ h2 {
 }
 
 h3 {
-  font-size: 1.4em;
+  font-size: 1.2em;
   font-weight: 400;
   line-height: 1.5em;
-  letter-spacing: 1px
+  letter-spacing: 1px;
 }
 
 .link {
+  transition: all 0.4s;
   cursor: pointer;
+}
+
+.link:hover {
+  transform:scale(2);
+  font-family: serif;
 }
 
 iframe {
@@ -157,17 +190,16 @@ aside {
   width: 100%;
   height: 800vh;
   position: absolute;
+/*  animation: spin 3s infinite*/
+  
   /*  transition: cubic-bezier(0.27, 0.57, 0.78, 0.46) 0.5s;*/
 }
 
 .main {
+  
   width: 100%;
   height: 100vh;
   display: flex;
-  /*
-  align-items: center;
-  justify-content: center;
-*/
 }
 
 .intro {
@@ -213,9 +245,10 @@ aside.scale {
 aside.left {
   display: flex;
   align-items: center;
-  padding-left: 110px;
+  padding-left: 140px;
 }
 
 aside.right {
   justify-content: flex-end;
 }
+

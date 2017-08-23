@@ -14,7 +14,12 @@
 /* Start here */
 
 body {
-  padding: 3em;
+padding: 3em;
+background-color: white;
+width: 100vw;
+height: 100vh;
+overflow: hidden;
+  
 }
 
 @font-face {

@@ -26,10 +26,10 @@
 }
 
 .mouse_play {
-  cursor: url(/assets/images/play.svg), auto;
+  cursor: url(assets/images/play.svg), auto;
 }
 .mouse_pause {
-  cursor: url(/assets/images/pause.svg), auto;
+  cursor: url(assets/images/pause.svg), auto;
 }
 
 header {

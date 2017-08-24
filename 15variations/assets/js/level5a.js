@@ -1,14 +1,14 @@
       $(document).ready(function() {
 
         var justSmoke = document.createElement('audio');
-        justSmoke.setAttribute('src', '/assets/music/05-JustSmoke.mp3');
+        justSmoke.setAttribute('src', 'assets/music/05-JustSmoke.mp3');
         $.get();
         justSmoke.addEventListener("load", function() {
           justSmoke.play();
         }, true);
 
         var coldArms = document.createElement('audio');
-        coldArms.setAttribute('src', '/assets/music/09-ColdArms.mp3');
+        coldArms.setAttribute('src', 'assets/music/09-ColdArms.mp3');
         $.get();
         coldArms.addEventListener("load", function() {
           coldArms.play();

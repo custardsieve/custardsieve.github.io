@@ -248,8 +248,12 @@ aside {
 }
 
 .intro .textbox {
-  width: 40%;
-  padding: 0;
+  width: 100%;
+  padding:  0 150px;
+}
+
+.intro .textbox p {
+  font-size: 2.5vw
 }
 
 aside.scale {
@@ -257,7 +261,7 @@ aside.scale {
 }
 
 .textbox {
-  padding-left:10%;
+  padding-left:0;
 }
 
 .a {

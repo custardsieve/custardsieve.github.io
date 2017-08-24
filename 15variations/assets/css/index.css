@@ -249,13 +249,40 @@ aside {
 
 .intro .textbox {
   width: 100%;
-  padding:50px 150px;
+  margin: 150px;
+  padding-top: 50px;
 }
 
 .intro .textbox p {
-  font-size: 2.5vw
+  font-size: 2.4vw
 }
 
+.intro .textbox em {
+  font-size: 2.4vw;
+}
+
+.intro .textbox a {
+/*  color: white;*/
+  font-size: 2.4vw;
+  padding-bottom: 5px;
+  border-bottom: 0.2vw solid;
+}
+
+.float {
+  float: left;
+  position:relative;
+  top: 5px;
+  font-size: 2.4vw;
+  font-weight: 800;
+}
+
+.float:after {
+  content:'\0027b3';
+  position:relative;
+  top:4px;
+  font-weight: 100;
+  padding: 0 10px
+}
 aside.scale {
   flex-basis: 60%;
 }

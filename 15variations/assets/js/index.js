@@ -35,13 +35,15 @@ $(document).ready(function () {
   var bgGreen = bgcolor(green);
   var bgBlue = bgcolor(blue);
     
-    $('body').css('background-color', 'rgb(' + bgRed + ',' + bgGreen + ',' + bgBlue + ')');
-    $('body').css('color', 'rgb(' + txtRed + ',' + txtGreen + ',' + txtBlue + ')');
+    
     $('.box1').css({'border-right':'15px solid rgb(' + txtRed + ',' + txtGreen + ',' + txtBlue + ')'});
     $('.box2').css({'background-color':'rgb(' + txtRed + ',' + txtGreen + ',' + txtBlue + ')'});
     $('.box3').css({'border-left':'15px solid rgb(' + txtRed + ',' + txtGreen + ',' + txtBlue + ')'});
     $('span.nav').css({'color':'rgb(' + bgRed + ',' + bgGreen + ',' + bgBlue + ')'});
     $('span.nav').css('border-bottom', '4px solid rgb(' + txtRed + ',' + txtGreen + ',' + txtBlue + ')');
+    
+    $('.txt_color').css({'color':'rgb(' + txtRed + ',' + txtGreen + ',' + txtBlue + ')'});
+    $('.bg_color').css({'background-color':'rgb(' + bgRed + ',' + bgGreen + ',' + bgBlue + ')'});
   }
   
   colorChange();

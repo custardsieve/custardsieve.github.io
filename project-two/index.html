@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Project Two</title>
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="assets/css/project-two.css">
+  <script type="text/javascript" src="assets/js/jquery-3.2.0.min.js" charset="utf-8"></script>
+  <script type="text/javascript" src="assets/js/instafeed.min.js"></script>
+  <script type="text/javascript" src="assets/js/project-two.js" charset="utf-8"></script>
+
+  <div id="instafeed"></div>
+<script type="text/javascript">
+  var userFeed = new Instafeed({
+    get: 'user',
+    userId: '3891752732',
+    clientId: 'fcad615174e744bfb7fceec69c6e9fe8',
+    accessToken: '3891752732.fcad615.660e74f3071640cdb893bbb3c1b0bce2',
+    resolution: 'standard_resolution',
+    template: '<a href="{{link}}" target="_blank" id="{{id}}"><img src="{{image}}" /><span>{{likes}}{{comments}}</span></a>',
+    sortBy: 'most-recent',
+    limit: 32,
+    links: false
+  });
+  userFeed.run();
+</script>
+      
+<!--
+  <script type="text/javascript">
+    var feed = new Instafeed({
+        get: 'tagged',
+        tagName: 'awesome',
+        clientId: 'edfaf50e3bd04706bc05e0181982589e'
+    });
+    feed.run();
+</script>
+-->
+ 
+
+
+
+</head>
+
+
+<body>
+  <div id="instafeed"></div>
+</body>
+</html>

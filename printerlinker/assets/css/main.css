@@ -1,0 +1,153 @@
+/*! normalize.css v6.0.0 | MIT License | github.com/necolas/normalize.css */html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}article,aside,footer,header,nav,section{display:block}h1{font-size:2em;margin:.67em 0}figcaption,figure,main{display:block}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent;-webkit-text-decoration-skip:objects}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}dfn{font-style:italic}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}audio,video{display:inline-block}audio:not([controls]){display:none;height:0}img{border-style:none}svg:not(:root){overflow:hidden}button,input,optgroup,select,textarea{margin:0}button,input{overflow:visible}button,select{text-transform:none}[type=reset],[type=submit],button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{display:inline-block;vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details,menu{display:block}summary{display:list-item}canvas{display:inline-block}template{display:none}[hidden]{display:none}/*# sourceMappingURL=normalize.min.css.map */
+
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+/*  font-family: -apple-system, Arial, Helvetica, sans-serif;*/
+
+}
+
+
+
+/* ----- -------- ----- */
+/* ----- Variable ----- */
+/* ----- -------- ----- */
+
+
+body {
+  font-family: -apple-system, Arial, Helvetica, sans-serif;
+  margin: 1em;
+/*  position: relative;*/
+  font-size: 20px;
+}
+
+.body-container {
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: #FF5252;
+}
+
+.highlight {
+  color: #EC6262;
+  color: #FF5252!important;
+}
+
+.title {
+  position: fixed;
+  top: 0.5em;
+  z-index: 999;
+  font-size:1.75em;
+  font-weight: 800;
+  letter-spacing: -1px;
+/*  margin-bottom: 2em;*/
+}
+
+sup {
+  font-weight: 200;
+  font-size:0.6em;
+}
+
+.title:after {
+  content:' {}';
+  letter-spacing: 1px;
+  position: relative;
+  top:-3px;
+}
+.main-nav {
+  z-index: 2;
+  min-width: 600px;
+  width:33%;
+  font-family: -apple-system, Arial, Helvetica, sans-serif;
+  margin-top: 6em;
+  display: inline-block;
+  float: left;
+}
+
+.map-container {
+  z-index: 0;
+  width: 60%;
+  margin-top: 6em;
+  padding-top: 60%;
+  position: absolute;
+  right: 1em;
+  display: inline-block;
+  background-color: #FF5252;
+  transform: rotate(-45deg);
+  transition: 0.4s linear;
+}
+
+table{
+  width: 30%;
+  font-size: 1em!important;
+  display:none;
+}
+
+tbody {
+  padding: 30px 0;
+  font-size: 20px!important;
+  color:black;
+/*  font-family: sans-serif;*/
+  letter-spacing: 0.5px;
+  font-weight: 300;
+  line-height: 1.3em;
+  width: 30%;
+}
+
+tbody tr th {
+  font-size: 1.2em;
+  text-align: left;
+  padding-top: 2em;
+  font-weight: 600;
+}
+
+tbody tr:nth-child(2) {
+  font-style: oblique;
+}
+
+tbody a {
+  text-decoration: none;
+  border-bottom: 2px solid;
+  transition: all 0.4s;
+}
+
+tbody a:hover {
+  opacity: 0.7;
+}
+
+button.accordion {
+  border: 0;
+  cursor: pointer;
+  text-align: left;
+  line-height: 1.2em;
+  width: 100%;
+  background-color: transparent;
+  font-size: 3.5em;
+  font-weight: 700;
+}
+button.accordion.active, button.accordion:hover {
+    color: #FF5252;
+}
+
+/* ----- -------- ----- */
+/* --- body Styling --- */
+/* ----- -------- ----- */
+
+.map-container {
+  z-index: 0;
+
+}
+
+#map {
+  position:absolute;
+  top:0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.2;
+  mix-blend-mode: multiply;
+  transition: 0.4s linear;
+}

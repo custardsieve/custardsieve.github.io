@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Printer Linker</title>
+  <link rel="stylesheet" href="assets/css/main.css">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <script type="text/javascript" src="assets/js/printer-linker.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBMP8lmGSQge5HZ6L-RoVvNDySBlshmUcI&callback=initMap" async defer></script>
+  <script type="text/javascript">
+    window.onload = function () {
+      populateData();
+      showHide();
+      initMap(10);
+    }
+    var categoryArray = ['binder', 'laserCutting', 'materials', 'printerBinder', 'printer', 'photo', 'signage'];
+
+    function populateData() {
+      var categoryArray = ['binder', 'laserCutting', 'materials', 'printerBinder', 'printer', 'photo', 'signage'];
+      for (i = 0; i < categoryArray.length; i++) {
+        var button = document.getElementById(categoryArray[i]); //get <table>
+        var table = document.createElement("table");
+        var tableCounter = document.createElement("sup");
+        var count = 0;
+        //      table.innerHTML = ""; //resets the table
+        for (j = 0; j < plData.length; j++) {
+          if (categoryArray[i] == plData[j].plCategory) {
+            count++;
+            var tableBody = document.createElement("tbody"); //make a TableBody for styling
+            tableBody.innerHTML += "<tr><th>" + plData[j].plName + "</th></tr><tr><td>&mdash; " + plData[i].plTags + "</td></tr><tr><td>" + plData[j].plStreet + " " + plData[j].plCity + " " + plData[j].plRegion + " " + plData[j].plPostcode + "</td></tr><tr><td><a class='highlight' href='tel:" + plData[j].plPhone + "'>" + plData[j].plPhone + "</a></td></tr><tr><td><a class='highlight' href='" + plData[j].plHyperlink + "'>" + plData[j].plHyperlink + "</a></td></tr>"; //add HTML to <tr>
+            table.appendChild(tableBody);
+          }
+        }
+        tableCounter.innerHTML += "(" + count + ")";
+        button.appendChild(tableCounter);
+        button.appendChild(table);
+      }
+    }
+
+    function showHide() {
+      var acc = document.getElementsByClassName("accordion");
+      var i;
+      var table = document.getElementsByTagName("table");
+      var mapContainer = document.getElementById("mapCanvas");
+      var map = document.getElementById("map");
+      for (i = 0; i < acc.length; i++) {
+        acc[i].onclick = function () {
+          mapContainer.style.transform = "rotate(0)";
+          map.style.opacity = "1";
+          mapContainer.style.backgroundColor = "white";
+          if (this.id === "binder") {
+            categoryChange(0);
+            initMap(10);
+          }
+          else if (this.id === "laserCutting") {
+            categoryChange(1);
+            initMap(10);
+          }
+          else if (this.id === "materials") {
+            categoryChange(2);
+            initMap(10);
+          }
+          else if (this.id === "printerBinder") {
+            categoryChange(3);
+            initMap(10);
+          }
+          else if (this.id === "printer") {
+            categoryChange(4);
+            initMap(12);
+          }
+          else if (this.id === "photo") {
+            categoryChange(5);
+            initMap(13);
+          }
+          else if (this.id === "signage") {
+            categoryChange(6);
+            initMap(12);
+          }
+          else {
+            categoryChange(0)
+          }
+          this.classList.toggle("active");
+          /* Toggle between hiding and showing the active panel */
+          var panel = this.children[1];
+          if (panel.style.display === "block") {
+            panel.style.display = "none";
+          }
+          else {
+            panel.style.display = "block";
+          }
+        }
+      }
+    }
+    
+        var melbourne = {
+      lat: -37.8136
+      , lng: 144.9631
+    };
+    var map;
+
+    function initMap(test) {
+      map = new google.maps.Map(document.getElementById('map'), {
+        zoom: test
+        , center: melbourne
+      , });
+      // Create a <script> tag and set the USGS URL as the source.
+      var script = document.createElement('script');
+      //      script.src = 'assets/js/google.js';
+      script.src = 'assets/js/plData.js';
+      document.getElementsByTagName('head')[0].appendChild(script);
+    }
+    // Loop through the results array and place a marker for each
+    // set of coordinates.
+    var category;
+
+    function categoryChange(number) {
+      category = categoryArray[number];
+      return category;
+    }
+    window.eqfeed_callback = function (results) {
+      console.log(results);
+      for (var i = 0; i < results.features.length; i++) {
+        if (results.features[i].plCategory === category) {
+          var latCoords = results.features[i].plLat;
+          var longCoords = results.features[i].plLon;
+          var latLng = new google.maps.LatLng(latCoords, longCoords);
+          var marker = new google.maps.Marker({
+            position: latLng
+            , label: results.features[i].plName
+            , map: map
+            , animation: google.maps.Animation.DROP
+          , });
+          marker.addListener('click', toggleBounce);
+        }
+
+        function toggleBounce() {
+          if (marker.getAnimation() !== null) {
+            marker.setAnimation(null);
+          }
+          else {
+            marker.setAnimation(google.maps.Animation.BOUNCE);
+          }
+        }
+      }
+    }
+
+  </script>
+</head>
+
+<body>
+  <div class="title highlight"><a href="index.html">Printer Linker</a></div>
+  <div class="body-container">
+    <div class="main-nav">
+      <!--      <table id="dataArea"></table>-->
+      <button class="accordion" onclick="initMap()" id="binder">Binder</button>
+      <button class="accordion" id="laserCutting">Laser Cutting</button>
+      <button class="accordion" id="materials">Materials</button>
+      <button class="accordion" id="printerBinder">Printer &amp; Binder</button>
+      <button class="accordion" id="printer">Printer</button>
+      <button class="accordion" id="photo">Photo</button>
+      <button class="accordion" id="signage">Signage</button>
+    </div>
+    <div class="map-container" id="mapCanvas">
+      <div id="map"></div>
+    </div>
+  </div>
+</body>
+
+</html>

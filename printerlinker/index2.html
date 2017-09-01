@@ -1,0 +1,120 @@
+<html>
+
+<head>
+  <title>JavaScript Demo</title>
+  <style type="text/css">
+    html,
+    body {
+      font-family: monospace;
+    }
+  </style>
+  <script type="text/javascript">
+    /*  
+        var textToFill = 'right';
+
+        //there are two variable types we'll look at
+        // strings = 'anything in quotes', generally text
+
+        alert('Let\'s play paper scissors rock ' + textToFill + ' now')// a backslash will 'escape' characters like quotes
+
+        function scoreFunction(){//how we write a function, self contained code
+            var score = 0;
+            var scoreTwo = 2; 
+
+            console.log(score + scoreTwo)//console.log is for logging anything to the console
+        }
+        //scoreFunction(); invoking the function scoreFunction()
+
+
+        function passingAVariable(text,moreText){//passing multiple variables
+            alert(text)
+            alert(moreText)
+        }
+        passingAVariable('something','something else')//passing strings to the variables in the function
+       */
+    var compScore = 0;
+    var humanScore = 0;
+
+    function runGame(pick) {
+      var randomNumber = Math.random();
+      //console.log(pick + " " + randomNumber)
+      var compPick; //undefined variable for pick
+      if (randomNumber < 0.33) { //Comp is ROCK
+        //alert('computer picks rock')
+        //console.log(pick + ' comp: rock')
+        compPick = 'rock'; //update variable
+        console.log(compPick)
+          //            if(pick === 'rock'){
+          //                
+          //            }else if(pick === 'scissors'){
+          //                
+          //            }else if(pick === 'paper'){
+          //                
+          //            }else{
+          //                alert('No hand picked')
+          //            }
+      }
+      else if (randomNumber < 0.66) { //Comp is PAPER
+        //alert('computer picks paper')
+        //console.log(pick + ' comp: paper')
+        compPick = 'paper';
+      }
+      else if (randomNumber <= 1) { //Comp is SCISSORS
+        //alert('computer picks scissors')
+        //console.log(pick + ' comp: scissors')
+        compPick = 'scissors';
+      }
+      else {
+        console.log('randomNumber conditions were not satisified')
+      }
+      //two hands are a draw
+      //rock defeats scissors
+      //scissors defeats paper
+      //paper defeats rock
+      console.log(pick + " comp: " + compPick)
+      if (pick === compPick) {
+        alert('Draw, comp is on ' + compScore + ' human is on ' + humanScore)
+      }
+      else if (pick === 'rock' && compPick === 'scissors') {
+        humanPoint()
+      }
+      else if (pick === 'scissors' && compPick === 'paper') {
+        humanPoint()
+      }
+      else if (pick === 'paper' && compPick === 'rock') { //spelling is important, that bug in class was caused by writing 'rocks' instead of 'rock', meaning we didn't correctly match the string
+        humanPoint()
+      }
+      else if (compPick === 'rock' && pick === 'scissors') {
+        compPoint()
+      }
+      else if (compPick === 'scissors' && pick === 'paper') {
+        compPoint()
+      }
+      else if (compPick === 'paper' && pick === 'rock') {
+        compPoint()
+      }
+
+      function humanPoint() {
+        humanScore += 1;
+        alert('Human wins on ' + humanScore + ' points, comp picked ' + compPick + ' and is on ' + compScore + ' points')
+      }
+
+      function compPoint() {
+        compScore += 1;
+        alert('Comp wins with ' + compPick + ' and is on ' + compScore + ' points, human is on ' + humanScore)
+      }
+    }
+    //you can find another, more advanced version of this game that I made here:
+    //https://domenicomazza.github.io/ee/paperScissorsRock.html
+  </script>
+</head>
+
+<body>
+  <h1>Rock Paper Scissors</h1>
+  <!--<button onclick="scoreFunction()">Score</button> invoke the function with onclick attribute //-->
+  <button onclick="runGame('rock')">Rock</button>
+  <button onclick="runGame('paper')">Paper</button>
+  <button onclick="runGame('scissors')">Scissors</button>
+</body>
+
+</html>

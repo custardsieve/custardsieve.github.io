@@ -1,0 +1,55 @@
+<html>
+
+<head>
+  <title>Data Input Demo</title>
+  <style type="text/css">
+    html,
+    body {
+      font-family: -apple-system, Arial, Helvetica, sans-serif;
+    }
+    
+    #dataDisplay {
+    }
+  </style>
+  
+  <script type="text/javascript" src="printer-linker.js"></script>
+  <script type="text/javascript">
+
+
+    function writeData() {
+
+      
+      
+      for (i = 0; i < plData.length; i++) {
+       
+        var tags = plData[i].plCategory;
+        var binder = tags.match(/binder/);
+                console.log(binder);
+        
+        if (binder != null) {
+          console.log(binder);
+          document.getElementById("binder").innerHTML += "<h2>" + plData[i].plName + "</h2><p>" + plData[i].plStreet + "</p><a href='" + plData[i].plHyperlink + "' target='_blank'>Visit Website</a><br>"
+        }// <-- If statement
+        
+      }// <-- For Loop
+    }// <-- Function writeData
+    
+    
+    
+    
+    window.onload = function () { //things to run once the DOM has load
+      writeData()
+    }
+    
+    
+  </script>
+</head>
+
+<body>
+  <h1>Printer Linker</h1>
+  <div id="dataDisplay">
+    <div id="binder"></div>
+  </div>
+</body>
+
+</html>

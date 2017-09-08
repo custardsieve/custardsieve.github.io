@@ -10,114 +10,306 @@
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBMP8lmGSQge5HZ6L-RoVvNDySBlshmUcI&callback=initMap" async defer></script>
   <script type="text/javascript">
     window.onload = function () {
-      populateData();
-      showHide();
-      initMap(10);
+      populateData(); // sets up the dataAreas for each accordion menu
+      showHide(); // initiates the accordians menus
+      initMap(10); // loads the base map
     }
+    
+    
+    // sets up an array to change on button click
     var categoryArray = ['binder', 'laserCutting', 'materials', 'printerBinder', 'printer', 'photo', 'signage'];
 
+    
+    // gets data from JSON file and counts the elements
+    // within each catagory
     function populateData() {
       var categoryArray = ['binder', 'laserCutting', 'materials', 'printerBinder', 'printer', 'photo', 'signage'];
       for (i = 0; i < categoryArray.length; i++) {
-        var button = document.getElementById(categoryArray[i]); //get <table>
-        var table = document.createElement("table");
-        var tableCounter = document.createElement("sup");
-        var count = 0;
-        //      table.innerHTML = ""; //resets the table
+        var button = document.getElementById(categoryArray[i]); //get buttons by category
+        var dataArea = document.createElement("div");
+        dataArea.className += "dataArea";
+        var tableCounter = document.createElement("sup"); // creates area from category count
+        var count = 0; // category count
         for (j = 0; j < plData.length; j++) {
           if (categoryArray[i] == plData[j].plCategory) {
             count++;
-            var tableBody = document.createElement("tbody"); //make a TableBody for styling
-            tableBody.innerHTML += "<tr><th>" + plData[j].plName + "</th></tr><tr><td>&mdash; " + plData[i].plTags + "</td></tr><tr><td>" + plData[j].plStreet + " " + plData[j].plCity + " " + plData[j].plRegion + " " + plData[j].plPostcode + "</td></tr><tr><td><a class='highlight' href='tel:" + plData[j].plPhone + "'>" + plData[j].plPhone + "</a></td></tr><tr><td><a class='highlight' href='" + plData[j].plHyperlink + "'>" + plData[j].plHyperlink + "</a></td></tr>"; //add HTML to <tr>
-            table.appendChild(tableBody);
+            // loads all the content for the buttons into
+            // Data Area
+            var dataAreaContainer = document.createElement("div"); //make a TableBody for styling
+            dataAreaContainer.className += "dataAreaContainer";
+            dataAreaContainer.innerHTML += "<div class='pl-name highlight'>" + plData[j].plName + "</div><div class='pl-services highlight'><strong>Services: </strong>" + plData[i].plTags + "</div><div class='pl-address highlight'><strong>Address: </strong>" + plData[j].plStreet + ", " + plData[j].plCity + ", " + plData[j].plRegion + ", " + plData[j].plPostcode + "</div><div class='pl-phone highlight'><strong>Call: </strong><a class='highlight' href='tel:" + plData[j].plPhone + "'>" + plData[j].plPhone + "</a></div><div class='pl-website highlight'><strong>Visit: </strong><a class='highlight' href='" + plData[j].plHyperlink + "'>Website</a></div>"; //add HTML to <tr>
+            dataArea.appendChild(dataAreaContainer);
           }
         }
+        
+        //loads the count
         tableCounter.innerHTML += "(" + count + ")";
         button.appendChild(tableCounter);
-        button.appendChild(table);
+        button.appendChild(dataArea);
       }
     }
 
+    //function to show and hide the accordion
+    //menu and loads the markers on the google
+    //map plus change and category
     function showHide() {
       var acc = document.getElementsByClassName("accordion");
       var i;
-      var table = document.getElementsByTagName("table");
       var mapContainer = document.getElementById("mapCanvas");
       var map = document.getElementById("map");
       for (i = 0; i < acc.length; i++) {
-        acc[i].onclick = function () {
-          mapContainer.style.transform = "rotate(0)";
-          map.style.opacity = "1";
-          mapContainer.style.backgroundColor = "white";
-          if (this.id === "binder") {
-            categoryChange(0);
-            initMap(10);
-          }
-          else if (this.id === "laserCutting") {
-            categoryChange(1);
-            initMap(10);
-          }
-          else if (this.id === "materials") {
-            categoryChange(2);
-            initMap(10);
-          }
-          else if (this.id === "printerBinder") {
-            categoryChange(3);
-            initMap(10);
-          }
-          else if (this.id === "printer") {
-            categoryChange(4);
-            initMap(12);
-          }
-          else if (this.id === "photo") {
-            categoryChange(5);
-            initMap(13);
-          }
-          else if (this.id === "signage") {
-            categoryChange(6);
-            initMap(12);
-          }
-          else {
-            categoryChange(0)
-          }
+        acc[i].onclick = function () { // on accordion button click
+          mapContainer.style.transform = "translateX(0)"; // loads the map into view
+          mapContainer.style.backgroundColor = "white"; // removes the transparency layer
           this.classList.toggle("active");
-          /* Toggle between hiding and showing the active panel */
-          var panel = this.children[1];
-          if (panel.style.display === "block") {
-            panel.style.display = "none";
+          var panel = this.children[1]; // loads the dataArea fro each button
+          if (panel.style.maxHeight) { //if the panel is NOT open
+            panel.style.maxHeight = null; 
           }
-          else {
-            panel.style.display = "block";
+          else { // opens the panel and check the ID
+            panel.style.maxHeight = "600px";
+            if (this.id === "binder") {
+              categoryChange(0); // loads the category on click for the google map
+              initMap(10); // sets up the map with view level 10
+            }
+            else if (this.id === "laserCutting") {
+              categoryChange(1);
+              initMap(10);
+            }
+            else if (this.id === "materials") {
+              categoryChange(2);
+              initMap(10);
+            }
+            else if (this.id === "printerBinder") {
+              categoryChange(3);
+              initMap(10);
+            }
+            else if (this.id === "printer") {
+              categoryChange(4);
+              initMap(12);
+            }
+            else if (this.id === "photo") {
+              categoryChange(5);
+              initMap(13);
+            }
+            else if (this.id === "signage") {
+              categoryChange(6);
+              initMap(12);
+            }
+            else {
+              categoryChange(0)
+            }
           }
         }
       }
     }
-    
-        var melbourne = {
+    var melbourne = {
       lat: -37.8136
       , lng: 144.9631
-    };
+    }; // initiates the Google Map to Melbourne
     var map;
 
-    function initMap(test) {
+    
+    // This is google Javascript
+    // with modifications
+    function initMap(size) {
       map = new google.maps.Map(document.getElementById('map'), {
-        zoom: test
+        zoom: size
         , center: melbourne
+        , disableDefaultUI: true
+        , zoomControl: true
+        , styles: [
+          {
+            "featureType": "water"
+            , "elementType": "geometry"
+            , "stylers": [
+              {
+                "color": "#e9e9e9"
+            }
+              , {
+                "lightness": 17
+            }
+        ]
+    }
+          , {
+            "featureType": "landscape"
+            , "elementType": "geometry"
+            , "stylers": [
+              {
+                "color": "#f5f5f5"
+            }
+              , {
+                "lightness": 20
+            }
+        ]
+    }
+          , {
+            "featureType": "road.highway"
+            , "elementType": "geometry.fill"
+            , "stylers": [
+              {
+                "color": "#ffffff"
+            }
+              , {
+                "lightness": 17
+            }
+        ]
+    }
+          , {
+            "featureType": "road.highway"
+            , "elementType": "geometry.stroke"
+            , "stylers": [
+              {
+                "color": "#ffffff"
+            }
+              , {
+                "lightness": 29
+            }
+              , {
+                "weight": 0.2
+            }
+        ]
+    }
+          , {
+            "featureType": "road.arterial"
+            , "elementType": "geometry"
+            , "stylers": [
+              {
+                "color": "#ffffff"
+            }
+              , {
+                "lightness": 18
+            }
+        ]
+    }
+          , {
+            "featureType": "road.local"
+            , "elementType": "geometry"
+            , "stylers": [
+              {
+                "color": "#ffffff"
+            }
+              , {
+                "lightness": 16
+            }
+        ]
+    }
+          , {
+            "featureType": "poi"
+            , "elementType": "geometry"
+            , "stylers": [
+              {
+                "color": "#f5f5f5"
+            }
+              , {
+                "lightness": 21
+            }
+        ]
+    }
+          , {
+            "featureType": "poi.park"
+            , "elementType": "geometry"
+            , "stylers": [
+              {
+                "color": "#dedede"
+            }
+              , {
+                "lightness": 21
+            }
+        ]
+    }
+          , {
+            "elementType": "labels.text.stroke"
+            , "stylers": [
+              {
+                "visibility": "on"
+            }
+              , {
+                "color": "#ffffff"
+            }
+              , {
+                "lightness": 16
+            }
+        ]
+    }
+          , {
+            "elementType": "labels.text.fill"
+            , "stylers": [
+              {
+                "saturation": 36
+            }
+              , {
+                "color": "#333333"
+            }
+              , {
+                "lightness": 40
+            }
+        ]
+    }
+          , {
+            "elementType": "labels.icon"
+            , "stylers": [
+              {
+                "visibility": "off"
+            }
+        ]
+    }
+          , {
+            "featureType": "transit"
+            , "elementType": "geometry"
+            , "stylers": [
+              {
+                "color": "#f2f2f2"
+            }
+              , {
+                "lightness": 19
+            }
+        ]
+    }
+          , {
+            "featureType": "administrative"
+            , "elementType": "geometry.fill"
+            , "stylers": [
+              {
+                "color": "#fefefe"
+            }
+              , {
+                "lightness": 20
+            }
+        ]
+    }
+          , {
+            "featureType": "administrative"
+            , "elementType": "geometry.stroke"
+            , "stylers": [
+              {
+                "color": "#fefefe"
+            }
+              , {
+                "lightness": 17
+            }
+              , {
+                "weight": 1.2
+            }
+        ]
+    }
+]
       , });
-      // Create a <script> tag and set the USGS URL as the source.
       var script = document.createElement('script');
-      //      script.src = 'assets/js/google.js';
       script.src = 'assets/js/plData.js';
       document.getElementsByTagName('head')[0].appendChild(script);
     }
-    // Loop through the results array and place a marker for each
-    // set of coordinates.
-    var category;
 
+    // little function that sets up the category
+    // array  for change inside the google script
+    var category;
     function categoryChange(number) {
       category = categoryArray[number];
       return category;
     }
+    
+    
+    //Google script to
     window.eqfeed_callback = function (results) {
       console.log(results);
       for (var i = 0; i < results.features.length; i++) {
@@ -131,38 +323,26 @@
             , map: map
             , animation: google.maps.Animation.DROP
           , });
-          marker.addListener('click', toggleBounce);
-        }
-
-        function toggleBounce() {
-          if (marker.getAnimation() !== null) {
-            marker.setAnimation(null);
-          }
-          else {
-            marker.setAnimation(google.maps.Animation.BOUNCE);
-          }
         }
       }
     }
-
   </script>
 </head>
 
 <body>
   <div class="title highlight"><a href="index.html">Printer Linker</a></div>
   <div class="body-container">
+    <div class="map-container" id="mapCanvas">
+      <div id="map"></div>
+    </div>
     <div class="main-nav">
-      <!--      <table id="dataArea"></table>-->
-      <button class="accordion" onclick="initMap()" id="binder">Binder</button>
+      <button class="accordion" id="binder">Binder</button>
       <button class="accordion" id="laserCutting">Laser Cutting</button>
       <button class="accordion" id="materials">Materials</button>
       <button class="accordion" id="printerBinder">Printer &amp; Binder</button>
       <button class="accordion" id="printer">Printer</button>
       <button class="accordion" id="photo">Photo</button>
       <button class="accordion" id="signage">Signage</button>
-    </div>
-    <div class="map-container" id="mapCanvas">
-      <div id="map"></div>
     </div>
   </div>
 </body>

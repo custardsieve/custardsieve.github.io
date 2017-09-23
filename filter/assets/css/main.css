@@ -17,6 +17,7 @@ body {
   color: #fff;
   margin: 0;
   padding: 2% 5%;
+  margin-left: 80px;
 }
 
 .title-container {
@@ -44,15 +45,39 @@ body {
 #dataAreaContainer {
   position: fixed;
 /*  background-color: pink;*/
-  width: 100%;
+  width: 90%;
+  margin-left:80px;
   padding: 2% 3.5%;
   height: 100vh;
-  overflow: scroll;
+  overflow-y: scroll;
   display:flex;
   flex-wrap:wrap;
   align-items: flex-end;
   top:0;
   left:0;
+}
+
+#dataAreaContainer::-webkit-scrollbar { 
+    display: none; 
+}
+
+#dataAreaContainerClick {
+  position: fixed;
+/*  background-color: pink;*/
+  width: 90%;
+  margin-left:80px;
+  padding: 2% 3.5%;
+  height: 100vh;
+  overflow-y: scroll;
+  display:flex;
+  flex-wrap:wrap;
+  align-items: flex-end;
+  top:0;
+  left:0;
+}
+
+#dataAreaContainerClick::-webkit-scrollbar { 
+    display: none; 
 }
 
 #intro {
@@ -103,8 +128,45 @@ span {
 
 nav {
   position: fixed;
-  left:20px;
-  top: 60px;
+  height:100vh;
+  width: 80px;
+  color:black;
+  z-index: 7;
+  left:0;
+  top: 0;
+  background-color:#fff;
+}
+.nav-container {
+  color: pink;
+  transition: all;
+}
+.nav-container svg {
+  height: 80px;
+  padding: 20px;
+}
+#nav-icon {
+  display: flex;
+  width:80px;
+  position: relative;
+  transition: all 0.6s cubic-bezier(1, 0.01, 0.49, 1.24);
+/*  left: -80px*/
+  transform: translateX(-80px);
+/*  overflow: hidden;*/
+}
+#icon-top {
+/*  width: 10px;*/
+/*  overflow:hidden;*/
+}
+.nav-element-container {
+  transform: rotate(90deg) translateY(-80px); 
+  transform-origin: top left;
+  width:90vh;
+  overflow: scroll;
+}
+.nav-element {
+  display: inline-block;
+  width: auto;
+  margin: 0 10px
 }
 
 nav button {
@@ -124,7 +186,7 @@ nav button {
 }
 
 .item {
-  
+  text-align: center;
 }
 
 .item img {
@@ -166,3 +228,4 @@ nav button {
 .hide {
   max-width: 0;
 }
+

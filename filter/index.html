@@ -1,201 +1,185 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <title>New Photography</title>
-    <link rel="apple-touch-icon" sizes="57x57" href="assets/images/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="assets/images/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="assets/images/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="assets/images/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="assets/images/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="assets/images/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="assets/images/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="assets/images/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="assets/images/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="assets/images/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
-    <link rel="stylesheet" href="assets/css/main.css">
-    <script src="assets/js/jquery-3.2.0.min.js" charset="utf-8"></script>
-    <script src="assets/js/main.js" charset="utf-8"></script>
-    <script type="text/javascript" src="assets/js/images.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Eczar:800|Work+Sans" rel="stylesheet">
-  
-    <script type="application/javascript">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>New Photography</title>
+  <link rel="apple-touch-icon" sizes="57x57" href="assets/images/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="assets/images/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="assets/images/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="assets/images/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="assets/images/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="assets/images/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="assets/images/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="assets/images/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/images/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="assets/images/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <script src="assets/js/jquery-3.2.0.min.js" charset="utf-8"></script>
+  <script src="assets/js/main.js" charset="utf-8"></script>
+  <script type="text/javascript" src="assets/js/images.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Eczar:800|Work+Sans" rel="stylesheet">
+  <script type="application/javascript">
+    
+    // Sets all functions to run on Load
     window.onload = function () {
-      
-      populateData();
-      var intro = document.getElementById("intro");
-      
-      // gets random Number
-      function random() {
-        var number = Math.floor(Math.random() * (1 - 0 + 3)) + 1;
-        return number;       
-      }
-      
-      //adds the class show to images
-      var imgs = document.images;
-      for (i = 0; i < imgs.length; i++) {
-        imgs[i].className += "show";
-      }
-      
-      // Sets the column size to a random number
-      var table = document.getElementsByClassName("item");
-        for (i = 0; i < table.length; i++) {
-          table[i].className += " col" + random() + "of6";
-        } 
-      
+        //loads all the images  
+        populateData();
+        var intro = document.getElementById("intro");
+        // Creates a random Grid on Hover
+        function random(min, max) {
+          var number = Math.floor(Math.random() * (max - min + 1)) + min;
+          return number;
+        }
       } // End of onLoad
     
     
-    // Loads the gallery at the Bottom of Page
+      // Loads the gallery at the Bottom of Page
     function populateData() {
-        var container = document.getElementById('container');
-        for (i = 0; i < npData.length; i++) {
-          container.innerHTML += "<div class='" + npData[i].class + "'><div class='spacer'><img src='" + npData[i].src + "'></div></div>";
-        }
+      var container = document.getElementById('container');
+      // Starts the loop for dataSets
+      for (i = 0; i < npData.length; i++) {
+        container.innerHTML += "<div class='" + npData[i].class + "' style='z-index:" + random(1, 5) + "'><div class='spacer'><img src='" + npData[i].src + "'></div></div>";
       }
-      
-      // Creates a random Grid on Hover
-      function random(min, max) {
-        var number = Math.floor(Math.random() * (max - min + 1)) + min;
-        return number;       
+      var table = document.getElementsByClassName("item");
+      for (i = 0; i < table.length; i++) {
+        table[i].className += " col" + random(1, 3) + "of6";
       }
-      
- 
-      function populateHover(itemName) {
-//        var hoverElement = document.getElementById(itemName);
-        var dataArea = document.getElementById("intro");
-        var dataAreaContainer = document.createElement("div");
-        var iconChange = document.getElementById("nav-icon");
-        dataAreaContainer.id += "dataAreaContainer";
-        dataAreaContainer.style.zIndex = "6";
-        
-        for (i = 0; i < npData.length; i++) {
-          var tag = npData[i].class;
-          var string = tag.match(itemName);
-          if (string != null) {
-            dataAreaContainer.innerHTML += "<div class='item col" + random(2,5) + "of6'><div class='spacer'><img src='" + npData[i].src + "'></div></div>"; 
-          }
-        }
-        dataArea.appendChild(dataAreaContainer);
-//        wait(1000);
-        iconChange.style.transform = "translateX(0)";
-      }
+    }
+    
+    // Creates a random Grid on Hover
+    function random(min, max) {
+      var number = Math.floor(Math.random() * (max - min + 1)) + min;
+      return number;
+    }
 
-      
-//      function populateClick(itemName) {
-////        var hoverElement = document.getElementById(itemName);
-//        var dataArea = document.getElementById("intro");
-//        var dataAreaContainer = document.createElement("div");
-//        var iconChange = document.getElementById("nav-icon");
-//        dataAreaContainer.id += "dataAreaContainerClick";
-//        dataAreaContainer.style.zIndex = "6";
-//        
-//        for (i = 0; i < npData.length; i++) {
-//          var tag = npData[i].class;
-//          var string = tag.match(itemName);
-//          if (string != null) {
-//            dataAreaContainer.innerHTML += "<div class='item col" + random(1,2) + "of6'><div class='spacer'><img src='" + npData[i].src + "'></div></div>"; 
-//          }
-//        }
-//        dataArea.appendChild(dataAreaContainer);
-//        iconChange.style.transform = "translateX(0)";
-//      }
-      
-      function wait(ms){
-         var start = new Date().getTime();
-         var end = start;
-         while(end < start + ms) {
-           end = new Date().getTime();
+    // Sorts Images OnHover
+    function populateHover(itemName) {
+      var dataArea = document.getElementById("intro");
+      var dataAreaContainer = document.createElement("div");
+      var iconChange = document.getElementById("nav-icon");
+      dataAreaContainer.id += "dataAreaContainer";
+      dataAreaContainer.style.zIndex = "6";
+      for (i = 0; i < npData.length; i++) {
+        var tag = npData[i].class;
+        var string = tag.match(itemName);
+        if (string != null) {
+          dataAreaContainer.innerHTML += "<div class='item col" + random(2, 5) + "of6'><div class='spacer'><img src='" + npData[i].src + "'></div></div>";
         }
       }
-            
-      function resetIntro() {
-        var dataTable = document.getElementById("dataAreaContainer");
-        var iconChange = document.getElementById("nav-icon");
-        dataTable.parentNode.removeChild(dataTable);
-        iconChange.style.transform = "translateX(-80px)";
-      }
-      
-      
-      
-      
-      
-      
-      
-    </script>
-  
-  </head>
-  <body>
+      dataArea.appendChild(dataAreaContainer);
+      iconChange.style.transform = "translateX(0)";
+    }
 
-    <!-- Start here -->
-<div class="title-container">
-  <div class="title">
-    <h1>The new path of direct photo&shy;graphy</h1>
+    //Never got to use this function :-(
+    function wait(ms) {
+      var start = new Date().getTime();
+      var end = start;
+      while (end < start + ms) {
+        end = new Date().getTime();
+      }
+    }
+
+    //hide and deletes the datacontainer for the image sorts
+    function resetIntro() {
+      var dataTable = document.getElementById("dataAreaContainer");
+      var iconChange = document.getElementById("nav-icon");
+      dataTable.parentNode.removeChild(dataTable);
+      iconChange.style.transform = "translateX(-80px)";
+    }
+
+    //Enables Thumbnail View
+    function thumbnailView() {
+      var table = document.getElementsByClassName("item");
+      for (i = 0; i < table.length; i++) {
+        table[i].classList.add("thumb");
+        console.log(table[i].classList);
+      }
+      document.getElementById("thumb").style.display = "none";
+      document.getElementById("flaneur").style.display = "initial";
+      document.getElementById("flaneur").style.backgroundColor = "#ff2300";
+      document.getElementById("flaneur").style.color = "white";
+    }
+
+    // disables thumbnail and give the user the
+    // ability to become a flanuer, browsing images
+    // as they scroll with pleasure
+    function FlanuerView() {
+      var table = document.getElementsByClassName("item");
+      for (i = 0; i < table.length; i++) {
+        table[i].classList.remove("thumb");
+        console.log(table[i].classList);
+      }
+      document.getElementById("thumb").style.display = "initial";
+      document.getElementById("flaneur").style.display = "none";
+    }
+  </script>
+</head>
+
+<body>
+  <!-- Start here -->
+  <div class="title-container">
+    <div class="title">
+      <h1>The new path of direct photo&shy;graphy</h1> </div>
   </div>
-</div>
-<div class="intro-container">
-  <div id="intro">
-    <p>While some photographers were pursuing imaginary worlds, others contented themselves with direct, untouched shots with a classical reportage style: the setting of life, people behaviour. However Robert Frank had already created these images and the time for images to symbolize great timeless truths was over, for we can´t record without passing judgement. </p><p>Two notable photographers of 60&#8217;s and 70&#8217;s were <span onmouseover="populateHover(this.id)"  id="lee-f">Lee Friedlander</span> and <span  onmouseover="populateHover(this.id)" id="gary-w">Garry Winogrand</span>, both using the rules of spontaneity for their artistic construction, similar to a jazz musician in their virtuosity of deconstructing the rules. Garry Winogrand, originally a painter, abandoned his art because it was too slow and became a reportage photographer for the Prix agency. He set out across America in a similar travel to Robert Frank, however Winogrand loved human contact and frequently used tools such as zoos, pretty girls and socialite gatherings simply as pretexts to produce images which he himself regarded as “still-life&#8217;s”. His books, <span onmouseover="populateHover(this.id)" id="animals">The Animals</span> (1969), <span onmouseover="populateHover(this.id)" id="women">Women are Beautiful</span> (1975) and <span onmouseover="populateHover(this.id)"  id="airports">Public Relations</span> (1977) are brilliant examples of this, devoid of any commentary one might be tempted to supply. </p><p>Although in art at the time, the abstract aesthetic began to evolve. Artists such as Tobey, Pollock, Bissière and Vieira da Silva began evoking the inextricable abundance of certain scenes. Meanwhile in photography, the intense disorder of the urban landscape defied the classic reporter seeking the right angle and moment for a clearly stated image. Friedlander was to construct his photographs by emphasising the very <span onmouseover="populateHover(this.id)"  id="newyork">confusion of the spectacle</span>, but unlike Winogrand, always with a solitary outlook. An exhibition organized in 1966 by Nathan Lyons Toward a Social Landscape was to show the works of Winogrand, Friedlander and Duane Michals. In these photographic spaces, man seemed to have been rejected and replaced by cars, posters, monuments and posts. Recognition that meaning has been lost in a world in which even though mankind multiplies and gathers he still remains invisible; the human being has become just one object among many others. </p><p>Until now photography had tried to eliminate whatever stood in the way of its theme but Friedlander photographs precisely all that is in the way, beginning with his own shadow, since it happens to be there&mdash;in <span onmouseover="populateHover(this.id)" id="self-portraits">Self-Portraits</span>, 1970. In <span onmouseover="populateHover(this.id)"  id="monuments">American Monumnet</span> (1975), Friedlander assembles a collection of images of official monuments, devoid of lyricism, intention or meaning. It´s concern is what is photographed, not any perceived idea of what a photograph should look like. Just as Winogrand states “I photograph to find out what something will look like photographed.” So too does Friedlander adopt this style which marked a whole line of direct photography and took over from the classic reportage of the thirties, forties and fifties. The title of Elliot Erwitt´s book, <span onmouseover="populateHover(this.id)" id="elliot-e">Photographs and Anti-photograph</span> (1972) indicates the extent to which the new manner of photography sometimes seemed paradoxical even to those who practiced it. In Erwitt´s work the anxiety prompted by Robert Frank´s heritage is laced with a sense of humor. The American photographer seizes, with an equal exactitude and impassivity, upon the tense relations between things and people in modern life. </p><p>Working with a more brutal register, <span onmouseover="populateHover(this.id)" id="mark-c">Mark Cohen</span> seizes upon faces and bodies as they loom up in sudden light of a flash. The world of chaotic American suburbs tackled by Friedlander is also depicted, in the realm of color, by <span onmouseover="populateHover(this.id)" id="stephen-s">Stephen Shore</span>. Because of fixity of the photographic image and the precise and haunting nature of it´s testimony, the objective truth it contains is always on the point of slipping into a hallucinatory dream. <span onmouseover="populateHover(this.id)" id="joel-m">Joel Meyerowitz</span> (Cape Light, 1978) another photographer of superb color and proximity, prefers busy crowds frozen in the electric light of a “retarded flash” which brings out the drawn expressions of the faces of several New York workers during rush hour. The work of Ralph Gibson, born 1939, assistant to the great Dorothea Lange and a friend and collaborator of Robert Frank, provides the most striking illustration of new direct photography. In 1969 Gibson set up his own publishing house, Lustrum Press. Each of his books of photography becomes an autonomous means of expression, making its effect through the succession, juxtaposition and rhythm of images. His Famous trilogy, The Somnambulist (1970), Déjà Vu (1973) and Days at Sea (1974), may be seem as a model for the art of putting images together. </p><p>Between The Somnambulist and Days at Sea a controlled shift takes place, moving away from visions still surrealistic and dreamlike towards almost minimal foreground form, veritable photographic bas-reliefs. But the tension between the oneiric content and the material presence is never broken. His endeavour is central to the double nature of photographic expression: on the one hand it can convey the imaginary; on the other it can report it. </p><p>In Tokyo, <span onmouseover="populateHover(this.id)" id="ikko-n">Ikko Naraharas</span> had his first work exhibited and was considered “the first phase of realism”. Soon Ikko joined <span onmouseover="populateHover(this.id)" id="shomei-t">Shomei Tomatsu</span>, Eikoh Hosoe and others to an agency known as Vivo. This agency saw the rise of new direct photography outlooks in Asia until 1962 when Ikko set off on a long world trip and subsequently frequented the United States many times. He was as sensitive to the presence of the past i.e. World War II, (Where Time has Stopped, 1967), as he was to the timeless modernity of America (Where Time has vanished, 1975). But central to his work was space; whether enclosed and confined or wide open to the great expanses. In a cruder sense, Shomei Tomatsu combined his commitment to the aftermath of war (11.02 Hagasaki, 1962) and the social crisis of Japan (Oh, Shinjuku! 1962) with an intensely personal plastic means of expression. In his case too, human testimony and plastic abstraction ceased to clash.</p>
-  </div><!-- End of Intro -->
-  <div class="gradient"></div>
-</div><!-- End of Intro-container -->
-
-
-<div id="container"> 
-</div><!-- Container -->
-
-<nav>
-  <div class="nav-container">
-   <div id="nav-icon" onclick="resetIntro()">
-      <div id="icon-top">
-      <svg version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 1024 1024" enable-background="new 0 0 1024 1024" xml:space="preserve">
-<polygon points="973.9,88.7 938.6,53.2 513.8,474.8 88.6,47.9 53.1,83.2 478.3,510 47.1,937.7 82.4,973.2 513.5,545.4 934.2,967.7 
-	969.6,932.5 549,510.2 "/>
-</svg>
-
+  <div class="intro-container">
+    <div id="intro">
+      <p>While some photographers were pursuing imaginary worlds, others contented themselves with direct, untouched shots with a classical reportage style: the setting of life, people behaviour. However Robert Frank had already created these images and the time for images to symbolize great timeless truths was over, for we can´t record without passing judgement. </p>
+      <p>Two notable photographers of 60&#8217;s and 70&#8217;s were <span onmouseover="populateHover(this.id)" id="lee-f">Lee Friedlander</span> and <span onmouseover="populateHover(this.id)" id="gary-w">Garry Winogrand</span>, both using the rules of spontaneity for their artistic construction, similar to a jazz musician in their virtuosity of deconstructing the rules. Garry Winogrand, originally a painter, abandoned his art because it was too slow and became a reportage photographer for the Prix agency. He set out across America in a similar travel to Robert Frank, however Winogrand loved human contact and frequently used tools such as zoos, pretty girls and socialite gatherings simply as pretexts to produce images which he himself regarded as “still-life&#8217;s”. His books, <span onmouseover="populateHover(this.id)" id="animals">The Animals</span> (1969), <span onmouseover="populateHover(this.id)" id="women">Women are Beautiful</span> (1975) and <span onmouseover="populateHover(this.id)" id="airports">Public Relations</span> (1977) are brilliant examples of this, devoid of any commentary one might be tempted to supply. </p>
+      <p>Although in art at the time, the abstract aesthetic began to evolve. Artists such as Tobey, Pollock, Bissière and Vieira da Silva began evoking the inextricable abundance of certain scenes. Meanwhile in photography, the intense disorder of the urban landscape defied the classic reporter seeking the right angle and moment for a clearly stated image. Friedlander was to construct his photographs by emphasising the very <span onmouseover="populateHover(this.id)" id="newyork">confusion of the spectacle</span>, but unlike Winogrand, always with a solitary outlook. An exhibition organized in 1966 by Nathan Lyons Toward a Social Landscape was to show the works of Winogrand, Friedlander and Duane Michals. In these photographic spaces, man seemed to have been rejected and replaced by cars, posters, monuments and posts. Recognition that meaning has been lost in a world in which even though mankind multiplies and gathers he still remains invisible; the human being has become just one object among many others. </p>
+      <p>Until now photography had tried to eliminate whatever stood in the way of its theme but Friedlander photographs precisely all that is in the way, beginning with his own shadow, since it happens to be there&mdash;in <span onmouseover="populateHover(this.id)" id="self-portraits">Self-Portraits</span>, 1970. In <span onmouseover="populateHover(this.id)" id="monuments">American Monumnet</span> (1975), Friedlander assembles a collection of images of official monuments, devoid of lyricism, intention or meaning. It´s concern is what is photographed, not any perceived idea of what a photograph should look like. Just as Winogrand states “I photograph to find out what something will look like photographed.” So too does Friedlander adopt this style which marked a whole line of direct photography and took over from the classic reportage of the thirties, forties and fifties. The title of Elliot Erwitt´s book, <span onmouseover="populateHover(this.id)" id="elliot-e">Photographs and Anti-photograph</span> (1972) indicates the extent to which the new manner of photography sometimes seemed paradoxical even to those who practiced it. In Erwitt´s work the anxiety prompted by Robert Frank´s heritage is laced with a sense of humor. The American photographer seizes, with an equal exactitude and impassivity, upon the tense relations between things and people in modern life. </p>
+      <p>Working with a more brutal register, <span onmouseover="populateHover(this.id)" id="mark-c">Mark Cohen</span> seizes upon faces and bodies as they loom up in sudden light of a flash. The world of chaotic American suburbs tackled by Friedlander is also depicted, in the realm of color, by <span onmouseover="populateHover(this.id)" id="stephen-s">Stephen Shore</span>. Because of fixity of the photographic image and the precise and haunting nature of it´s testimony, the objective truth it contains is always on the point of slipping into a hallucinatory dream. <span onmouseover="populateHover(this.id)" id="joel-m">Joel Meyerowitz</span> (Cape Light, 1978) another photographer of superb color and proximity, prefers busy crowds frozen in the electric light of a “retarded flash” which brings out the drawn expressions of the faces of several New York workers during rush hour. The work of Ralph Gibson, born 1939, assistant to the great Dorothea Lange and a friend and collaborator of Robert Frank, provides the most striking illustration of new direct photography. In 1969 Gibson set up his own publishing house, Lustrum Press. Each of his books of photography becomes an autonomous means of expression, making its effect through the succession, juxtaposition and rhythm of images. His Famous trilogy, The Somnambulist (1970), Déjà Vu (1973) and Days at Sea (1974), may be seem as a model for the art of putting images together. </p>
+      <p>Between The Somnambulist and Days at Sea a controlled shift takes place, moving away from visions still surrealistic and dreamlike towards almost minimal foreground form, veritable photographic bas-reliefs. But the tension between the oneiric content and the material presence is never broken. His endeavour is central to the double nature of photographic expression: on the one hand it can convey the imaginary; on the other it can report it. </p>
+      <p>In Tokyo, <span onmouseover="populateHover(this.id)" id="ikko-n">Ikko Naraharas</span> had his first work exhibited and was considered “the first phase of realism”. Soon Ikko joined <span onmouseover="populateHover(this.id)" id="shomei-t">Shomei Tomatsu</span>, Eikoh Hosoe and others to an agency known as Vivo. This agency saw the rise of new direct photography outlooks in Asia until 1962 when Ikko set off on a long world trip and subsequently frequented the United States many times. He was as sensitive to the presence of the past i.e. World War II, (Where Time has Stopped, 1967), as he was to the timeless modernity of America (Where Time has vanished, 1975). But central to his work was space; whether enclosed and confined or wide open to the great expanses. In a cruder sense, Shomei Tomatsu combined his commitment to the aftermath of war (11.02 Hagasaki, 1962) and the social crisis of Japan (Oh, Shinjuku! 1962) with an intensely personal plastic means of expression. In his case too, human testimony and plastic abstraction ceased to clash.</p>
     </div>
-      <div id="icon-bottom">
-       <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 1024 1024" enable-background="new 0 0 1024 1024" xml:space="preserve">
-        <path d="M512,0C229.2,0,0,229.2,0,512s229.2,512,512,512s512-229.2,512-512S794.8,0,512,0z M965.5,643.2L684,692.9l73.7-87.9h2.3
-          v-2.7l200.2-238.6C976,411.3,984,461,984,512C984,556.9,977.8,600.8,965.5,643.2z M473.6,730l-131.1-75.7L290.7,512l51.8-142.3
-          L473.6,294l149.1,26.3l97.3,116v151.4l-97.3,116L473.6,730z M943.8,321L760,540V110.3c31,19.1,59.6,41.9,85.8,68
-          C887.2,219.7,920.2,267.7,943.8,321z M695.7,77.1c8.2,3.5,16.3,7.2,24.3,11.1v285.9L443.8,44.9C466.2,41.6,489,40,512,40
-          C575.7,40,637.5,52.5,695.7,77.1z M328.3,77.1c23-9.7,46.6-17.6,70.6-23.5l183.8,219L159.6,198c6-6.7,12.3-13.3,18.7-19.8
-          C221.6,134.9,272.1,100.8,328.3,77.1z M130.8,233.6l281.5,49.6L40.2,498c1.7-58.8,14.1-115.8,36.9-169.7
-          C91.3,294.6,109.3,262.9,130.8,233.6z M41,543.7l247.5-142.9l-147,403.8c-26.3-33.2-47.9-69.6-64.5-108.9
-          C56.6,647.2,44.5,596.3,41,543.7z M178.2,845.8c-2.2-2.2-4.4-4.5-6.6-6.8l97.7-268.5l147,403.9c-30.1-6.2-59.5-15.3-88.1-27.4
-          C272.1,923.2,221.6,889.1,178.2,845.8z M512,984c-17,0-33.8-0.9-50.5-2.7l-97.8-268.6l372.2,214.9c-13,7-26.5,13.5-40.2,19.3
-          C637.5,971.5,575.7,984,512,984z M845.8,845.8C823.9,867.6,800.3,887,775,904L527.5,761.1l116.5-20.5l0,0l0,0l306.8-54.1
-          c-1.2,3.1-2.5,6.2-3.8,9.2C923.2,751.9,889.1,802.4,845.8,845.8z"/>
-      </svg>
-     </div>
-   </div>
-   <div class="nav-element-container">
-      <div class="nav-element">
-        <h2>gallery</h2>
-      </div>
-      <div class="nav-element">
-        <h2>gallery</h2>
-      </div>
-      <div class="nav-element">
-        <h2>gallery</h2>
-      </div>
-      <div class="nav-element">
-        <h2>gallery</h2>
-      </div>
-      <div class="nav-element">
-      <h2>gallery</h2>
-    </div>
-    </div>
+    <!-- End of Intro -->
+    <div class="gradient"></div>
   </div>
-</nav>
+  <!-- End of Intro-container -->
+  <div id="container"> </div>
+  <!-- Container -->
+  <nav>
+    <div class="nav-container">
+      <div class="icon-hide">
+        <div id="nav-icon">
+          <div onclick="resetIntro()" id="icon-top">
+            <svg version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1024 1024" enable-background="new 0 0 1024 1024" xml:space="preserve">
+              <polygon points="973.9,88.7 938.6,53.2 513.8,474.8 88.6,47.9 53.1,83.2 478.3,510 47.1,937.7 82.4,973.2 513.5,545.4 934.2,967.7 
+    969.6,932.5 549,510.2 " /> </svg>
+          </div>
+          <div onclick="location.href='#top'" id="icon-bottom">
+            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1024 1024" enable-background="new 0 0 1024 1024" xml:space="preserve">
+              <path d="M512,0C229.2,0,0,229.2,0,512s229.2,512,512,512s512-229.2,512-512S794.8,0,512,0z M965.5,643.2L684,692.9l73.7-87.9h2.3
+            v-2.7l200.2-238.6C976,411.3,984,461,984,512C984,556.9,977.8,600.8,965.5,643.2z M473.6,730l-131.1-75.7L290.7,512l51.8-142.3
+            L473.6,294l149.1,26.3l97.3,116v151.4l-97.3,116L473.6,730z M943.8,321L760,540V110.3c31,19.1,59.6,41.9,85.8,68
+            C887.2,219.7,920.2,267.7,943.8,321z M695.7,77.1c8.2,3.5,16.3,7.2,24.3,11.1v285.9L443.8,44.9C466.2,41.6,489,40,512,40
+            C575.7,40,637.5,52.5,695.7,77.1z M328.3,77.1c23-9.7,46.6-17.6,70.6-23.5l183.8,219L159.6,198c6-6.7,12.3-13.3,18.7-19.8
+            C221.6,134.9,272.1,100.8,328.3,77.1z M130.8,233.6l281.5,49.6L40.2,498c1.7-58.8,14.1-115.8,36.9-169.7
+            C91.3,294.6,109.3,262.9,130.8,233.6z M41,543.7l247.5-142.9l-147,403.8c-26.3-33.2-47.9-69.6-64.5-108.9
+            C56.6,647.2,44.5,596.3,41,543.7z M178.2,845.8c-2.2-2.2-4.4-4.5-6.6-6.8l97.7-268.5l147,403.9c-30.1-6.2-59.5-15.3-88.1-27.4
+            C272.1,923.2,221.6,889.1,178.2,845.8z M512,984c-17,0-33.8-0.9-50.5-2.7l-97.8-268.6l372.2,214.9c-13,7-26.5,13.5-40.2,19.3
+            C637.5,971.5,575.7,984,512,984z M845.8,845.8C823.9,867.6,800.3,887,775,904L527.5,761.1l116.5-20.5l0,0l0,0l306.8-54.1
+            c-1.2,3.1-2.5,6.2-3.8,9.2C923.2,751.9,889.1,802.4,845.8,845.8z" /> </svg>
+          </div>
+        </div>
+        <!-- End of Nav-icon -->
+      </div>
+      <!-- End of Nav-Hide -->
+      <div class="nav-element-container">
+        <div class="nav-element"> <a href="#container"><h2>Gallery</h2></a> </div>
+        <div onclick="thumbnailView()" id="thumb" class="nav-element">
+          <h2>Thumbnail View</h2> </div>
+        <div onclick="FlanuerView()" id="flaneur" class="nav-element">
+          <h2>Flâneur View</h2> </div>
+      </div>
+      <!-- End of Nav-Element-Container-->
+    </div>
+    <!-- End of Nav-Container-->
+  </nav>
+</body>
 
-
-  </body>
 </html>

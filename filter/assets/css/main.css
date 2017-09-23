@@ -10,7 +10,9 @@
 
 /* Start here */
 
-
+/* ------------------------------------- */
+/* ------------------- body and title -- */
+/* ------------------------------------- */
 body {
   font-family: 'Work Sans', sans-serif;
   background-color: #000;
@@ -24,15 +26,13 @@ body {
   z-index: 2;
   position: fixed;
   top:0;
-  width: 100%;
   text-align: center;
   text-transform: uppercase;
 }
 .title {
-  width: 60%;
-  margin: 0 auto;
+  width: 90%;
   color:transparent;
-  -webkit-text-stroke: 1px grey;
+  -webkit-text-stroke: 1px white;
   letter-spacing: 2px;
   line-height: 1;
 }
@@ -42,9 +42,13 @@ body {
   position: relative;
 }
 
+/* ----------------------------------- */
+/* ---------------- Image Container -- */
+/* ---------------- for hover -------- */
+/* ----------------------------------- */
+
 #dataAreaContainer {
   position: fixed;
-/*  background-color: pink;*/
   width: 90%;
   margin-left:80px;
   padding: 2% 3.5%;
@@ -63,7 +67,6 @@ body {
 
 #dataAreaContainerClick {
   position: fixed;
-/*  background-color: pink;*/
   width: 90%;
   margin-left:80px;
   padding: 2% 3.5%;
@@ -80,6 +83,72 @@ body {
     display: none; 
 }
 
+
+/* ----------------------------------- */
+/* ---------------- Main Navigation -- */
+/* ----------------------------------- */
+
+nav {
+  position: fixed;
+  height:100vh;
+  width: 80px;
+  color:black;
+  z-index: 7;
+  left:0;
+  top: 0;
+  background-color:#fff;
+  transition: all 0.6s cubic-bezier(1, 0.01, 0.49, 1.24);
+}
+
+.nav-container {
+  transition: all;
+}
+
+.nav-container svg {
+  height: 80px;
+  padding: 24px;
+}
+
+#nav-icon {
+  display: flex;
+  width:80px;
+  position: relative;
+  transition: all 0.6s cubic-bezier(1, 0.01, 0.49, 1.24);
+  transform: translateX(-80px);
+}
+
+#icon-top {
+  background-color: #ff2300;
+}
+
+.nav-element-container {
+  transform: rotate(90deg) translateY(-80px); 
+  transform-origin: top left;
+  display: flex;
+  width:90vh;
+  height: 80px;
+}
+
+.nav-element {
+  transform: rotate(180deg);
+  width: auto;
+  padding: 0 20px;
+  transition: all 0.4s cubic-bezier(1, 0.01, 0.49, 1.24);
+}
+
+.nav-element:hover {
+  background-color: #ff2300;
+}
+
+nav button {
+  display: block;
+  margin:5px;
+  border: 0;
+  background-color: transparent;
+  color: blue;
+  font-size: 80px;
+}
+
 #intro {
   background-color: black;
   padding-top:2%;
@@ -89,10 +158,15 @@ body {
 .gradient {
   height: 500px;
   background: #fff;  /*For browsers that do not support gradients */
-    background: -webkit-linear-gradient(rgba(0,0,0,1),rgba(0,0,0,0)); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(rgba(0,0,0,1),rgba(0,0,0,0)); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(rgba(0,0,0,1),rgba(0,0,0,0)); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(rgba(0,0,0,1),rgba(0,0,0,0));
+  background: -webkit-linear-gradient(rgba(0,0,0,1),rgba(0,0,0,0)); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(rgba(0,0,0,1),rgba(0,0,0,0)); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(rgba(0,0,0,1),rgba(0,0,0,0)); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(rgba(0,0,0,1),rgba(0,0,0,0));
+}
+
+.icon-hide {
+  width: 80px;
+  overflow: hidden;
 }
 
 
@@ -100,12 +174,15 @@ body {
 /* ------------------- Typography -- */
 /* --------------------------------- */
 
-h1, h2, h3, h4, h5 {
+h1 {
   font-family: 'Eczar', serif;
+  font-size: calc(2.5rem + 4.5vmin); 
 }
 
-h1 {
- font-size: calc(2.5rem + 4.5vmin); 
+h2 {
+  font-size: 22px;
+  font-weight: 100;
+  margin: 25px 0;
 }
 
 p {
@@ -122,64 +199,23 @@ p + p:before {
   letter-spacing: -5px
 }
 
+a {
+  text-decoration: none;
+  color:black;
+}
+
 span {
   border-bottom: 3px solid white;
 }
 
-nav {
-  position: fixed;
-  height:100vh;
-  width: 80px;
-  color:black;
-  z-index: 7;
-  left:0;
-  top: 0;
-  background-color:#fff;
-}
-.nav-container {
-  color: pink;
-  transition: all;
-}
-.nav-container svg {
-  height: 80px;
-  padding: 20px;
-}
-#nav-icon {
-  display: flex;
-  width:80px;
-  position: relative;
-  transition: all 0.6s cubic-bezier(1, 0.01, 0.49, 1.24);
-/*  left: -80px*/
-  transform: translateX(-80px);
-/*  overflow: hidden;*/
-}
-#icon-top {
-/*  width: 10px;*/
-/*  overflow:hidden;*/
-}
-.nav-element-container {
-  transform: rotate(90deg) translateY(-80px); 
-  transform-origin: top left;
-  width:90vh;
-  overflow: scroll;
-}
-.nav-element {
-  display: inline-block;
-  width: auto;
-  margin: 0 10px
-}
-
-nav button {
-  display: block;
-  margin:5px;
-  border: 0;
-  background-color: transparent;
-  color: blue;
-  font-size: 80px;
-}
+/* ----------------------------------- */
+/* ---------------- Image Container -- */
+/* ---------------- for hover -------- */
+/* ----------------------------------- */
 
 #container {
   margin-top: 100vh;
+  padding-top:300px;
   display: flex;
   flex-wrap:wrap;
   align-items: flex-end;
@@ -221,11 +257,41 @@ nav button {
   padding: 20px;
 }
 
-.show {
-/*  max-width: 100%*/
+.thumb {
+  flex: 0 0 16.666%;
 }
 
-.hide {
-  max-width: 0;
+#flaneur {
+  display:none;
 }
 
+/* ----------------------------------- */
+/* ---------------- Media Queries ---- */
+/* ----------------------------------- */
+
+@media screen and (max-width: 1024px) {
+  p {
+    font-size: 1.3em;
+  }  
+  nav {
+    background-color: #7b7b7b;
+  }
+  .col1of6 {
+    flex:0 0 33.333%;
+  }
+  .thumb {
+    flex:0 0 33.333%;
+  }
+}
+
+@media screen and (max-width: 667px) {
+  p{
+    font-size: 1.1em;
+  }
+  .col1of6, .col2of6, .col3of6 {
+    flex:0 0 100%;
+  }
+  .thumb {
+    flex:0 0 50%;
+  }
+}

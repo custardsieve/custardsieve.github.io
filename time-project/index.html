@@ -110,8 +110,8 @@
     var hours = date.getHours();
     var seconds = date.getSeconds();
     var minutes = date.getMinutes();
-    console.log(date.getUTCHours());
-    console.log(date.getHours());
+//    console.log(date.getUTCHours());
+//    console.log(date.getHours());
     
     
       function initLocalClocks() {  
@@ -253,22 +253,46 @@ function moveSecondHands() {
     }
   }, 1000);
 }
+    function timeDifference() {
+      var difference = 0;
+      if (utcHours > hours) {
+        difference = utcHours - hours;
+      } else if (utcHours < hours) {
+        difference = hours - utcHours;
+      }
+      return difference;
+    }
         
 // --------------------------------- 
 // Typed script messages
 // --------------------------------- 
        
-    document.addEventListener('DOMContentLoaded', function() { 
-      
+  document.addEventListener('DOMContentLoaded', function() { 
+  
+    var difference = timeDifference();
+    console.log(difference);
+   if (difference === 0) {
+     var d = new Date;
   var typed = new Typed('#typed', {
-//    stringsElement: '#typed-strings',
-    strings: ["I think<em>bad coffee</em> is still better than no coffee.", "me gusta la paella!", "It's " + timeDay + " " + timeHour + ":" + timeMinute + ":" + timeSeconds + " " + amPm + " where we are.", ],
+    
+    strings: ["it's " + d.toLocaleTimeString() + " where are are.^2500 Why don't you give me a call,^1000 I should be available.", ],
     typeSpeed: 40,
     backSpeed: 20,
     startDelay: 3000,
     loop: false,
     loopCount: Infinity,
   });
+   } else {
+     var typed = new Typed('#typed', {
+    
+    strings: ["there is " + difference + " hours difference between us.^2500 So I may be either in bed,^1000 Just waking up^1000 or^1000 in a yoga session.^2000 So keep this in mind before contacting me.", ],
+    typeSpeed: 40,
+    backSpeed: 20,
+    startDelay: 3000,
+    loop: false,
+    loopCount: Infinity,
+  });
+   }
 
 });
 
@@ -308,8 +332,7 @@ function toggleLoop(typed) {
     </button>
       <h1 class="indent">Hello, I am David and <span href="#" id="typed"></span></h1>
     </h1>
-  <h1>I am a graduate communication-design student from some kind of <span onmouseover="populateHover(this.id)" id="thumb"><em>art&nbsp;school</em></span> in Melbourne. I have previously studied fine-arts in the sunny town on Valencia in Spain and majored in <span onmouseover="populateHover(this.id)" id="photo"><em>photography</em></span>. I like to work on <span onmouseover="populateHover(this.id)" id="visual-identities"><em>visual-identities</em></span>, <span onmouseover="populateHover(this.id)" id="publications"><em>publications</em></span> and <span onmouseover="populateHover(this.id)" id="front-end"><em>Front-<i class="swash">End</i></em></span> digital design. I’m particularly interested in <span onmouseover="populateHover(this.id)" id="programming"><em>programming</em></span> techniques and <span onmouseover="populateHover(this.id)" id="ux"><em>User&dash;<i class="swash">E</i>xperienc<i class="swash">e</i></em></span> design. In my free time I play classical piano, cook paellas and work on my <span onmouseover="populateHover(this.id)" id="art-school"><em>Ducati</em></span> — named Tiffany (which always seems to be <span id="iframe"><em>broken?</em><div class="websites"><iframe src="http://www.bikeabouttours.com/" frameborder="0"></iframe></div></span>).</h1> </div>
- <div class="image"></div>
+  <h1>I am a graduate communication-design student from some kind of art&nbsp;school in Melbourne. I have previously studied fine-arts in the sunny town on Valencia in Spain and majored in photography. I like to work on <span onmouseover="populateHover(this.id)" id="visual-identities"><em>visual-identities</em></span>, <span onmouseover="populateHover(this.id)" id="publications"><em>publications</em></span> and Front-End</i></em></span> digital design. I’m particularly interested in programming techniques and Experience design. In my free time I play classical piano, cook paellas and work on my Ducati — named Tiffany (which always seems to be broken?</h1>
  
   
   <article class="clock" id="local">

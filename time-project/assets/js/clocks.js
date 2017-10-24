@@ -1,10 +1,10 @@
-    function initLocalClocks() {
-      // Get the local time using JS
-      var date = new Date;
-      var seconds = date.getSeconds();
-      var minutes = date.getMinutes();
-      var hours = date.getHours();
-      
+var date = new Date;
+var utcHours = date.getUTCHours() + 11;
+var hours = date.getHours();
+var seconds = date.getSeconds();
+var minutes = date.getMinutes();
+
+function initLocalClocks() {  
       // Creates the AM or PM content for the clocks
       var localClock = document.getElementById('local');
       localClock.querySelector('.am_pm').innerHTML = "PM";
@@ -46,16 +46,10 @@
     }
     
     function initMelbClocks() {
-      // Get the Melbourn time using JS
-      var date = new Date;
-      var hours = date.getUTCHours() + 8;
-      var seconds = date.getSeconds();
-      var minutes = date.getMinutes();
-      
       // Creates the AM or PM content for the clocks
       var melbClock = document.getElementById('melb');
       melbClock.querySelector('.am_pm').innerHTML = "PM";
-      if (hours > 12) {
+      if (utcHours > 12) {
         melbClock.querySelector('.am_pm').innerHTML = "PM";
       } else {
         melbClock.querySelector('.am_pm').innerHTML = "AM";
@@ -65,7 +59,7 @@
       var hands = [
         {
           hand: 'hours'
-          , angle: (hours * 30) + (minutes / 2)
+          , angle: (utcHours * 30) + (minutes / 2)
     }
         , {
           hand: 'minutes'
@@ -141,4 +135,12 @@ function moveSecondHands() {
     }
   }, 1000);
 }
-    
+    function timeDifference() {
+      var difference = 0;
+      if (utcHours > hours) {
+        difference = utcHours - hours;
+      } else if (utcHours < hours) {
+        difference = hours - utcHours;
+      }
+      return difference;
+    }

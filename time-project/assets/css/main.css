@@ -53,10 +53,10 @@ body {
 
 h1 {
   margin:0;
-  font-family: 'LyonDisplay-Regular', "Times New Roman", Times, Baskerville, Georgia, serif;
+  font-family: 'Work Sans', sans-serif;  
   font-weight: 100;
   font-size: 4em;
-  line-height: 1.3em;
+  line-height: 1.5em;
   color:blue;
   z-index: 4;
   mix-blend-mode:multiply;

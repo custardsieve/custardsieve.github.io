@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+    button {
+      outline: 0;
+      border: 0;
+      background-color: transparent;
+    }
+    
+    .logo {
+      width: 50%;
+      height: 50%;
+      /*      stroke: black;*/
+      stroke-width: 5;
+    }
+    
+    .logo polygon {
+      fill: transparent
+    }
+    
+  </style>
+</head>
+
+<body>
+  <button id="button">
+    <svg class="logo" viewBox="-5 -5 310 310">
+      <polygon stroke="black" points="0,0 0,150 0,300 150,300 300,300 300,150 300,0 150,0">
+        <animate id="animate-to-cross" begin="indefinite" fill="freeze" attributeName="points" dur="300ms" to="0,0 150,150 0,300 150,150 300,300 150,150 300,0 150,150" />
+        <animate id="animation-to-blue" begin="indefinite" fill="freeze" attributeName="stroke" dur="300ms" to="#0000ff" />
+        <animateTransform id="animation-rotate" attributeType="xml" attributeName="transform" type="rotate" from="0 150 150" to="180 150 150" dur="300ms" begin="indefinite" fill="freeze" /> </animate>
+        <animate id="animate-to-logo" begin="indefinite" fill="freeze" attributeName="points" dur="300ms" to="0,0 0,150 0,300 150,300 300,300 300,150 300,0 150,0" />
+        <animate id="animation-to-black" begin="indefinite" fill="freeze" attributeName="stroke" dur="300ms" to="#000000"> </animate>
+    </svg>
+  </button>
+  <script>
+    var animationToCheck = document.getElementById("animate-to-cross")
+      , animationToBlue = document.getElementById("animation-to-blue")
+      , animationToLogo = document.getElementById("animate-to-logo")
+      , animationToBlack = document.getElementById("animation-to-black")
+      , animationRotate = document.getElementById("animation-rotate");
+
+    button.addEventListener('click', function () {
+      console.log(button);
+      if (button.classList.contains("close")) {
+        button.classList.remove("close");
+        animationToLogo.beginElement();
+        animationToBlack.beginElement();
+        animationRotate.beginElement();
+      }
+      else {
+        button.classList.add("close");
+        animationToCheck.beginElement();
+        animationToBlue.beginElement();
+//        animationRotate.beginElement();
+      }
+    }, false);
+  </script>
+</body>
+
+</html>

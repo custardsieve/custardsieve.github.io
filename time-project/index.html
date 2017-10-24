@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>David Newman</title>
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link href="https://fonts.googleapis.com/css?family=Work+Sans:500" rel="stylesheet">
+  <script src="assets/js/typed.min.js" type="text/javascript"></script>
+  <script  src="assets/js/images.js" type="text/javascript"></script>
+<!--  <script src="assets/js/demos.js" type="text/javascript"></script>-->
+<!--  <script src="assets/js/clocks.js" type="text/javascript"></script>-->
+  <script type="application/javascript">
+
+// ---------------------------------   
+// Sets all functions to run on Load
+// --------------------------------- 
+    window.onload = function () {
+        logo();  
+        initMelbClocks();
+        initLocalClocks();
+        setUpMinuteHands();
+        moveSecondHands();
+    } // End of onLoad
+
+// --------------------------------- 
+// Creates a random Grid on Hover
+// --------------------------------- 
+    function random(min, max) {
+      var number = Math.floor(Math.random() * (max - min + 1)) + min;
+      return number;
+    }
+
+// ---------------------------------     
+// Sorts Images OnHover
+// --------------------------------- 
+    function populateHover(itemName) {
+   
+      var dataArea = document.getElementById("tupperware");
+      var dataAreaContainer = document.createElement("div");
+      dataAreaContainer.id += "dataAreaContainer";
+      dataAreaContainer.style.zIndex = "6";
+      for (i = 0; i < dnData.length; i++) {
+        var tag = dnData[i].class;
+        var string = tag.match(itemName);
+        if (string != null) {
+          dataAreaContainer.innerHTML += "<div class='item col" + random(1, 3) + "of6'><div class='spacer'><img src='" + dnData[i].src + "'></div></div>";         
+        }
+      }
+      dataArea.appendChild(dataAreaContainer);
+      
+//      Initiates the animation for the close button
+      var animationToCheck = document.getElementById("animate-to-cross")
+        , animationToBlue = document.getElementById("animation-to-blue")
+      
+      button.classList.add("close");
+      animationToCheck.beginElement();
+      animationToBlue.beginElement();
+      
+    }
+
+    function removeLoading() {
+      var dataTable = document.getElementById("loading");
+      dataAreaContainer.parentNode.removeChild(dataTable);
+      
+    }
+// ---------------------------------
+// Hide and deletes the datacontainer 
+// for the image sorts
+// ---------------------------------
+    function resetIntro() {
+      var dataTable = document.getElementById("dataAreaContainer");
+      dataTable.parentNode.removeChild(dataTable);
+    }
+
+// --------------------------------- 
+//Logo Function to change on Click
+// --------------------------------- 
+    function logo() {
+         var animationToCheck = document.getElementById("animate-to-cross")
+        , animationToBlue = document.getElementById("animation-to-blue")
+        , animationToLogo = document.getElementById("animate-to-logo")
+        , animationToBlack = document.getElementById("animation-to-black")
+        , animationRotate = document.getElementById("animation-rotate");
+
+      button.addEventListener('click', function () {
+
+        if (button.classList.contains("close")) {
+          button.classList.remove("close");
+          animationToLogo.beginElement();
+          animationToBlack.beginElement();
+          animationRotate.beginElement();
+          resetIntro();
+        }
+
+        else {
+          button.classList.add("close");
+          animationToCheck.beginElement();
+          animationToBlue.beginElement();
+        }
+      }, false);
+    }
+    
+// --------------------------------- 
+// Clock functions
+// ---------------------------------
+    var date = new Date;
+    var utcHours = date.getUTCHours() + 11;
+    var hours = date.getHours();
+    var seconds = date.getSeconds();
+    var minutes = date.getMinutes();
+    console.log(date.getUTCHours());
+    console.log(date.getHours());
+    
+    
+      function initLocalClocks() {  
+//      var date = new Date;
+//      var hours = date.getHours();
+//      var seconds = date.getSeconds();
+//      var minutes = date.getMinutes();
+      // Creates the AM or PM content for the clocks
+      var localClock = document.getElementById('local');
+      localClock.querySelector('.am_pm').innerHTML = "PM";
+      if (hours > 12) {
+        localClock.querySelector('.am_pm').innerHTML = "PM";
+      } else {
+        localClock.querySelector('.am_pm').innerHTML = "AM";
+      }
+      
+      // Create an object with each hand and it's angle in degrees
+      var hands = [
+        {
+          hand: 'hours'
+          , angle: (hours * 30) + (minutes / 2)
+    }
+        , {
+          hand: 'minutes'
+          , angle: (minutes * 6)
+    }
+        , {
+          hand: 'seconds'
+          , angle: (seconds * 6)
+    }
+  ];
+      // Loop through each of these hands to set their angle
+      for (var j = 0; j < hands.length; j++) {
+        var localClock = document.getElementById('local');
+        var elements = localClock.querySelectorAll('.' + hands[j].hand);
+        for (var k = 0; k < elements.length; k++) {
+          elements[k].style.webkitTransform = 'rotateZ(' + hands[j].angle + 'deg)';
+          elements[k].style.transform = 'rotateZ(' + hands[j].angle + 'deg)';
+          
+          // If this is a minute hand, note the seconds position (to calculate minute position later)
+          if (hands[j].hand === 'minutes') {
+            elements[k].parentNode.setAttribute('data-second-angle', hands[j + 1].angle);
+          }
+        }
+      }
+    }
+    
+    function initMelbClocks() {
+//      var date = new Date;
+//      var utcHours = date.getUTCHours() + 11;
+//      var seconds = date.getSeconds();
+//      var minutes = date.getMinutes();
+      // Creates the AM or PM content for the clocks
+      var melbClock = document.getElementById('melb');
+      melbClock.querySelector('.am_pm').innerHTML = "PM";
+      if (utcHours > 12) {
+        melbClock.querySelector('.am_pm').innerHTML = "PM";
+      } else {
+        melbClock.querySelector('.am_pm').innerHTML = "AM";
+      }
+      
+      // Create an object with each hand and it's angle in degrees
+      var hands = [
+        {
+          hand: 'hours'
+          , angle: (utcHours * 30) + (minutes / 2)
+    }
+        , {
+          hand: 'minutes'
+          , angle: (minutes * 6)
+    }
+        , {
+          hand: 'seconds'
+          , angle: (seconds * 6)
+    }
+  ];
+      // Loop through each of these hands to set their angle
+      for (var j = 0; j < hands.length; j++) {
+        var melbClock = document.getElementById('melb');
+        var elements = melbClock.querySelectorAll('.' + hands[j].hand);
+        for (var k = 0; k < elements.length; k++) {
+          elements[k].style.webkitTransform = 'rotateZ(' + hands[j].angle + 'deg)';
+          elements[k].style.transform = 'rotateZ(' + hands[j].angle + 'deg)';
+          
+          // If this is a minute hand, note the seconds position (to calculate minute position later)
+          if (hands[j].hand === 'minutes') {
+            elements[k].parentNode.setAttribute('data-second-angle', hands[j + 1].angle);
+          }
+        }
+      }
+    }
+
+    function setUpMinuteHands() {
+      // Find out how far into the minute we are
+      var containers = document.querySelectorAll('.minutes-container');
+      var secondAngle = containers[0].getAttribute("data-second-angle");
+      if (secondAngle > 0) {
+        // Set a timeout until the end of the current minute, to move the hand
+        var delay = (((360 - secondAngle) / 6) + 0.1) * 1000;
+        setTimeout(function () {
+          moveMinuteHands(containers);
+        }, delay);
+      }
+    }
+
+    function moveMinuteHands(containers) {
+      for (var i = 0; i < containers.length; i++) {
+        containers[i].style.webkitTransform = 'rotateZ(6deg)';
+        containers[i].style.transform = 'rotateZ(6deg)';
+      }
+      // Then continue with a 60 second interval
+      setInterval(function () {
+        for (var i = 0; i < containers.length; i++) {
+          if (containers[i].angle === undefined) {
+            containers[i].angle = 12;
+          }
+          else {
+            containers[i].angle += 6;
+          }
+          containers[i].style.webkitTransform = 'rotateZ(' + containers[i].angle + 'deg)';
+          containers[i].style.transform = 'rotateZ(' + containers[i].angle + 'deg)';
+        }
+      }, 60000);
+    }
+    
+
+function moveSecondHands() {
+  var containers = document.querySelectorAll('.seconds-container');
+  setInterval(function() {
+     
+    for (var i = 0; i < containers.length; i++) {
+      if (containers[i].angle === undefined) {
+        containers[i].angle = 6;
+      } else {
+        containers[i].angle += 6;
+      }
+      containers[i].style.webkitTransform = 'rotateZ('+ containers[i].angle +'deg)';
+      containers[i].style.transform = 'rotateZ('+ containers[i].angle +'deg)';
+    }
+  }, 1000);
+}
+        
+// --------------------------------- 
+// Typed script messages
+// --------------------------------- 
+       
+    document.addEventListener('DOMContentLoaded', function() { 
+      
+  var typed = new Typed('#typed', {
+//    stringsElement: '#typed-strings',
+    strings: ["I think<em>bad coffee</em> is still better than no coffee.", "me gusta la paella!", "It's " + timeDay + " " + timeHour + ":" + timeMinute + ":" + timeSeconds + " " + amPm + " where we are.", ],
+    typeSpeed: 40,
+    backSpeed: 20,
+    startDelay: 3000,
+    loop: false,
+    loopCount: Infinity,
+  });
+
+});
+
+function prettyLog(str) {
+  console.log('%c ' + str, 'color: green; font-weight: bold;');
+}
+
+function toggleLoop(typed) {
+  if (typed.loop) {
+    typed.loop = false;
+  } else {
+    typed.loop = true;
+  }
+}
+    
+  </script>
+</head>
+
+<body class="color-theme">
+  <div id="tupperware">
+  <div class="hero-circle">
+			<div class="hero-face">
+				<div id="hour" class="hero-hour"></div>
+				<div id="minute" class="hero-minute"></div>
+				<div id="second" class="hero-second"></div>
+			</div>
+		</div>
+    <button id="button">
+      <svg class="logo" viewBox="-5 -5 310 310">
+        <polygon stroke="black" points="0,0 0,150 0,300 150,300 300,300 300,150 300,0 150,0">
+          <animate id="animate-to-cross" begin="indefinite" fill="freeze" attributeName="points" dur="300ms" to="0,0 150,150 0,300 150,150 300,300 150,150 300,0 150,150" />
+          <animate id="animation-to-blue" begin="indefinite" fill="freeze" attributeName="stroke" dur="300ms" to="#0000ff" />
+          <animateTransform id="animation-rotate" attributeType="xml" attributeName="transform" type="rotate" from="0 150 150" to="180 150 150" dur="300ms" begin="indefinite" fill="freeze" /> </animate>
+          <animate id="animate-to-logo" begin="indefinite" fill="freeze" attributeName="points" dur="300ms" to="0,0 0,150 0,300 150,300 300,300 300,150 300,0 150,0" />
+          <animate id="animation-to-black" begin="indefinite" fill="freeze" attributeName="stroke" dur="300ms" to="#000000"> </animate>
+      </svg>
+    </button>
+      <h1 class="indent">Hello, I am David and <span href="#" id="typed"></span></h1>
+    </h1>
+  <h1>I am a graduate communication-design student from some kind of <span onmouseover="populateHover(this.id)" id="thumb"><em>art&nbsp;school</em></span> in Melbourne. I have previously studied fine-arts in the sunny town on Valencia in Spain and majored in <span onmouseover="populateHover(this.id)" id="photo"><em>photography</em></span>. I like to work on <span onmouseover="populateHover(this.id)" id="visual-identities"><em>visual-identities</em></span>, <span onmouseover="populateHover(this.id)" id="publications"><em>publications</em></span> and <span onmouseover="populateHover(this.id)" id="front-end"><em>Front-<i class="swash">End</i></em></span> digital design. I’m particularly interested in <span onmouseover="populateHover(this.id)" id="programming"><em>programming</em></span> techniques and <span onmouseover="populateHover(this.id)" id="ux"><em>User&dash;<i class="swash">E</i>xperienc<i class="swash">e</i></em></span> design. In my free time I play classical piano, cook paellas and work on my <span onmouseover="populateHover(this.id)" id="art-school"><em>Ducati</em></span> — named Tiffany (which always seems to be <span id="iframe"><em>broken?</em><div class="websites"><iframe src="http://www.bikeabouttours.com/" frameborder="0"></iframe></div></span>).</h1> </div>
+ <div class="image"></div>
+ 
+  
+  <article class="clock" id="local">
+  <div class="title">You</div>
+   <div class="am_pm"></div>
+    <div class="hours-container">
+      <div class="hours"></div>
+    </div>
+    <div class="minutes-container">
+      <div class="minutes"></div>
+    </div>
+    <div class="seconds-container">
+      <div class="seconds"></div>
+    </div>
+  </article>
+
+  <article class="clock" id="melb">
+  <div class="title">Me</div>
+   <div class="am_pm"></div>
+    <div class="hours-container">
+      <div class="hours"></div>
+    </div>
+    <div class="minutes-container">
+      <div class="minutes"></div>
+    </div>
+    <div class="seconds-container">
+      <div class="seconds"></div>
+    </div>
+  </article>
+  
+  <nav>
+   <div class="nav-tupperware">
+     <div class="element">
+       <a href="#">written work</a>
+     </div>
+     <div class="element">
+       <a href="#">portfolio</a>
+     </div>
+     <div class="element">
+       <a href="#">linkedIn</a>
+     </div>
+     <div class="element">
+       <a href="#">instagram</a>
+     </div>
+   </div>
+ </nav>
+</body>
+
+</html>

@@ -1,0 +1,478 @@
+/*  Welcome to my site        */
+/*  HANDCRAFTED IN MELBOURNE  */
+/*  Please contact me for any */
+/*  questions or updates on:  */
+/*  0435 077 598              */
+
+
+/*! normalize.css v6.0.0 | MIT License | github.com/necolas/normalize.css */html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}article,aside,footer,header,nav,section{display:block}h1{font-size:2em;margin:.67em 0}figcaption,figure,main{display:block}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent;-webkit-text-decoration-skip:objects}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}dfn{font-style:italic}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}audio,video{display:inline-block}audio:not([controls]){display:none;height:0}img{border-style:none}svg:not(:root){overflow:hidden}button,input,optgroup,select,textarea{margin:0}button,input{overflow:visible}button,select{text-transform:none}[type=reset],[type=submit],button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{display:inline-block;vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details,menu{display:block}summary{display:list-item}canvas{display:inline-block}template{display:none}[hidden]{display:none}/*# sourceMappingURL=normalize.min.css.map */
+
+/*  Extra Normalising  */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+   font-family:'LyonDisplay-MediumItalic';
+   src: url('../fonts/LyonDisplay-MediumItalic.eot');
+   src: url('../fonts/LyonDisplay-MediumItalic.eot?#iefix') format('embedded-opentype'),
+     url('../fonts/LyonDisplay-MediumItalic.woff') format('woff'),
+     url('../fonts/LyonDisplay-MediumItalic.ttf') format('truetype'),
+     url('../fonts/LyonDisplay-MediumItalic.svg#LyonDisplay-MediumItalic') format('svg');
+   font-weight: normal;
+   font-style: normal;
+   font-stretch: normal;
+}
+
+@font-face {
+   font-family:'LyonDisplay-Regular';
+   src: url('../fonts/LyonDisplay-Regular.eot');
+   src: url('../fonts/LyonDisplay-Regular.eot?#iefix') format('embedded-opentype'),
+     url('../fonts/LyonDisplay-Regular.woff') format('woff'),
+     url('../fonts/LyonDisplay-Regular.ttf') format('truetype'),
+     url('../fonts/LyonDisplay-Regular.svg#LyonDisplay-Regular') format('svg');
+   font-weight: normal;
+   font-style: normal;
+   font-stretch: normal;
+}
+
+
+body {
+  margin: 2em;
+  top:0;
+  position: relative;
+  transition: all 600ms cubic-bezier(0.19, 1, 0.22, 1); 
+}
+
+/*  ---------------- */
+/*  -- Typography -- */
+/*  ---------------- */
+
+
+h1 {
+  margin:0;
+  font-family: 'LyonDisplay-Regular', "Times New Roman", Times, Baskerville, Georgia, serif;
+  font-weight: 100;
+  font-size: 4em;
+  line-height: 1.3em;
+  color:blue;
+  z-index: 4;
+  mix-blend-mode:multiply;
+}
+
+h1 + h1 {
+  margin-bottom: 2em;
+}
+
+.indent {
+ text-indent: 80px; 
+}
+
+em {
+  font-family: 'LyonDisplay-MediumItalic', "Times New Roman", Times, Baskerville, Georgia, serif;
+  color: blue;
+  mix-blend-mode:multiply;
+  font-style: normal;
+  font-weight: 100;
+  -moz-font-feature-settings: "ss02";
+  -webkit-font-feature-settings: "ss02";
+  font-feature-settings: "ss02";
+  border-bottom: 2px solid currentColor;
+  display: inline-block;
+  line-height: 0.75;
+  text-shadow:
+    3px 3px white,
+    3px -3px white,
+    -3px 3px white,
+    -3px -3px white;
+  transition: all 600ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+i {
+  font-style: normal;
+}
+i.swash {
+  -moz-font-feature-settings: "aalt";
+  -webkit-font-feature-settings: "aalt";
+  font-feature-settings: "aalt";
+  font-style: normal;
+}
+
+span {
+  position: relative;
+}
+em {
+  transition: all 600ms ease-out;
+}
+
+span > em:hover {
+  color: #0000ff;
+}
+
+a {
+  font-family: 'Work Sans', sans-serif;
+  text-decoration: none;
+  color: black;
+  letter-spacing: 1px;
+  font-size: 20px;
+}
+
+span#iframe:hover .websites {
+  display:block;
+  position: fixed;
+  top:0;
+  left:0;
+  width: calc(100% - 2em);
+  height: calc(100vh-2em);
+  margin: 1em;
+}
+.websites{
+  display:none
+}
+iframe {
+  width: 100%;
+  height: 100vh;
+}
+
+/* --------------------- */
+/* -- Global Variable -- */
+/* --------------------- */
+
+.color-theme {
+  background-color: rgb(250,250,250);
+  color: black;
+}
+
+.theme-dark {
+  background-color: black;
+  color: white;
+}
+
+button#button {
+  position: fixed;
+  z-index:999;
+  top:3.3em;
+  left: 3em;
+  width: 5em;
+  outline: 0;
+  border: 0;
+  background-color: transparent;
+  margin-right: 2em
+}
+
+.logo {
+  width: 100%;
+  height: 100%;
+  stroke-width: 15;
+}
+
+.logo polygon {
+  fill: transparent
+}
+
+
+#tupperware {
+/*  margin: 0 300px;*/
+  display: flex;
+  flex-wrap:wrap;
+  align-items: flex-end;
+}
+
+.item {
+  text-align: center;
+}
+
+.item img {
+  max-width: 100%;
+  background-color: pink;
+}
+
+img {
+  background: url(../images/davidnewman01.jpg);
+  background-size: contain;
+}
+
+.col1of6 {
+  flex: 0 0 16.666%;
+}
+
+.col2of6 {
+  flex:0 0 33.333%;
+}
+
+.col3of6 {
+  flex:0 0 49.999%;
+}
+
+.col4of6 {
+  flex:0 0 66.666%;
+}
+
+.col5of6 {
+  flex:0 0 83.333%;
+}
+
+.col6of6 {
+  flex:0 0 100%;
+}
+
+.spacer {
+  padding: 1em;
+}
+
+.gradient {
+  width: 100%;
+  height: 1em;
+  background:pink;
+}
+
+.nav-tupperware {
+  display:flex;
+  z-index: 8;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  justify-content: space-between;
+  padding: 3em 2.4em 2em;
+  background: white; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(rgba(255,255,255,0),rgba(255,255,255,1),rgba(255,255,255,1),rgba(255,255,255,1)); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(rgba(255,255,255,0),rgba(255,255,255,1),rgba(255,255,255,1),rgba(255,255,255,1)); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(rgba(255,255,255,0),rgba(255,255,255,1),rgba(255,255,255,1),rgba(255,255,255,1)); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(rgba(255,255,255,0),rgba(255,255,255,1),rgba(255,255,255,1),rgba(255,255,255,1)); /* Standard syntax */
+}
+
+.image {
+  background-image: url(assets/images/davidnewman33.jpg) no-repeat;
+}
+
+
+
+/* -------------------------- */
+/* ------- Image Container -- */
+/* ------- for hover -------- */
+/* -------------------------- */
+
+#dataAreaContainer {
+  position: fixed;
+  width: calc(100vw - 2em);
+  margin: 1em;
+  height: 100vh;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  display:flex;
+  flex-wrap:wrap;
+  align-items: flex-end;
+  top:0;
+  left:0;
+}
+
+#dataAreaContainer::-webkit-scrollbar { 
+    display: none; 
+}
+
+#dataAreaContainerClick {
+  position: fixed;
+  width: 90%;
+  margin-left:80px;
+  padding: 2% 3.5%;
+  height: 100vh;
+  overflow-y: scroll;
+  display:flex;
+  flex-wrap:wrap;
+  align-items: flex-end;
+  top:0;
+  left:0;
+}
+
+#dataAreaContainerClick::-webkit-scrollbar { 
+    display: none; 
+}
+
+/* --------------------- */
+/* --- Clock Function -- */
+/* --------------------- */
+#local {
+  top:100px;
+  left:2em;
+}
+#melb {
+  top:400px;
+  right: 2em;
+}
+.title{
+  text-align: center;
+  font-family: 'Work Sans', sans-serif; 
+  font-size: 1.5em;
+  position: absolute;
+  bottom:-40px;
+  width: 100%;
+  color:black;
+  
+}
+
+.clock {
+  border-radius: 50%;
+  background: #fff url(../images/junghans.svg) no-repeat center;
+  height: 20em;
+  width: 20em;
+  padding: 0;
+  margin: 0;
+  position: fixed; 
+  display: block;
+  z-index: 3;
+  background-size: 95%;
+  box-shadow: 0 0 0.5em rgba(0,0,0,0.2) inset;
+}
+
+.clock::after {
+    background: black;
+    border-radius: 50%;
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 4%;
+    height: 4%;
+    z-index: 10
+}
+
+
+.am_pm {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 1em;
+  position: absolute;
+  top: 47.5%;
+  right: 25%;
+}
+
+.minutes-container, .hours-container, .seconds-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+/*  Hands  */
+
+
+.hours {
+  position: absolute;
+  background: #000;
+    border-radius: 85%/10%;
+    width: 2%;
+    height: 20%;
+    left: 49%;
+    top: 30%;
+    transform-origin: 50% 100%;
+}
+
+.minutes {
+  position: absolute;
+  background: #000;
+    border-radius: 150%/10%;
+    width: 2%;
+    height: 35%;
+    left: 49%;
+    top: 15%;
+    transform-origin: 50% 100%;
+}
+
+
+.seconds {
+    background: #000;
+    height: 45%;
+    left: 49.5%;
+    position: absolute;
+    top: 14%;
+    transform-origin: 50% 80%;
+    width: 0.5%;
+    z-index: 8;
+}
+
+
+/*  animations  */
+
+@keyframes rotate {
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+
+.hours-container {
+  animation: rotate 43200s infinite linear;
+}
+
+.minutes-container {
+  transition: transform 0.3s cubic-bezier(.4,2.08,.55,.44);
+}
+
+.seconds-container {
+  transition: transform 0.2s cubic-bezier(.4,2.08,.55,.44);
+}
+
+/* --------------------- */
+/* --- Media Queries --- */
+/* --------------------- */
+
+@media screen and (max-width: 1024px) {
+
+
+  h1 {
+    font-size: 2.4em;
+  }  
+  button#button {
+    width: 3em
+  }
+  .indent {
+    text-indent: 50px;
+  }
+}
+
+
+
+@media screen and (max-width: 500px){
+  body{
+    margin: 1em;
+  }
+  h1 {
+    font-weight: 100;
+    font-size: 1.3em;
+    line-height: 1.5em;
+  }
+  em {
+    border-bottom: 1px solid currentColor;
+    display: inline-block;
+    line-height: 0.75;
+    text-shadow:
+      1px 1px white,
+      1px -1px white,
+      -1px 1px white,
+      -1px -1px white;
+    }
+  button#button {
+    top:1.5em;
+    left: 1.5em;
+    width: 2em;
+  }
+  .indent {
+    text-indent: 30px;
+  }
+  .nav-tupperware {
+    z-index:6;
+    padding: 1.5em 1em 1em 1em;
+}
+  a {
+    font-size: 0.8em;
+    letter-spacing: initial;
+    padding: 1em 0em;
+  }
+  .col1of6,.col2of6,.col3of6,.col4of6,.col5of6,.col6of6 {
+    flex:0 0 100%;
+  }
+}
+

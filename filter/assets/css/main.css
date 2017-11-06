@@ -49,7 +49,6 @@ body {
 
 #dataAreaContainer {
   position: fixed;
-/*  width: 100%;*/
   margin-left:80px;
   padding: 2%;
   padding-left: calc(5% - 20px);

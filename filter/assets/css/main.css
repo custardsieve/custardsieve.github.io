@@ -49,9 +49,11 @@ body {
 
 #dataAreaContainer {
   position: fixed;
-  width: 90%;
+/*  width: 100%;*/
   margin-left:80px;
-  padding: 2% 3.5%;
+  padding: 2%;
+  padding-left: calc(5% - 20px);
+  padding-right: calc(5% - 20px);
   height: 100vh;
   overflow-y: scroll;
   display:flex;

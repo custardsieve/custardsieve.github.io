@@ -53,13 +53,14 @@ body {
 
 h1 {
   margin:0;
-  font-family: 'Work Sans', sans-serif;  
-  font-weight: 100;
+  font-family: 'LyonDisplay-Regular', "Times New Roman", Times, Baskerville, Georgia, serif;  font-weight: 100;
   font-size: 3.5em;
   line-height: 1.5em;
-  color:black;
+  color:transparent;
   z-index: 4;
-  mix-blend-mode:multiply;
+/*  mix-blend-mode:multiply;*/
+  -webkit-text-stroke-width: 0.8px;
+  -webkit-text-stroke-color: black;
 }
 
 h1 + h1 {
@@ -72,22 +73,26 @@ h1 + h1 {
 
 em {
   font-family: 'LyonDisplay-MediumItalic', "Times New Roman", Times, Baskerville, Georgia, serif;
-  color: black;
-  mix-blend-mode:multiply;
+  color: transparent;
+  -webkit-text-stroke-width: 0.8px;
+  -webkit-text-stroke-color: black;
   font-style: normal;
   font-weight: 100;
   font-size: inheret;
   -moz-font-feature-settings: "ss02";
   -webkit-font-feature-settings: "ss02";
   font-feature-settings: "ss02";
-  border-bottom: 2px solid currentColor;
+  border-bottom: 1px solid blue;
+  padding-bottom: 10px;
   display: inline-block;
   line-height: 0.75;
+/*
   text-shadow:
     2px 2px white,
     2px -2px white,
     -2px 2px white,
     -2px -2px white;
+*/
   transition: all 600ms cubic-bezier(0.19, 1, 0.22, 1);
 }
 

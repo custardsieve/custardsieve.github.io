@@ -1,0 +1,466 @@
+$lighter:#F0EDE4;
+$light:#9F9D8F;
+$middle: #656656;
+$dark: #3B4031;
+$darker:#1D2515;
+$font-body: gotham,"Helvetica Neue", helvetica, sans-serif;
+$font-secondary: lyon,times,serif;
+$lg-screen: 900px;
+$transition:ease-in-out;
+
+@font-face {
+    font-family: 'lyon';
+    src: 
+        url('/fonts/LyonDisplay-Light.woff2') format('woff2'),
+        url('/fonts/LyonDisplay-Light.woff') format('woff'),
+        url('/fonts/LyonDisplay-Light.ttf') format('truetype'),
+        url('/fonts/LyonDisplay-Light.eot?#iefix') format('embedded-opentype');
+    font-weight: 100;
+    unicode-range: U+000-5FF; /* Latin glyphs */
+}
+@font-face {
+    font-family: 'gotham';
+    src: 
+        url('/fonts/BD-Gotham.woff2') format('woff2'),
+        url('/fonts/BD-Gotham.woff') format('woff'),
+        url('/fonts/BD-Gotham.ttf') format('truetype'),
+        url('/fonts/BD-Gotham.eot?#iefix') format('embedded-opentype');
+    font-weight: 500;
+    unicode-range: U+0020-U+007E; /* Basic Latin glyphs */
+}
+@font-face {
+    font-family: 'gotham';
+    src: 
+        url('/fonts/BD-Gotham--Light.woff2') format('woff2'),
+        url('/fonts/BD-Gotham--Light.woff') format('woff'),
+        url('/fonts/BD-Gotham--Light.ttf') format('truetype'),
+        url('/fonts/BD-Gotham--Light.eot?#iefix') format('embedded-opentype');
+    font-weight: 100;
+    unicode-range: U+0020-U+007E; /* Basic Latin glyphs */
+}
+// html *:before {
+//     transition: 0.5s $transition;
+//   }
+
+body {
+    font-family: $font-body;
+    font-size: 14px;
+    transition: background-color 0.4s $transition;
+    overflow: hidden;
+
+    &.middle {
+        background-color: $middle;
+        color: $lighter;
+        fill: $lighter;
+        stroke: $lighter;
+        .inner {
+            background-color: $middle;
+        }
+    }
+    &.light {
+        background-color: $light;
+        color: $dark;
+        fill: $dark;
+        stroke: $dark;
+        .inner {
+            background-color: $light;
+        }
+        .plant-one {
+            right:66vw;
+        }
+        .plant-two {
+            left: 70vw;
+            transform: rotate(-5deg);
+        }
+    }
+    &.lighter {
+        background-color: $lighter;
+        color: $dark;
+        fill: $dark;
+        stroke: $dark;
+        .inner {
+            background-color: $lighter;
+        }
+        .plant-one {
+            right:65vw;
+        }
+        .plant-two {
+            left: 71vw;
+            transform: rotate(-5deg);
+        }
+    }
+    &.dark {
+        background-color: $dark;
+        color: $lighter;
+        fill: $lighter;
+        stroke: $light;
+        .inner {
+            background-color: $dark;
+        }
+        .plant-one {
+            right:69vw;
+            transform: rotate(-5deg);
+        }
+        .plant-two {
+            left: 67vw;
+            transform: rotate(-5deg);
+        }
+    }
+    &.darker {
+        background-color: $darker;
+        color: $light;
+        fill: $light;
+        stroke: $middle;
+        .inner {
+            background-color: $darker;
+        }
+        .plant-one {
+            right:70vw;
+            transform: rotate(-7deg);
+        }
+        .plant-two {
+            left: 66vw;
+            transform: rotate(-3deg);
+        }
+    }
+    a {
+        text-decoration: none;
+        color: inherit;
+        padding: 10px;
+
+        &:hover {
+            color: white;
+            border-top: 1px solid;
+            border-bottom: 1px solid;
+        }
+
+        &#nav-home {
+            &:hover {
+                border:0;
+            }
+        }
+    }
+    h1,h2,h3,h4,p,a {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothin: grayscale;
+        margin: 0;
+        text-align: center;
+        font-variant: small-caps;
+        letter-spacing: 1px;
+        font-weight: 400;
+        // color: inherit;
+    }
+} // END body
+nav {
+    z-index: 2;
+    width: 100%;
+    position: fixed;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 0;
+    
+    .nav-container {
+        max-width: $lg-screen;
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &__logo {
+            width: 100px;
+            padding-top: 20px;
+        }
+    }
+} //End nav
+.body-container {
+    position: relative;
+    .plant-one {
+        position: fixed;
+        width: 420px;
+        top: 11vh;
+        z-index: 1;
+        right: 68vw;
+        opacity: 0.4;
+        transition: 0.7s all 0.1s ease-out;
+    }
+    .plant-two {
+        position: fixed;
+        width: 420px;
+        bottom: 4vh;
+        z-index: 1;
+        left: 68vw;
+        opacity: 0.4;
+        transition: 0.7s all 0.1s ease-out;
+    }
+
+}
+#belt {
+    z-index: 1;
+    display: flex;
+    overflow: scroll;
+    position: relative;
+    width: 500%;
+    right: 200%;
+    transition: all 0.4s $transition;
+
+    .body-container {
+        width: 100%;
+        height: 100vh;
+    }
+    .card {
+        width:  100%;
+        height: 100%;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+    }
+}
+
+.inner {
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20vh 0;
+    max-width: $lg-screen;
+    width: 100%;
+    transition: background-color 0.4s $transition;
+
+    h2 {
+        font-size: 1rem;
+        color: inherit;
+    }
+    #date{
+        margin-top: 50px;
+        width: 240px;
+    }
+    &__accordion {
+        position: relative;
+        border: 1.5px solid;
+        border-radius: 3px;
+        border-color: white;
+        padding: 1rem 2rem;
+        margin-top: 2rem;
+        cursor: pointer;
+        // overflow: hidden;
+        &:hover {
+            background-color: darken($dark, 3%);
+        }
+    }
+    span {
+        transition: all 0.4s 0.2s $transition;
+        display: inline-block;
+    }
+    
+}
+#accomm {
+    .inner {
+        // overflow:scroll;
+    }
+    .accommodation {
+        width: 550px
+    }
+    p {
+        font-variant: initial;
+        font-weight: 100;
+        letter-spacing: 0;
+        font-size: 1rem;
+        width: 70%;
+        margin-bottom: 1rem;
+        background-color: $lighter;
+    }
+    h2 {
+        margin: 1rem 0 1rem;;
+    }
+    a {
+        font-variant: initial;
+        padding: 0;
+        letter-spacing: 0;
+        // text-decoration: underline;
+        border-bottom: 2px solid $dark;
+        &:hover {
+            border: 0;
+            color: $light;
+            border-bottom: 2px solid $light;
+        }
+    }
+}
+#count-down {
+    display:none;
+    flex-direction: row;
+    justify-content: center;
+    font-family: $font-secondary;
+    font-variant-numeric: oldstyle-nums;
+    font-size: 9rem;
+    line-height: 1;
+
+    #days,#hours,#minutes {
+        
+        &:after {
+            font-family: $font-secondary;
+            font-size: 7rem;
+            content: ":";
+            padding: 0 10px;
+        }
+    }// END #days
+
+    &__days, &__hours, &__minutes, &__seconds {
+        position: relative;
+    }
+    &__seconds {
+        width: 130px;
+    }
+     
+    h3 {
+        position: absolute; 
+        font-family: $font-body;
+        font-size: 0.9rem;
+        font-weight: 400;
+        width: 70%;
+    }
+    
+} // END count-down
+#well {
+    .gifts {
+        width: 400px;
+        opacity: 0.5;
+    }
+    p {
+        font-variant: normal;
+        font-weight: 100;
+        max-width: 500px;
+        width: 100%;
+        font-size: 1rem;
+        line-height: 1.5;
+        transform: translateY(-15px);
+    }
+    h3 {
+        color: white;
+        z-index: 2;
+    }
+    .bank-details {
+        overflow: hidden;
+        padding: 0 1em;
+        max-height: 0;
+        opacity: 0;
+        transition: all 0.3s ease;
+        width: 280px;
+        letter-spacing: 1px;
+        font-size: 1.2rem;
+        .row {
+            display: flex;
+            justify-content: space-between;
+            padding: 6px 0;
+
+            &:first-child {
+                padding-top:40px;
+            }
+        }
+        .cell:first-child {
+            font-weight: 100;
+            font-variant: small-caps;
+        }
+    }
+    .open {
+        max-height: 500px;
+        opacity: 1;
+    }
+}
+.turn {
+    // transition: all 0.4s 0.2s $transition;
+    transform: rotate(225deg);
+}
+#contact {
+    .contact {
+        width: 350px;
+    }
+}
+
+#itin {
+    .itinerary {
+        width: 400px;
+        padding-bottom: 1vh;
+    }
+    .itin {
+        &__grid {
+            display: flex;
+            padding: 0 50px 10px;
+            background-color: $light;
+        }
+        &__card {
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 0.5px;
+            text-align: center;
+            width: 20%;
+            // position: relative;
+            // top: -10px;
+            
+            &:nth-child(1) {
+                .itin__card__img {
+                    svg {
+                        height: 130%;
+                        transform: translate(8px, -16px);
+                    }
+                }
+            }
+
+            &__img {
+                width: 100%;
+                height: 50px;
+                svg {
+                    height: 100%;
+                    path {
+                        fill: $lighter;
+                        stroke-width: 0px;
+                    }
+                }
+            }
+            &__day {
+                color: $lighter;
+                padding: 16px 0 0;
+            }
+            &__timeline {
+                display: flex;
+                height: 20px;
+                padding: 20px 0;
+                div {
+                    border-top: 1.5px solid white;
+                    height: 10px;
+                    width: 50%;
+                    &:nth-child(odd) {
+                        border-right: 2px solid white;
+                    }
+                }
+                &.dashed {
+                    div {
+                        border-top: 1.5px dashed white;
+                        &:nth-child(odd) {
+                            border-right: 2px dashed white;
+                        }
+                    }
+                }
+            }
+            &__name {
+                padding: 6px 0 0;
+            }
+            &__desc {
+                text-transform: initial;
+                font-weight: 100;
+                font-size: 0.9rem;
+                padding: 14px 10px;
+            }
+            &__attire {
+                font-family: serif;
+                font-size: 1rem;
+                letter-spacing: initial;
+                text-transform: initial;
+                font-style: italic;
+                padding: 0 20px 0;
+            }
+        }
+    }
+}
+

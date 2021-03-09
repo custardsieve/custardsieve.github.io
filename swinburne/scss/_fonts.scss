@@ -18,23 +18,24 @@
   // ========================================================importing
   $dir: 'https://custardsieve.github.io/swinburne/fonts/';
   $SimplonNorm: 'SimplonNorm';
-  @include fface('#{$dir}',$SimplonNorm,'-Light', '-WebS', '300', $SimplonNorm);
-  @include fface('#{$dir}',$SimplonNorm,'-Regular', '-WebS', '400', $SimplonNorm);
-  @include fface('#{$dir}',$SimplonNorm,'-Medium', '-WebS', '500', $SimplonNorm);
-  @include fface('#{$dir}',$SimplonNorm,'-Bold', '-WebS', '700', $SimplonNorm);
-  @include fface('#{$dir}',$SimplonNorm,'-LightItalic', '-WebS', '300', $SimplonNorm, italic);
-  @include fface('#{$dir}',$SimplonNorm,'-RegularItalic', '-WebS', '400', $SimplonNorm, italic);
-  @include fface('#{$dir}',$SimplonNorm,'-MediumItalic', '-WebS', '500', $SimplonNorm, italic);
-  @include fface('#{$dir}',$SimplonNorm,'-BoldItalic', '-WebS', '700', $SimplonNorm, italic);
+  $pack: '-WebS';
+  @include fface('#{$dir}',$SimplonNorm,'-Light', $pack, '300', $SimplonNorm);
+  @include fface('#{$dir}',$SimplonNorm,'-Regular', $pack, '400', $SimplonNorm);
+  @include fface('#{$dir}',$SimplonNorm,'-Medium', $pack, '500', $SimplonNorm);
+  @include fface('#{$dir}',$SimplonNorm,'-Bold', $pack, '700', $SimplonNorm);
+  @include fface('#{$dir}',$SimplonNorm,'-LightItalic', $pack, '300', $SimplonNorm, italic);
+  @include fface('#{$dir}',$SimplonNorm,'-RegularItalic', $pack, '400', $SimplonNorm, italic);
+  @include fface('#{$dir}',$SimplonNorm,'-MediumItalic', $pack, '500', $SimplonNorm, italic);
+  @include fface('#{$dir}',$SimplonNorm,'-BoldItalic', $pack, '700', $SimplonNorm, italic);
   
   $SimplonMono: 'SimplonMono';
-  @include fface('#{$dir}',$SimplonMono,'-Light', '-WebS', '300', $SimplonMono);
-  @include fface('#{$dir}',$SimplonMono,'-Regular', '-WebS', '400', $SimplonMono);
-  @include fface('#{$dir}',$SimplonMono,'-Medium', '-WebS', '500', $SimplonMono);
-  @include fface('#{$dir}',$SimplonMono,'-Bold', '-WebS', '700', $SimplonMono);
-  @include fface('#{$dir}',$SimplonMono,'-LightItalic', '-WebS', '300', $SimplonMono italic);
-  @include fface('#{$dir}',$SimplonMono,'-RegularItalic', '-WebS', '400', $SimplonMono italic);
-  @include fface('#{$dir}',$SimplonMono,'-MediumItalic', '-WebS', '500', $SimplonMono italic);
-  @include fface('#{$dir}',$SimplonMono,'-BoldItalic', '-WebS', '700', $SimplonMono italic);
+  @include fface('#{$dir}',$SimplonMono,'-Light', $pack, '300', $SimplonMono);
+  @include fface('#{$dir}',$SimplonMono,'-Regular', $pack, '400', $SimplonMono);
+  @include fface('#{$dir}',$SimplonMono,'-Medium', $pack, '500', $SimplonMono);
+  @include fface('#{$dir}',$SimplonMono,'-Bold', $pack, '700', $SimplonMono);
+  @include fface('#{$dir}',$SimplonMono,'-LightItalic', $pack, '300', $SimplonMono italic);
+  @include fface('#{$dir}',$SimplonMono,'-RegularItalic', $pack, '400', $SimplonMono italic);
+  @include fface('#{$dir}',$SimplonMono,'-MediumItalic', $pack, '500', $SimplonMono italic);
+  @include fface('#{$dir}',$SimplonMono,'-BoldItalic', $pack, '700', $SimplonMono italic);
   // ========================================================usage
  

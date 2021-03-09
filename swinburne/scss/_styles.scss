@@ -1,15 +1,16 @@
 
-$simplon: 'Simplon Norm', fantasy;
+$norm: 'SimplonNorm', fantasy;
+$mono: 'SimplonMono', fantasy;
 
 .brand-header__nav .nav-link {
-    font-family: $simplon!important;
+    font-family: $norm!important;
     font-size: 1.04rem!important;
     letter-spacing: 0.1px;
     text-transform: capitalize!important;
 }
 
 .h1, .h2, .h3, .h4, .h5, h1, h2, h3, h4, h5 {
-    font-family: $simplon!important;
+    font-family: $norm!important;
 }
 .h1, .h2, .h3, h1, h2, h3 {
     font-weight:300!important;
@@ -38,12 +39,12 @@ $simplon: 'Simplon Norm', fantasy;
 .card-taglist li  {
     text-transform: uppercase;
     padding:0;
-    font-family:'Simplon Mono', fantasy;
+    font-family:'$mono', fantasy;
     letter-spacing: 2px;
     font-size:10px;
 }
 .btn {
-  font-family: $simplon;
+  font-family: $norm;
   font-weight: 300!important;
   text-transform: uppercase;
   letter-spacing: 2px !important; 
@@ -60,7 +61,7 @@ $simplon: 'Simplon Norm', fantasy;
     font-weight: 100!important;
 }
 .cards-tiles-narrow .card .card-title {
-    font-family: $simplon!important;
+    font-family: $norm!important;
     font-weight: 400;
 }
 .icon--yellow .svg-inline--fa {

@@ -1,12 +1,140 @@
+@font-face {
+  font-family: "SimplonNorm";
+  src: url("https://custardsieve.github.io/swinburne/fonts/SimplonNorm-Light-WebS.eot");
+  src: url("https://custardsieve.github.io/swinburne/fonts/SimplonNorm-Light-WebS.eot?#iefix") format("embedded-opentype"), url("https://custardsieve.github.io/swinburne/fonts/SimplonNorm-Light-WebS.woff2") format("woff2"), url("https://custardsieve.github.io/swinburne/fonts/SimplonNorm-Light-WebS.woff") format("woff"), url("https://custardsieve.github.io/swinburne/fonts/SimplonNorm-Light-WebS.ttf") format("truetype"), url("https://custardsieve.github.io/swinburne/fonts/SimplonNorm-Light-WebS.svg#SimplonNorm") format("svg");
+  font-weight: "300";
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SimplonNorm";
+  src: url("https://custardsieve.github.io/swinburne/fonts/SimplonNorm-Regular-WebS.eot");
+  src: url("https://custardsieve.github.io/swinburne/fonts/SimplonNorm-Regular-WebS.eot?#iefix") format("embedded-opentype"), url("https://custardsieve.github.io/swinburne/fonts/SimplonNorm-Regular-WebS.woff2") format("woff2"), url("https://custardsieve.github.io/swinburne/fonts/SimplonNorm-Regular-WebS.woff") format("woff"), url("https://custardsieve.github.io/swinburne/fonts/SimplonNorm-Regular-WebS.ttf") format("truetype"), url("https://custardsieve.github.io/swinburne/fonts/SimplonNorm-Regular-WebS.svg#SimplonNorm") format("svg");
+  font-weight: "400";
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SimplonNorm";
+  src: url("https://custardsieve.github.io/swinburne/fonts/SimplonNorm-Medium-WebS.eot");
+  src: url("https://custardsieve.github.io/swinburne/fonts/SimplonNorm-Medium-WebS.eot?#iefix") format("embedded-opentype"), url("https://custardsieve.github.io/swinburne/fonts/SimplonNorm-Medium-WebS.woff2") format("woff2"), url("https://custardsieve.github.io/swinburne/fonts/SimplonNorm-Medium-WebS.woff") format("woff"), url("https://custardsieve.github.io/swinburne/fonts/SimplonNorm-Medium-WebS.ttf") format("truetype"), url("https://custardsieve.github.io/swinburne/fonts/SimplonNorm-Medium-WebS.svg#SimplonNorm") format("svg");
+  font-weight: "500";
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SimplonNorm";
+  src: url("https://custardsieve.github.io/swinburne/fonts/SimplonNorm-Bold-WebS.eot");
+  src: url("https://custardsieve.github.io/swinburne/fonts/SimplonNorm-Bold-WebS.eot?#iefix") format("embedded-opentype"), url("https://custardsieve.github.io/swinburne/fonts/SimplonNorm-Bold-WebS.woff2") format("woff2"), url("https://custardsieve.github.io/swinburne/fonts/SimplonNorm-Bold-WebS.woff") format("woff"), url("https://custardsieve.github.io/swinburne/fonts/SimplonNorm-Bold-WebS.ttf") format("truetype"), url("https://custardsieve.github.io/swinburne/fonts/SimplonNorm-Bold-WebS.svg#SimplonNorm") format("svg");
+  font-weight: "700";
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SimplonNorm";
+  src: url("https://custardsieve.github.io/swinburne/fonts/SimplonNorm-LightItalic-WebS.eot");
+  src: url("https://custardsieve.github.io/swinburne/fonts/SimplonNorm-LightItalic-WebS.eot?#iefix") format("embedded-opentype"), url("https://custardsieve.github.io/swinburne/fonts/SimplonNorm-LightItalic-WebS.woff2") format("woff2"), url("https://custardsieve.github.io/swinburne/fonts/SimplonNorm-LightItalic-WebS.woff") format("woff"), url("https://custardsieve.github.io/swinburne/fonts/SimplonNorm-LightItalic-WebS.ttf") format("truetype"), url("https://custardsieve.github.io/swinburne/fonts/SimplonNorm-LightItalic-WebS.svg#SimplonNorm") format("svg");
+  font-weight: "300";
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "SimplonNorm";
+  src: url("https://custardsieve.github.io/swinburne/fonts/SimplonNorm-RegularItalic-WebS.eot");
+  src: url("https://custardsieve.github.io/swinburne/fonts/SimplonNorm-RegularItalic-WebS.eot?#iefix") format("embedded-opentype"), url("https://custardsieve.github.io/swinburne/fonts/SimplonNorm-RegularItalic-WebS.woff2") format("woff2"), url("https://custardsieve.github.io/swinburne/fonts/SimplonNorm-RegularItalic-WebS.woff") format("woff"), url("https://custardsieve.github.io/swinburne/fonts/SimplonNorm-RegularItalic-WebS.ttf") format("truetype"), url("https://custardsieve.github.io/swinburne/fonts/SimplonNorm-RegularItalic-WebS.svg#SimplonNorm") format("svg");
+  font-weight: "400";
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "SimplonNorm";
+  src: url("https://custardsieve.github.io/swinburne/fonts/SimplonNorm-MediumItalic-WebS.eot");
+  src: url("https://custardsieve.github.io/swinburne/fonts/SimplonNorm-MediumItalic-WebS.eot?#iefix") format("embedded-opentype"), url("https://custardsieve.github.io/swinburne/fonts/SimplonNorm-MediumItalic-WebS.woff2") format("woff2"), url("https://custardsieve.github.io/swinburne/fonts/SimplonNorm-MediumItalic-WebS.woff") format("woff"), url("https://custardsieve.github.io/swinburne/fonts/SimplonNorm-MediumItalic-WebS.ttf") format("truetype"), url("https://custardsieve.github.io/swinburne/fonts/SimplonNorm-MediumItalic-WebS.svg#SimplonNorm") format("svg");
+  font-weight: "500";
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "SimplonNorm";
+  src: url("https://custardsieve.github.io/swinburne/fonts/SimplonNorm-BoldItalic-WebS.eot");
+  src: url("https://custardsieve.github.io/swinburne/fonts/SimplonNorm-BoldItalic-WebS.eot?#iefix") format("embedded-opentype"), url("https://custardsieve.github.io/swinburne/fonts/SimplonNorm-BoldItalic-WebS.woff2") format("woff2"), url("https://custardsieve.github.io/swinburne/fonts/SimplonNorm-BoldItalic-WebS.woff") format("woff"), url("https://custardsieve.github.io/swinburne/fonts/SimplonNorm-BoldItalic-WebS.ttf") format("truetype"), url("https://custardsieve.github.io/swinburne/fonts/SimplonNorm-BoldItalic-WebS.svg#SimplonNorm") format("svg");
+  font-weight: "700";
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "SimplonMono";
+  src: url("https://custardsieve.github.io/swinburne/fonts/SimplonMono-Light-WebS.eot");
+  src: url("https://custardsieve.github.io/swinburne/fonts/SimplonMono-Light-WebS.eot?#iefix") format("embedded-opentype"), url("https://custardsieve.github.io/swinburne/fonts/SimplonMono-Light-WebS.woff2") format("woff2"), url("https://custardsieve.github.io/swinburne/fonts/SimplonMono-Light-WebS.woff") format("woff"), url("https://custardsieve.github.io/swinburne/fonts/SimplonMono-Light-WebS.ttf") format("truetype"), url("https://custardsieve.github.io/swinburne/fonts/SimplonMono-Light-WebS.svg#SimplonMono") format("svg");
+  font-weight: "300";
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SimplonMono";
+  src: url("https://custardsieve.github.io/swinburne/fonts/SimplonMono-Regular-WebS.eot");
+  src: url("https://custardsieve.github.io/swinburne/fonts/SimplonMono-Regular-WebS.eot?#iefix") format("embedded-opentype"), url("https://custardsieve.github.io/swinburne/fonts/SimplonMono-Regular-WebS.woff2") format("woff2"), url("https://custardsieve.github.io/swinburne/fonts/SimplonMono-Regular-WebS.woff") format("woff"), url("https://custardsieve.github.io/swinburne/fonts/SimplonMono-Regular-WebS.ttf") format("truetype"), url("https://custardsieve.github.io/swinburne/fonts/SimplonMono-Regular-WebS.svg#SimplonMono") format("svg");
+  font-weight: "400";
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SimplonMono";
+  src: url("https://custardsieve.github.io/swinburne/fonts/SimplonMono-Medium-WebS.eot");
+  src: url("https://custardsieve.github.io/swinburne/fonts/SimplonMono-Medium-WebS.eot?#iefix") format("embedded-opentype"), url("https://custardsieve.github.io/swinburne/fonts/SimplonMono-Medium-WebS.woff2") format("woff2"), url("https://custardsieve.github.io/swinburne/fonts/SimplonMono-Medium-WebS.woff") format("woff"), url("https://custardsieve.github.io/swinburne/fonts/SimplonMono-Medium-WebS.ttf") format("truetype"), url("https://custardsieve.github.io/swinburne/fonts/SimplonMono-Medium-WebS.svg#SimplonMono") format("svg");
+  font-weight: "500";
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SimplonMono";
+  src: url("https://custardsieve.github.io/swinburne/fonts/SimplonMono-Bold-WebS.eot");
+  src: url("https://custardsieve.github.io/swinburne/fonts/SimplonMono-Bold-WebS.eot?#iefix") format("embedded-opentype"), url("https://custardsieve.github.io/swinburne/fonts/SimplonMono-Bold-WebS.woff2") format("woff2"), url("https://custardsieve.github.io/swinburne/fonts/SimplonMono-Bold-WebS.woff") format("woff"), url("https://custardsieve.github.io/swinburne/fonts/SimplonMono-Bold-WebS.ttf") format("truetype"), url("https://custardsieve.github.io/swinburne/fonts/SimplonMono-Bold-WebS.svg#SimplonMono") format("svg");
+  font-weight: "700";
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SimplonMono";
+  src: url("https://custardsieve.github.io/swinburne/fonts/SimplonMono-LightItalic-WebS.eot");
+  src: url("https://custardsieve.github.io/swinburne/fonts/SimplonMono-LightItalic-WebS.eot?#iefix") format("embedded-opentype"), url("https://custardsieve.github.io/swinburne/fonts/SimplonMono-LightItalic-WebS.woff2") format("woff2"), url("https://custardsieve.github.io/swinburne/fonts/SimplonMono-LightItalic-WebS.woff") format("woff"), url("https://custardsieve.github.io/swinburne/fonts/SimplonMono-LightItalic-WebS.ttf") format("truetype"), url("https://custardsieve.github.io/swinburne/fonts/SimplonMono-LightItalic-WebS.svg#SimplonMono italic") format("svg");
+  font-weight: "300";
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SimplonMono";
+  src: url("https://custardsieve.github.io/swinburne/fonts/SimplonMono-RegularItalic-WebS.eot");
+  src: url("https://custardsieve.github.io/swinburne/fonts/SimplonMono-RegularItalic-WebS.eot?#iefix") format("embedded-opentype"), url("https://custardsieve.github.io/swinburne/fonts/SimplonMono-RegularItalic-WebS.woff2") format("woff2"), url("https://custardsieve.github.io/swinburne/fonts/SimplonMono-RegularItalic-WebS.woff") format("woff"), url("https://custardsieve.github.io/swinburne/fonts/SimplonMono-RegularItalic-WebS.ttf") format("truetype"), url("https://custardsieve.github.io/swinburne/fonts/SimplonMono-RegularItalic-WebS.svg#SimplonMono italic") format("svg");
+  font-weight: "400";
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SimplonMono";
+  src: url("https://custardsieve.github.io/swinburne/fonts/SimplonMono-MediumItalic-WebS.eot");
+  src: url("https://custardsieve.github.io/swinburne/fonts/SimplonMono-MediumItalic-WebS.eot?#iefix") format("embedded-opentype"), url("https://custardsieve.github.io/swinburne/fonts/SimplonMono-MediumItalic-WebS.woff2") format("woff2"), url("https://custardsieve.github.io/swinburne/fonts/SimplonMono-MediumItalic-WebS.woff") format("woff"), url("https://custardsieve.github.io/swinburne/fonts/SimplonMono-MediumItalic-WebS.ttf") format("truetype"), url("https://custardsieve.github.io/swinburne/fonts/SimplonMono-MediumItalic-WebS.svg#SimplonMono italic") format("svg");
+  font-weight: "500";
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SimplonMono";
+  src: url("https://custardsieve.github.io/swinburne/fonts/SimplonMono-BoldItalic-WebS.eot");
+  src: url("https://custardsieve.github.io/swinburne/fonts/SimplonMono-BoldItalic-WebS.eot?#iefix") format("embedded-opentype"), url("https://custardsieve.github.io/swinburne/fonts/SimplonMono-BoldItalic-WebS.woff2") format("woff2"), url("https://custardsieve.github.io/swinburne/fonts/SimplonMono-BoldItalic-WebS.woff") format("woff"), url("https://custardsieve.github.io/swinburne/fonts/SimplonMono-BoldItalic-WebS.ttf") format("truetype"), url("https://custardsieve.github.io/swinburne/fonts/SimplonMono-BoldItalic-WebS.svg#SimplonMono italic") format("svg");
+  font-weight: "700";
+  font-style: normal;
+}
+
 .brand-header__nav .nav-link {
-  font-family: "Simplon Norm", fantasy !important;
+  font-family: "SimplonNorm", fantasy !important;
   font-size: 1.04rem !important;
   letter-spacing: 0.1px;
   text-transform: capitalize !important;
 }
 
 .h1, .h2, .h3, .h4, .h5, h1, h2, h3, h4, h5 {
-  font-family: "Simplon Norm", fantasy !important;
+  font-family: "SimplonNorm", fantasy !important;
 }
 
 .h1, .h2, .h3, h1, h2, h3 {
@@ -42,13 +170,13 @@
 .card-taglist li {
   text-transform: uppercase;
   padding: 0;
-  font-family: 'Simplon Mono', fantasy;
+  font-family: '$mono', fantasy;
   letter-spacing: 2px;
   font-size: 10px;
 }
 
 .btn {
-  font-family: "Simplon Norm", fantasy;
+  font-family: "SimplonNorm", fantasy;
   font-weight: 300 !important;
   text-transform: uppercase;
   letter-spacing: 2px !important;
@@ -68,7 +196,7 @@
 }
 
 .cards-tiles-narrow .card .card-title {
-  font-family: "Simplon Norm", fantasy !important;
+  font-family: "SimplonNorm", fantasy !important;
   font-weight: 400;
 }
 

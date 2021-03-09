@@ -20,14 +20,14 @@
   $SimplonNorm: 'SimplonNorm';
   $name: 'Simplon Norm';
   $pack: '-WebS';
-  @include fface('#{$dir}',$SimplonNorm,'-Light', $pack, '300', '$SimplonNorm', normal, 'SimplonNorm-Light');
-  @include fface('#{$dir}',$SimplonNorm,'-Regular', $pack, '400', $SimplonNorm, normal, $name);
-  @include fface('#{$dir}',$SimplonNorm,'-Medium', $pack, '500', $SimplonNorm, normal, $name);
-  @include fface('#{$dir}',$SimplonNorm,'-Bold', $pack, '700', $SimplonNorm, normal, $name);
-  @include fface('#{$dir}',$SimplonNorm,'-LightItalic', $pack, '300', $SimplonNorm, italic, $name);
-  @include fface('#{$dir}',$SimplonNorm,'-RegularItalic', $pack, '400', $SimplonNorm, italic, $name);
-  @include fface('#{$dir}',$SimplonNorm,'-MediumItalic', $pack, '500', $SimplonNorm, italic, $name);
-  @include fface('#{$dir}',$SimplonNorm,'-BoldItalic', $pack, '700', $SimplonNorm, italic, $name);
+  @include fface('#{$dir}',$SimplonNorm,'-Light', $pack, '300', '$SimplonNorm', normal, $SimplonNorm + '-Light');
+  @include fface('#{$dir}',$SimplonNorm,'-Regular', $pack, '400', $SimplonNorm, normal, $SimplonNorm + '-Regular');
+  @include fface('#{$dir}',$SimplonNorm,'-Medium', $pack, '500', $SimplonNorm, normal, $SimplonNorm + '-Medium');
+  @include fface('#{$dir}',$SimplonNorm,'-Bold', $pack, '700', $SimplonNorm, normal, $SimplonNorm + '-Bold');
+  @include fface('#{$dir}',$SimplonNorm,'-LightItalic', $pack, '300', $SimplonNorm, italic, $SimplonNorm + '-LightItalic');
+  @include fface('#{$dir}',$SimplonNorm,'-RegularItalic', $pack, '400', $SimplonNorm, italic, $SimplonNorm + '-RegularItalic');
+  @include fface('#{$dir}',$SimplonNorm,'-MediumItalic', $pack, '500', $SimplonNorm, italic, $SimplonNorm + '-MediumItalic');
+  @include fface('#{$dir}',$SimplonNorm,'-BoldItalic', $pack, '700', $SimplonNorm, italic, $SimplonNorm + '-BoldItalic');
   
   $SimplonMono: 'SimplonMono';
   $name: 'Simplon Mono';

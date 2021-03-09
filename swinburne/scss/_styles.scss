@@ -1,6 +1,6 @@
 
-$norm: 'Simplon Norm', fantasy;
-$mono: 'Simplon Mono', fantasy;
+$norm: 'SimplonNorm';
+$mono: 'SimplonMono';
 
 .brand-header__nav .nav-link {
     font-family: $norm!important;
@@ -10,20 +10,16 @@ $mono: 'Simplon Mono', fantasy;
 }
 
 .h1, .h2, .h3, .h4, .h5, h1, h2, h3, h4, h5 {
-    font-family: 'Simplon Norm'!important;
+    font-family: $norm + '-Light'!important;
 }
-.h1, .h2, .h3, h1, h2, h3 {
-    font-family: 'SimplonNorm-Light'!important;
-}
+
 .h4, .h5, h4, h5 {
-    font-weight:800!important;
+    font-family: $norm + '-Medium'!important;
 }
 .h1, h1 {
-    letter-spacing: 3px;
-    font-weight:300!important;
     font-size: 42px;
     line-height: 1.1;
-    text-transform: uppercase!important;
+    text-transform: none!important;
 }
 .h2, h2 {
     font-size: 33px!important;

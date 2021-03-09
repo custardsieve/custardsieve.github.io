@@ -20,7 +20,7 @@
   $SimplonNorm: 'SimplonNorm';
   $name: 'Simplon Norm';
   $pack: '-WebS';
-  @include fface('#{$dir}',$SimplonNorm,'-Light', $pack, '300', $SimplonNorm, normal, $name);
+  @include fface('#{$dir}',$SimplonNorm,'-Light', $pack, '300', '$SimplonNorm', normal, 'SimplonNorm-Light');
   @include fface('#{$dir}',$SimplonNorm,'-Regular', $pack, '400', $SimplonNorm, normal, $name);
   @include fface('#{$dir}',$SimplonNorm,'-Medium', $pack, '500', $SimplonNorm, normal, $name);
   @include fface('#{$dir}',$SimplonNorm,'-Bold', $pack, '700', $SimplonNorm, normal, $name);

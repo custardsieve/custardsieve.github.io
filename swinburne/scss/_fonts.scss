@@ -1,8 +1,8 @@
 
 
-@mixin fface($path, $family, $width, $type, $weight: 400, $svg: '', $style: normal) {
+@mixin fface($path, $family, $width, $type, $weight: 400, $svg: '', $style: normal, $offical-name:'') {
     @font-face {
-      font-family: $family;
+      font-family: $offical-name;
       @if $svg == '' {
         // with OTF without SVG and EOT
         src: url('#{$path}#{$family}#{$width}#{$type}.otf') format('opentype'), url('#{$path}#{$family}#{$width}#{$type}.woff2') format('woff2'), url('#{$path}#{$family}#{$width}#{$type}.woff') format('woff'), url('#{$path}#{$family}#{$width}#{$type}.ttf') format('truetype');
@@ -18,24 +18,26 @@
   // ========================================================importing
   $dir: 'https://custardsieve.github.io/swinburne/fonts/';
   $SimplonNorm: 'SimplonNorm';
+  $name: 'Simplon Norm';
   $pack: '-WebS';
-  @include fface('#{$dir}',$SimplonNorm,'-Light', $pack, '300', $SimplonNorm);
-  @include fface('#{$dir}',$SimplonNorm,'-Regular', $pack, '400', $SimplonNorm);
-  @include fface('#{$dir}',$SimplonNorm,'-Medium', $pack, '500', $SimplonNorm);
-  @include fface('#{$dir}',$SimplonNorm,'-Bold', $pack, '700', $SimplonNorm);
-  @include fface('#{$dir}',$SimplonNorm,'-LightItalic', $pack, '300', $SimplonNorm, italic);
-  @include fface('#{$dir}',$SimplonNorm,'-RegularItalic', $pack, '400', $SimplonNorm, italic);
-  @include fface('#{$dir}',$SimplonNorm,'-MediumItalic', $pack, '500', $SimplonNorm, italic);
-  @include fface('#{$dir}',$SimplonNorm,'-BoldItalic', $pack, '700', $SimplonNorm, italic);
+  @include fface('#{$dir}',$SimplonNorm,'-Light', $pack, '300', $SimplonNorm, normal, $name);
+  @include fface('#{$dir}',$SimplonNorm,'-Regular', $pack, '400', $SimplonNorm, normal, $name);
+  @include fface('#{$dir}',$SimplonNorm,'-Medium', $pack, '500', $SimplonNorm, normal, $name);
+  @include fface('#{$dir}',$SimplonNorm,'-Bold', $pack, '700', $SimplonNorm, normal, $name);
+  @include fface('#{$dir}',$SimplonNorm,'-LightItalic', $pack, '300', $SimplonNorm, italic, $name);
+  @include fface('#{$dir}',$SimplonNorm,'-RegularItalic', $pack, '400', $SimplonNorm, italic, $name);
+  @include fface('#{$dir}',$SimplonNorm,'-MediumItalic', $pack, '500', $SimplonNorm, italic, $name);
+  @include fface('#{$dir}',$SimplonNorm,'-BoldItalic', $pack, '700', $SimplonNorm, italic, $name);
   
   $SimplonMono: 'SimplonMono';
-  @include fface('#{$dir}',$SimplonMono,'-Light', $pack, '300', $SimplonMono);
-  @include fface('#{$dir}',$SimplonMono,'-Regular', $pack, '400', $SimplonMono);
-  @include fface('#{$dir}',$SimplonMono,'-Medium', $pack, '500', $SimplonMono);
-  @include fface('#{$dir}',$SimplonMono,'-Bold', $pack, '700', $SimplonMono);
-  @include fface('#{$dir}',$SimplonMono,'-LightItalic', $pack, '300', $SimplonMono italic);
-  @include fface('#{$dir}',$SimplonMono,'-RegularItalic', $pack, '400', $SimplonMono italic);
-  @include fface('#{$dir}',$SimplonMono,'-MediumItalic', $pack, '500', $SimplonMono italic);
-  @include fface('#{$dir}',$SimplonMono,'-BoldItalic', $pack, '700', $SimplonMono italic);
+  $name: 'Simplon Mono';
+  @include fface('#{$dir}',$SimplonMono,'-Light', $pack, '300', $SimplonMono, normal, $name);
+  @include fface('#{$dir}',$SimplonMono,'-Regular', $pack, '400', $SimplonMono, normal, $name);
+  @include fface('#{$dir}',$SimplonMono,'-Medium', $pack, '500', $SimplonMono, normal, $name);
+  @include fface('#{$dir}',$SimplonMono,'-Bold', $pack, '700', $SimplonMono, normal, $name);
+  @include fface('#{$dir}',$SimplonMono,'-LightItalic', $pack, '300', $SimplonMono italic, $name);
+  @include fface('#{$dir}',$SimplonMono,'-RegularItalic', $pack, '400', $SimplonMono italic, $name);
+  @include fface('#{$dir}',$SimplonMono,'-MediumItalic', $pack, '500', $SimplonMono italic, $name);
+  @include fface('#{$dir}',$SimplonMono,'-BoldItalic', $pack, '700', $SimplonMono italic, $name);
   // ========================================================usage
  

@@ -1,0 +1,53 @@
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* H E A D E R S ~~~~~~~~~~~~~~~~~ */
+/* ——————————————————————————————— */
+
+.brand-header__nav .nav-link {
+    font-family: $norm + '-Medium';
+    font-weight: 300;
+    font-size: $body;
+    color: black;
+    @media(max-width:$lg-break) {
+        color: white!important;
+    }
+    text-transform: none;
+    -webkit-font-smoothing: subpixel-antialiased;
+}
+@media (min-width: 1024px) {
+    .brand-header__nav {
+        padding-left: 1.875rem;
+    }
+}
+.nav-link.l-2 {
+    font-family: $norm + '-Light';
+    font-weight: 300;
+    font-size: $sub;
+    font-weight: 100;
+    line-height: 1.3;
+    padding-top: 1px; /*Fix for weird line-height issue*/
+}
+.brand-header__nav .nav-link.l-3  {
+    color:#d1d1d1;
+    font-family: $norm + '-Light';
+    font-size: 15px;
+    letter-spacing: 0.2px;
+}
+.brand-header__nav .nav-link.l-2.mega-menu-heading {
+    color: white;
+    font-family: $norm + '-Medium';
+    font-size: $body;
+    &:hover {
+        color: #FF6053;
+    }
+}
+@media (min-width: 1024px) {
+.brand-header__nav .nav-item.l-1:not(:first-child) {
+    margin-left: 24px!important;
+}
+}
+.brand-header__nav .icon--vertical {
+    margin-left: 0.35rem;
+}
+.brand-header__nav .dropdown-toggle-split-icon  {
+    color: black
+}

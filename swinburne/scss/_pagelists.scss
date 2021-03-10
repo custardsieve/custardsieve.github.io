@@ -1,0 +1,80 @@
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* P A G E L I S T S ~~~~~~~~~~~~~ */
+/* ——————————————————————————————— */
+
+.taglist, .taglist li {
+    line-height: 1.4;
+    font-family:$mono + '-Regular';
+    
+    text-transform: uppercase;
+    padding:0;
+
+    &__item {
+        margin-right:24px;
+        line-height: 2;
+        font-size:$caption2;
+        color: #5C5E66;
+    }   
+}
+.contentblock>.icon {
+    color: inherit;
+}
+.card  {
+    &-taglist {
+        margin-bottom: 14px;
+
+        & li {
+            padding-bottom:0;
+        }
+    }
+    &-subtitle {
+        line-height: 1;
+        font-family:$mono + '-Regular';
+        font-size:$caption2;
+        color: #5C5E66;
+        text-transform: uppercase;
+        margin-bottom: 14px;
+    }
+    &-title :not(.cards-tiles-narrow > .card-title) {
+        margin-bottom:14px;
+    }
+    &-action {
+        margin-top: auto;
+        padding-top: 14px;
+    }
+    &-link > span :not(.link-text) {
+        width: auto;
+    }
+    &-link {
+        font-family: $norm + '-Regular'!important;
+    }
+    &-date {
+        margin-top: 0;
+    }
+    
+
+    &--promoted &-body, &--promoted &-title, &--promoted &-text {
+        background-color: #242323;
+        color: white
+    }
+}
+.cards-tiles-narrow .card .card-title {
+    margin-bottom:0; /* fix for narrow cards issue */ 
+    font-size: 16px!important;
+}
+
+
+.eventlist {
+    .card-body {
+        margin-top: auto;
+        flex: none;
+        border-top: 0.5px solid #e2e2e2;
+    }
+    
+    .taglist {
+        font-family:$mono + '-Regular';
+        font-size:$caption2;
+        text-transform: uppercase;
+        padding:0;
+    }
+}

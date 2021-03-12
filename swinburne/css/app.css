@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-/* F O N T F A C E  ~~~~~~~~~~~~~~ */
+/* UPDATED 12-MAR- 3:00pm  ~~~~~~~ */
 /* ——————————————————————————————— */
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,300&display=swap");
 @font-face {
@@ -134,24 +134,6 @@
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /* T Y P O G R A P H Y ~~~~~~~~~~~ */
 /* ——————————————————————————————— */
-body {
-  -webkit-font-smoothing: antialiased;
-  font-family: "SimplonNorm-Light";
-  line-height: 1.4;
-}
-
-p em, p i {
-  font-family: "SimplonNorm-LightItalic";
-}
-
-p b, p strong {
-  font-family: "SimplonNorm-Medium";
-}
-
-a span {
-  font-family: "SimplonNorm-Regular";
-}
-
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
   font-family: "SimplonNorm-Regular";
   line-height: 1.25;

@@ -46,29 +46,29 @@ $caption1-mob-sm: 12px;
 $caption2-mob-sm: 10px;
 
 
-body {
-    -webkit-font-smoothing: antialiased;
-    font-family: $norm + '-Light';
-    line-height: 1.4;
-}
+// body {
+//     -webkit-font-smoothing: antialiased;
+//     font-family: $norm + '-Light';
+//     line-height: 1.4;
+// }
 // .p, p, ul, li:not(li.breadcrumb-item), a:not(.breadcrumb-item a), tr, td, th  {
     // -webkit-font-smoothing: antialiased;
     // font-family: $norm + '-Light';
     // line-height: 1.4;
 // }
-p {
-    em, i {
-        font-family: $norm + '-LightItalic';
-    }
-    b, strong {
-        font-family: $norm + '-Medium';
-    }
-}
-a {
-    span {
-        font-family: $norm + '-Regular';
-    }
-}
+// p {
+//     em, i {
+//         font-family: $norm + '-LightItalic';
+//     }
+//     b, strong {
+//         font-family: $norm + '-Medium';
+//     }
+// }
+// a {
+//     span {
+//         font-family: $norm + '-Regular';
+//     }
+// }
 
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
     font-family: $norm + '-Regular';

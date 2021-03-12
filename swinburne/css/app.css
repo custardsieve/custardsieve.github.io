@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-/* UPDATED 12-MAR- 3:00pm  ~~~~~~~ */
+/* UPDATED 12-MAR- 3:02pm  ~~~~~~~ */
 /* ——————————————————————————————— */
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,300&display=swap");
 @font-face {
@@ -237,91 +237,6 @@
 }
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-/* P A G E L I S T S ~~~~~~~~~~~~~ */
-/* ——————————————————————————————— */
-.taglist, .taglist li {
-  line-height: 1.4;
-  font-family: "SimplonMono-Regular";
-  text-transform: uppercase;
-  padding: 0;
-}
-
-.taglist__item, .taglist li__item {
-  margin-right: 24px;
-  line-height: 2;
-  font-size: 10px;
-  color: #5C5E66;
-}
-
-.contentblock > .icon {
-  color: inherit;
-}
-
-.card-taglist {
-  margin-bottom: 14px;
-}
-
-.card-taglist li {
-  padding-bottom: 0;
-}
-
-.card-subtitle {
-  line-height: 1;
-  font-family: "SimplonMono-Regular";
-  font-size: 10px;
-  color: #5C5E66;
-  text-transform: uppercase;
-  margin-bottom: 14px;
-}
-
-.card-title {
-  margin-bottom: 14px;
-}
-
-.card-action {
-  margin-top: auto;
-  padding-top: 14px;
-}
-
-.card-link > span :not(.link-text) {
-  width: auto;
-}
-
-.card-link {
-  font-family: "SimplonNorm-Regular" !important;
-}
-
-.card-date {
-  margin-top: 0;
-}
-
-.card--promoted .card-body, .card--promoted .card-title, .card--promoted .card-text {
-  background-color: #242323;
-  color: white;
-}
-
-.cards-tiles-narrow .card .card-title {
-  margin-bottom: 0;
-  /* fix for narrow cards issue */
-  font-size: 16px !important;
-}
-
-.eventlist .card-body {
-  margin-top: auto;
-  -webkit-box-flex: 0;
-      -ms-flex: none;
-          flex: none;
-  border-top: 0.5px solid #e2e2e2;
-}
-
-.eventlist .taglist {
-  font-family: "SimplonMono-Regular";
-  font-size: 10px;
-  text-transform: uppercase;
-  padding: 0;
-}
-
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /* H E A D E R S ~~~~~~~~~~~~~~~~~ */
 /* ——————————————————————————————— */
 .brand-header__nav .nav-link {
@@ -462,6 +377,91 @@ button.search-input__collection.btn.btn-sm.btn--no-hover.text-uppercase.btn-seco
 .results-column.results-column--secondary.strong > p {
   font-family: "SimplonMono-Medium";
   font-size: 11.5px;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* P A G E L I S T S ~~~~~~~~~~~~~ */
+/* ——————————————————————————————— */
+.taglist, .taglist li {
+  line-height: 1.4;
+  font-family: "SimplonMono-Regular";
+  text-transform: uppercase;
+  padding: 0;
+}
+
+.taglist__item, .taglist li__item {
+  margin-right: 24px;
+  line-height: 2;
+  font-size: 10px;
+  color: #5C5E66;
+}
+
+.contentblock > .icon {
+  color: inherit;
+}
+
+.card-taglist {
+  margin-bottom: 14px;
+}
+
+.card-taglist li {
+  padding-bottom: 0;
+}
+
+.card-subtitle {
+  line-height: 1;
+  font-family: "SimplonMono-Regular";
+  font-size: 10px;
+  color: #5C5E66;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.card-title {
+  margin-bottom: 14px;
+}
+
+.card-action {
+  margin-top: auto;
+  padding-top: 14px;
+}
+
+.card-link > span :not(.link-text) {
+  width: auto;
+}
+
+.card-link {
+  font-family: "SimplonNorm-Regular" !important;
+}
+
+.card-date {
+  margin-top: 0;
+}
+
+.card--promoted .card-body, .card--promoted .card-title, .card--promoted .card-text {
+  background-color: #242323;
+  color: white;
+}
+
+.cards-tiles-narrow .card .card-title {
+  margin-bottom: 0;
+  /* fix for narrow cards issue */
+  font-size: 16px !important;
+}
+
+.eventlist .card-body {
+  margin-top: auto;
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  border-top: 0.5px solid #e2e2e2;
+}
+
+.eventlist .taglist {
+  font-family: "SimplonMono-Regular";
+  font-size: 10px;
+  text-transform: uppercase;
+  padding: 0;
 }
 
 .breadcrumb {

@@ -78,7 +78,7 @@ $caption2-mob-sm: 10px;
     & .strong,b,strong {
         font-weight: 100!important;
     }
-    color:black;
+    // color:black;
 }
 
 .h4, .h5, h4, h5 {
@@ -95,6 +95,7 @@ $caption2-mob-sm: 10px;
         font-size: $h1-mob-sm!important;
     }
     line-height: 1;
+    letter-spacing: -1.3px;
     text-transform: none;
 }
 .h2, h2 {
@@ -143,10 +144,15 @@ $caption2-mob-sm: 10px;
     font-family: 'SimplonMono-Regular';
     font-size: 10px;
     -webkit-font-smoothing: subpixel-antialiased;
-    color:black;
+    // color:black;
 }
 .contact-details .details__contrast, .event-details .details__contrast, .news-details[component] .details__contrast {
     & .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+        color:white
+    }
+}
+.theme--page-details-narrow>.container .description, .theme--page-details-narrow>.container .title, .theme--page-details-tall>.container .description, .theme--page-details-tall>.container .title {
+    & > .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
         color:white
     }
 }

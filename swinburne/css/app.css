@@ -139,7 +139,6 @@
   line-height: 1.25;
   -webkit-font-smoothing: antialiased;
   font-weight: 300;
-  color: black;
 }
 
 .h1 .strong, .h1 b, .h1 strong, .h2 .strong, .h2 b, .h2 strong, .h3 .strong, .h3 b, .h3 strong, .h4 .strong, .h4 b, .h4 strong, .h5 .strong, .h5 b, .h5 strong, .h6 .strong, .h6 b, .h6 strong, h1 .strong, h1 b, h1 strong, h2 .strong, h2 b, h2 strong, h3 .strong, h3 b, h3 strong, h4 .strong, h4 b, h4 strong, h5 .strong, h5 b, h5 strong, h6 .strong, h6 b, h6 strong {
@@ -154,6 +153,7 @@
   font-family: "SimplonNorm-Light";
   font-size: 61px;
   line-height: 1;
+  letter-spacing: -1.3px;
   text-transform: none;
 }
 
@@ -245,10 +245,13 @@
   font-family: 'SimplonMono-Regular';
   font-size: 10px;
   -webkit-font-smoothing: subpixel-antialiased;
-  color: black;
 }
 
 .contact-details .details__contrast .h1, .contact-details .details__contrast .h2, .contact-details .details__contrast .h3, .contact-details .details__contrast .h4, .contact-details .details__contrast .h5, .contact-details .details__contrast .h6, .contact-details .details__contrast h1, .contact-details .details__contrast h2, .contact-details .details__contrast h3, .contact-details .details__contrast h4, .contact-details .details__contrast h5, .contact-details .details__contrast h6, .event-details .details__contrast .h1, .event-details .details__contrast .h2, .event-details .details__contrast .h3, .event-details .details__contrast .h4, .event-details .details__contrast .h5, .event-details .details__contrast .h6, .event-details .details__contrast h1, .event-details .details__contrast h2, .event-details .details__contrast h3, .event-details .details__contrast h4, .event-details .details__contrast h5, .event-details .details__contrast h6, .news-details[component] .details__contrast .h1, .news-details[component] .details__contrast .h2, .news-details[component] .details__contrast .h3, .news-details[component] .details__contrast .h4, .news-details[component] .details__contrast .h5, .news-details[component] .details__contrast .h6, .news-details[component] .details__contrast h1, .news-details[component] .details__contrast h2, .news-details[component] .details__contrast h3, .news-details[component] .details__contrast h4, .news-details[component] .details__contrast h5, .news-details[component] .details__contrast h6 {
+  color: white;
+}
+
+.theme--page-details-narrow > .container .description > .h1, .theme--page-details-narrow > .container .description .h2, .theme--page-details-narrow > .container .description .h3, .theme--page-details-narrow > .container .description .h4, .theme--page-details-narrow > .container .description .h5, .theme--page-details-narrow > .container .description .h6, .theme--page-details-narrow > .container .description h1, .theme--page-details-narrow > .container .description h2, .theme--page-details-narrow > .container .description h3, .theme--page-details-narrow > .container .description h4, .theme--page-details-narrow > .container .description h5, .theme--page-details-narrow > .container .description h6, .theme--page-details-narrow > .container .title > .h1, .theme--page-details-narrow > .container .title .h2, .theme--page-details-narrow > .container .title .h3, .theme--page-details-narrow > .container .title .h4, .theme--page-details-narrow > .container .title .h5, .theme--page-details-narrow > .container .title .h6, .theme--page-details-narrow > .container .title h1, .theme--page-details-narrow > .container .title h2, .theme--page-details-narrow > .container .title h3, .theme--page-details-narrow > .container .title h4, .theme--page-details-narrow > .container .title h5, .theme--page-details-narrow > .container .title h6, .theme--page-details-tall > .container .description > .h1, .theme--page-details-tall > .container .description .h2, .theme--page-details-tall > .container .description .h3, .theme--page-details-tall > .container .description .h4, .theme--page-details-tall > .container .description .h5, .theme--page-details-tall > .container .description .h6, .theme--page-details-tall > .container .description h1, .theme--page-details-tall > .container .description h2, .theme--page-details-tall > .container .description h3, .theme--page-details-tall > .container .description h4, .theme--page-details-tall > .container .description h5, .theme--page-details-tall > .container .description h6, .theme--page-details-tall > .container .title > .h1, .theme--page-details-tall > .container .title .h2, .theme--page-details-tall > .container .title .h3, .theme--page-details-tall > .container .title .h4, .theme--page-details-tall > .container .title .h5, .theme--page-details-tall > .container .title .h6, .theme--page-details-tall > .container .title h1, .theme--page-details-tall > .container .title h2, .theme--page-details-tall > .container .title h3, .theme--page-details-tall > .container .title h4, .theme--page-details-tall > .container .title h5, .theme--page-details-tall > .container .title h6 {
   color: white;
 }
 
@@ -492,4 +495,8 @@ button.search-input__collection.btn.btn-sm.btn--no-hover.text-uppercase.btn-seco
   -webkit-box-align: none !important;
       -ms-flex-align: none !important;
           align-items: none !important;
+}
+
+.bg-yellow, .bg-yellow-pattern {
+  background-color: #f8f8f8;
 }

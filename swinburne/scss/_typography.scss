@@ -75,9 +75,13 @@ $caption2-mob-sm: 10px;
     line-height: 1.25;
     -webkit-font-smoothing: antialiased;
     font-weight: 300;
+    & .strong,b,strong {
+        font-weight: 100!important;
+    }
+    color:black;
 }
 
-.h3, .h4, .h5, h3, h4, h5 {
+.h4, .h5, h4, h5 {
     font-family: $norm + '-Medium';
 }
 .h1, h1 {
@@ -134,4 +138,15 @@ $caption2-mob-sm: 10px;
 .h6, h6 {
     font-size:$body;
     font-family:$norm + '-Medium';
+}
+.breadcrumb {
+    font-family: 'SimplonMono-Regular';
+    font-size: 10px;
+    -webkit-font-smoothing: subpixel-antialiased;
+    color:black;
+}
+.contact-details .details__contrast, .event-details .details__contrast, .news-details[component] .details__contrast {
+    & .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+        color:white
+    }
 }

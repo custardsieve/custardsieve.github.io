@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-/* UPDATED 12-MAR- 3:02pm  ~~~~~~~ */
+/* UPDATED 15-MAR- 10:10am  ~~~~~~~ */
 /* ——————————————————————————————— */
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,300&display=swap");
 @font-face {
@@ -139,9 +139,14 @@
   line-height: 1.25;
   -webkit-font-smoothing: antialiased;
   font-weight: 300;
+  color: black;
 }
 
-.h3, .h4, .h5, h3, h4, h5 {
+.h1 .strong, .h1 b, .h1 strong, .h2 .strong, .h2 b, .h2 strong, .h3 .strong, .h3 b, .h3 strong, .h4 .strong, .h4 b, .h4 strong, .h5 .strong, .h5 b, .h5 strong, .h6 .strong, .h6 b, .h6 strong, h1 .strong, h1 b, h1 strong, h2 .strong, h2 b, h2 strong, h3 .strong, h3 b, h3 strong, h4 .strong, h4 b, h4 strong, h5 .strong, h5 b, h5 strong, h6 .strong, h6 b, h6 strong {
+  font-weight: 100 !important;
+}
+
+.h4, .h5, h4, h5 {
   font-family: "SimplonNorm-Medium";
 }
 
@@ -234,6 +239,17 @@
 .h6, h6 {
   font-size: 16px;
   font-family: "SimplonNorm-Medium";
+}
+
+.breadcrumb {
+  font-family: 'SimplonMono-Regular';
+  font-size: 10px;
+  -webkit-font-smoothing: subpixel-antialiased;
+  color: black;
+}
+
+.contact-details .details__contrast .h1, .contact-details .details__contrast .h2, .contact-details .details__contrast .h3, .contact-details .details__contrast .h4, .contact-details .details__contrast .h5, .contact-details .details__contrast .h6, .contact-details .details__contrast h1, .contact-details .details__contrast h2, .contact-details .details__contrast h3, .contact-details .details__contrast h4, .contact-details .details__contrast h5, .contact-details .details__contrast h6, .event-details .details__contrast .h1, .event-details .details__contrast .h2, .event-details .details__contrast .h3, .event-details .details__contrast .h4, .event-details .details__contrast .h5, .event-details .details__contrast .h6, .event-details .details__contrast h1, .event-details .details__contrast h2, .event-details .details__contrast h3, .event-details .details__contrast h4, .event-details .details__contrast h5, .event-details .details__contrast h6, .news-details[component] .details__contrast .h1, .news-details[component] .details__contrast .h2, .news-details[component] .details__contrast .h3, .news-details[component] .details__contrast .h4, .news-details[component] .details__contrast .h5, .news-details[component] .details__contrast .h6, .news-details[component] .details__contrast h1, .news-details[component] .details__contrast h2, .news-details[component] .details__contrast h3, .news-details[component] .details__contrast h4, .news-details[component] .details__contrast h5, .news-details[component] .details__contrast h6 {
+  color: white;
 }
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
@@ -462,12 +478,6 @@ button.search-input__collection.btn.btn-sm.btn--no-hover.text-uppercase.btn-seco
   font-size: 10px;
   text-transform: uppercase;
   padding: 0;
-}
-
-.breadcrumb {
-  font-family: 'SimplonMono-Regular';
-  font-size: 11px;
-  -webkit-font-smoothing: subpixel-antialiased;
 }
 
 .icon--yellow .svg-inline--fa {

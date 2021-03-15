@@ -1,9 +1,15 @@
 @charset "UTF-8";
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-/* UPDATED 15-MAR- 10:10am  ~~~~~~~ */
+/* UPDATED 15-MAR- 3:10pm  ~~~~~~~ */
 /* ——————————————————————————————— */
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,300&display=swap");
 @font-face {
+  @font-feature-values {
+    @styleset {
+      alt-a: 1;
+      alt-l: 2;
+    }
+  }
   font-family: "SimplonNorm-Light";
   src: url("https://custardsieve.github.io/swinburne/fonts/SimplonNorm-Light-WebS.eot");
   src: url("https://custardsieve.github.io/swinburne/fonts/SimplonNorm-Light-WebS.eot?#iefix") format("embedded-opentype"), url("https://custardsieve.github.io/swinburne/fonts/SimplonNorm-Light-WebS.woff2") format("woff2"), url("https://custardsieve.github.io/swinburne/fonts/SimplonNorm-Light-WebS.woff") format("woff"), url("https://custardsieve.github.io/swinburne/fonts/SimplonNorm-Light-WebS.ttf") format("truetype"), url("https://custardsieve.github.io/swinburne/fonts/SimplonNorm-Light-WebS.svg#$SimplonNorm") format("svg");
@@ -68,6 +74,12 @@
 }
 
 @font-face {
+  @font-feature-values {
+    @styleset {
+      alt-a: 1;
+      alt-l: 2;
+    }
+  }
   font-family: "SimplonMono-Light";
   src: url("https://custardsieve.github.io/swinburne/fonts/SimplonMono-Light-WebS.eot");
   src: url("https://custardsieve.github.io/swinburne/fonts/SimplonMono-Light-WebS.eot?#iefix") format("embedded-opentype"), url("https://custardsieve.github.io/swinburne/fonts/SimplonMono-Light-WebS.woff2") format("woff2"), url("https://custardsieve.github.io/swinburne/fonts/SimplonMono-Light-WebS.woff") format("woff"), url("https://custardsieve.github.io/swinburne/fonts/SimplonMono-Light-WebS.ttf") format("truetype"), url("https://custardsieve.github.io/swinburne/fonts/SimplonMono-Light-WebS.svg#SimplonMono") format("svg");
@@ -134,6 +146,30 @@
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /* T Y P O G R A P H Y ~~~~~~~~~~~ */
 /* ——————————————————————————————— */
+body {
+  -webkit-font-smoothing: antialiased;
+  font-family: "SimplonNorm-Light";
+  line-height: 1.4;
+}
+
+.p, p, ul, li:not(li.breadcrumb-item), a:not(.breadcrumb-item a), tr, td, th {
+  -webkit-font-smoothing: antialiased;
+  font-family: "SimplonNorm-Light";
+  line-height: 1.4;
+}
+
+p em, p i {
+  font-family: "SimplonNorm-LightItalic";
+}
+
+p b, p strong {
+  font-family: "SimplonNorm-Medium";
+}
+
+a span {
+  font-family: "SimplonNorm-Regular";
+}
+
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
   font-family: "SimplonNorm-Regular";
   line-height: 1.25;
@@ -155,6 +191,8 @@
   line-height: 1;
   letter-spacing: -1.3px;
   text-transform: none;
+  -webkit-font-feature-settings: 'salt';
+          font-feature-settings: 'salt';
 }
 
 @media (max-width: 1024px) {

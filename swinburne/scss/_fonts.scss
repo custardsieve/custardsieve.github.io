@@ -1,15 +1,15 @@
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-/* UPDATED 15-MAR- 3:10pm  ~~~~~~~ */
+/* UPDATED 16-MAR- 4:10pm  ~~~~~~~ */
 /* ——————————————————————————————— */
 
 @mixin fface($path, $family, $width, $type, $weight: 400, $svg: '', $style: normal, $offical-name:'') {
     @font-face {
-      @if $width == '-Light' {
-        @font-feature-values {
-          @styleset { alt-a: 1; alt-l: 2; } 
-        }
-      }
+      // @if $width == '-Light' {
+      //   @font-feature-values {
+      //     @styleset { alt-a: 1; alt-l: 2; } 
+      //   }
+      // }
       font-family: $offical-name;
       @if $svg == '' {
         // with OTF without SVG and EOT

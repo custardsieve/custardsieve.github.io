@@ -134,30 +134,34 @@
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /* T Y P O G R A P H Y ~~~~~~~~~~~ */
 /* ——————————————————————————————— */
+/* CHANGE BODY FONT HERE ----- */
+/*
 body {
-  -webkit-font-smoothing: antialiased;
-  font-family: "SimplonNorm-Light";
-  line-height: 1.4;
+    -webkit-font-smoothing: antialiased;
+    font-family: $norm + '-Light';
+    line-height: 1.4;
 }
 
-.p, p, ul, li:not(li.breadcrumb-item), a:not(.breadcrumb-item a), tr, td, th {
-  -webkit-font-smoothing: antialiased;
-  font-family: "SimplonNorm-Light";
-  line-height: 1.4;
-}
 
-p em, p i {
-  font-family: "SimplonNorm-LightItalic";
+.p, p, ul, li:not(li.breadcrumb-item), a:not(.breadcrumb-item a), tr, td, th  {
+    -webkit-font-smoothing: antialiased;
+    font-family: $norm + '-Light';
+    line-height: 1.4;
 }
-
-p b, p strong {
-  font-family: "SimplonNorm-Medium";
+p {
+    em, i {
+        font-family: $norm + '-LightItalic';
+    }
+    b, strong {
+        font-family: $norm + '-Medium';
+    }
 }
-
-a span {
-  font-family: "SimplonNorm-Regular";
+a {
+    span {
+        font-family: $norm + '-Regular';
+    }
 }
-
+*/
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
   font-family: "SimplonNorm-Regular";
   line-height: 1.25;
@@ -179,7 +183,8 @@ a span {
   line-height: 1;
   letter-spacing: -1.3px;
   text-transform: none;
-  font-feature-settings: 'salt';
+  -webkit-font-feature-settings: 'salt';
+          font-feature-settings: 'salt';
 }
 
 @media (max-width: 1024px) {
@@ -267,7 +272,7 @@ a span {
 }
 
 .breadcrumb {
-  font-family: 'SimplonMono-Regular';
+  font-family: 'SimplonNorm-Regular';
   font-size: 10px;
   -webkit-font-smoothing: subpixel-antialiased;
 }
@@ -366,7 +371,9 @@ a span {
 /* S E A R C H ~~~~~~~~~~~~~~~~~~~ */
 /* ——————————————————————————————— */
 .search-input__collection {
-  justify-content: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   /* Left alignment with icons */
 }
 
@@ -493,7 +500,9 @@ button.search-input__collection.btn.btn-sm.btn--no-hover.text-uppercase.btn-seco
 
 .eventlist .card-body {
   margin-top: auto;
-  flex: none;
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
   border-top: 0.5px solid #e2e2e2;
 }
 
@@ -513,7 +522,9 @@ button.search-input__collection.btn.btn-sm.btn--no-hover.text-uppercase.btn-seco
 }
 
 .contact-details .meta--main, .event-details .meta--main, #content-area .news-details[component] .media-object .meta--main {
-  align-items: none !important;
+  -webkit-box-align: none !important;
+      -ms-flex-align: none !important;
+          align-items: none !important;
 }
 
 .bg-yellow, .bg-yellow-pattern {

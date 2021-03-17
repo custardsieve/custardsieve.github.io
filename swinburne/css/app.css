@@ -624,7 +624,7 @@ body.page:not(.v2) .note__icon {
   background-color: #DC2D27;
 }
 
-body.page:not(.v2) .note--bd {
+body.page:not(.v2) .note__bd {
   line-height: 1.4;
 }
 

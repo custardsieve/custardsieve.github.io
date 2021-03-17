@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-/* UPDATED 17-MAR- 10:40pm  ~~~~~~~ */
+/* UPDATED 17-MAR- 12:40pm  ~~~~~~~ */
 /* ——————————————————————————————— */
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,300&display=swap");
 @font-face {
@@ -530,4 +530,104 @@ button.search-input__collection.btn.btn-sm.btn--no-hover.text-uppercase.btn-seco
 
 .bg-yellow, .bg-yellow-pattern {
   background-color: #f8f8f8;
+}
+
+body.page:not(.v2) {
+  font-weight: 100;
+  background: none;
+  color: #343642;
+}
+
+body.page:not(.v2) p a, body.page:not(.v2) td a, body.page:not(.v2) div > a {
+  color: inherit;
+  border-bottom-color: inherit;
+  border-bottom: 1.4px solid;
+}
+
+body.page:not(.v2) p a:hover, body.page:not(.v2) td a:hover, body.page:not(.v2) div > a:hover {
+  color: #DC2D27;
+  text-decoration: none;
+}
+
+body.page:not(.v2) p a.help, body.page:not(.v2) td a.help, body.page:not(.v2) div > a.help {
+  border: 0;
+}
+
+body.page:not(.v2) .breadcrumbs {
+  font-family: 'SimplonNorm-Regular';
+  font-size: 10.5px;
+  letter-spacing: 0.2px;
+  -webkit-font-smoothing: subpixel-antialiased;
+  text-decoration: none;
+  color: #d1d1d1;
+}
+
+body.page:not(.v2) .breadcrumbs a {
+  color: #343642;
+  border: 0;
+  margin-left: 8px;
+}
+
+body.page:not(.v2) .breadcrumbs a:after {
+  margin-right: 8px;
+}
+
+body.page:not(.v2) #course-subtitle {
+  font-family: "SimplonNorm-Medium";
+  font-size: 22px;
+  font-style: normal;
+}
+
+@media (max-width: 1024px) {
+  body.page:not(.v2) #course-subtitle {
+    font-size: 20px !important;
+  }
+}
+
+@media (max-width: 704px) {
+  body.page:not(.v2) #course-subtitle {
+    font-size: 22px !important;
+  }
+}
+
+body.page:not(.v2) .title-block h2 {
+  font-family: "SimplonNorm-Medium";
+  font-size: 22px;
+  font-style: normal;
+}
+
+@media (max-width: 1024px) {
+  body.page:not(.v2) .title-block h2 {
+    font-size: 20px !important;
+  }
+}
+
+@media (max-width: 704px) {
+  body.page:not(.v2) .title-block h2 {
+    font-size: 22px !important;
+  }
+}
+
+body.page:not(.v2) .course-level fa {
+  padding-right: 8px;
+}
+
+body.page:not(.v2) .swin-accordion {
+  background-color: #f6f6f6;
+}
+
+body.page:not(.v2) .swin-accordion-open.swin-accordion-heading {
+  background-color: #242323;
+}
+
+body.page:not(.v2) .note__icon {
+  background-color: #DC2D27;
+}
+
+body.page:not(.v2) .note--bd {
+  line-height: 1.4;
+}
+
+body.page:not(.v2) .media.with-large-icon > .pull-left {
+  color: #343642;
 }

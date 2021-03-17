@@ -1,0 +1,73 @@
+
+$norm: 'SimplonNorm';
+$mono: 'SimplonMono';
+
+$base: 16px;
+$scale: 1.414;
+$lg-break: 1024px;
+$sm-break: 704px;
+ // Major Thirds 1:1.25 (*10,*12,*16,20,25,*31,3*9,48,*61)
+$h1: 61px;
+$h2: 40px;
+$h3: 31px;
+$h4: 22px;
+$h5: 18px;
+$h6: 16px;
+$body:16px;
+$sub:14px;
+$caption1: 12px;
+$caption2: 10px;
+
+// Minor Third 1:1.20 (*16,*19,*23,*27,*33,39,*47,57)
+$h1-mob-lg: 47px;
+$h2-mob-lg: 33px;
+$h3-mob-lg: 27px;
+$h4-mob-lg: 20px;
+$h5-mob-lg: 17.5px;
+$h6-mob-lg: 16px;
+$body-mob-lg:16px;
+$sub-mob-lg:14px;
+$caption1-mob-lg: 12px;
+$caption2-mob-lg: 10px;
+
+// Major Second 1:1.125 (*10,*12,*14,*16,*18,*20,22,*26,29,*32,*36)
+$h1-mob-sm: 36px;
+$h2-mob-sm: 32px;
+$h3-mob-sm: 26px;
+$h4-mob-sm: 22px;
+$h5-mob-sm: 18px;
+$h6-mob-sm: 16px;
+$body-mob-sm:16px;
+$sub-mob-sm:14px;
+$caption1-mob-sm: 12px;
+$caption2-mob-sm: 10px;
+
+$font-body: 'Open Sans',‘Helvetica Neue’, Helvetica, Arial, sans-serif;
+$font-heading: 'Montserrat', ‘Helvetica Neue’, Helvetica, Arial, sans-serif;
+$font-mono:'DM Mono',‘Helvetica Neue’, Helvetica, Arial, sans-serif;
+$swinburne-red: #DC2D27;
+$swinburne-red-dark: #A63431;
+$swinburne-red-50: #ed9693;
+$swinburne-yellow: #FFEB14;
+$swinburne-yellow-50: #fff589;
+$swinburne-charcoal: #343642;
+$swinburne-charcoal-secondary:#5C5E66;
+$swinburne-charcoal-50:#eaebec;
+$grey-1:#737578;
+$grey-2:#a5a5a5;
+$grey-3:#d1d1d1;
+$grey-4:#e2e2e2;
+$grey-5:#f6f6f6;
+$grey-0:#242323;
+$red:#DC2D27;
+$red-50:#ed9693;
+$blue:#00AEEF;
+$blue-50:#7fd6f7;
+$green:#85c441;
+$green-50:#c2e1a0;
+$purple:#883681;
+$purple-50:#c39ac0;
+$turquoise:#00bed8;
+$turquoise-50: #7dfeeb;
+$md-screen:620px;
+$padding-left:30px;

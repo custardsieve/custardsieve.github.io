@@ -1,0 +1,91 @@
+body.page:not(.v2) {
+    font-weight: 100;
+    background: none;
+    color: $swinburne-charcoal;
+    // a {
+    //     color: inherit;
+    // }
+    p a, td a, div > a {
+        color: inherit;
+        border-bottom-color: inherit;
+        border-bottom: 1.4px solid;
+        &:hover {
+            color: $swinburne-red;
+            text-decoration: none;
+        }
+        &.help {
+            border: 0;
+        }
+    }
+    .breadcrumbs {
+        font-family: 'SimplonNorm-Regular';
+        font-size: 10.5px;
+        letter-spacing: 0.2px;
+        -webkit-font-smoothing: subpixel-antialiased;
+        text-decoration: none;
+        color: $grey-3;
+         a {
+             color: $swinburne-charcoal;
+             border: 0;
+             margin-left: 8px;
+            &:after {
+                margin-right: 8px;
+            }
+         }
+         
+    }
+
+    #course {
+        &-subtitle {
+            font-family: $norm + '-Medium';
+            font-size:$h4;
+            font-style: normal;
+
+            @media(max-width:$lg-break){
+                font-size: $h4-mob-lg!important;
+            }
+            @media(max-width:$sm-break){
+                font-size: $h4-mob-sm!important;
+            }
+        }
+    }
+    .title-block {
+        h2 {
+            font-family: $norm + '-Medium';
+            font-size:$h4;
+            font-style: normal;
+
+            @media(max-width:$lg-break){
+                font-size: $h4-mob-lg!important;
+            }
+            @media(max-width:$sm-break){
+                font-size: $h4-mob-sm!important;
+            }
+        }
+    }
+    .course {
+        &-level {
+            fa {
+                padding-right: 8px;
+            }
+        }
+    }
+
+    .swin-accordion {    
+        background-color: $grey-5;
+        &-open.swin-accordion-heading {
+            background-color: $grey-0;
+        }
+    }
+    .note{
+        &__icon {
+        background-color: $swinburne-red;
+        }
+        &--bd {
+            line-height: 1.4;
+        }
+    }
+    .media.with-large-icon > .pull-left {
+        color: $swinburne-charcoal;
+    }
+}

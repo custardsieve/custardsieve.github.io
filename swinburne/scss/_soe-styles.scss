@@ -1,0 +1,78 @@
+hr {
+    display: none;
+}
+.btn {
+    align-items: center;
+    display: inline-flex;
+    height: 3.125rem;
+    letter-spacing: -.5px;
+    min-width: 10.9375rem;
+    position: relative;
+    text-align: left;
+    border-radius: 3px;
+    border-width:0;
+    font-weight: 500;
+    font-size: 12px;
+    letter-spacing: 0.2px;
+    
+    &:hover {
+        box-shadow:none;
+        transition: opacity .15s ease-in-out 0s; 
+    }
+    
+    &-dark:not(:active):hover {
+        background-color: #4a4d5f;
+        color: #fff;
+
+        &:after {
+            opacity: 1;
+        }
+    }
+    &-primary:not(:active):hover {
+        color: #fff;
+        background-color: $swinburne-red;
+        &:after {
+            opacity: 1;
+        }
+    }
+    &-primary:after {
+        background-color: #ad1914;
+        border-bottom-left-radius: 3px;
+        border-bottom-right-radius: 3px;
+        bottom: 0;
+        content: "";
+        display: block;
+        height: .1875rem;
+        left: 0;
+        opacity: 0;
+        position: absolute;
+        right: 0;
+        transition: opacity .15s ease-in-out 0s;
+    }
+    &-dark:after {
+        background-color: #000;
+        border-bottom-left-radius: 3px;
+        border-bottom-right-radius: 3px;
+        bottom: 0;
+        content: "";
+        display: block;
+        height: .1875rem;
+        left: 0;
+        opacity: 0;
+        position: absolute;
+        right: 0;
+        transition: opacity .15s ease-in-out 0s;
+    }
+}
+
+card-header > .card-body {
+    padding-top: 0;
+}
+ul li {
+    margin: 0
+}
+
+.acgForm .acgFormFieldText {
+    border: 1px solid $grey-3;
+    border-radius: 3px;
+}

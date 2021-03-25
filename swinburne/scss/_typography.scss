@@ -2,49 +2,6 @@
 /* T Y P O G R A P H Y ~~~~~~~~~~~ */
 /* ——————————————————————————————— */
 
-$norm: 'SimplonNorm';
-$mono: 'SimplonMono';
-
-$base: 16px;
-$scale: 1.414;
-$lg-break: 1024px;
-$sm-break: 704px;
- // Major Thirds 1:1.25 (*10,*12,*16,20,25,*31,3*9,48,*61)
-$h1: 61px;
-$h2: 40px;
-$h3: 31px;
-$h4: 22px;
-$h5: 18px;
-$h6: 16px;
-$body:16px;
-$sub:14px;
-$caption1: 12px;
-$caption2: 10px;
-
-// Minor Third 1:1.20 (*16,*19,*23,*27,*33,39,*47,57)
-$h1-mob-lg: 47px;
-$h2-mob-lg: 33px;
-$h3-mob-lg: 27px;
-$h4-mob-lg: 20px;
-$h5-mob-lg: 17.5px;
-$h6-mob-lg: 16px;
-$body-mob-lg:16px;
-$sub-mob-lg:14px;
-$caption1-mob-lg: 12px;
-$caption2-mob-lg: 10px;
-
-// Major Second 1:1.125 (*10,*12,*14,*16,*18,*20,22,*26,29,*32,*36)
-$h1-mob-sm: 36px;
-$h2-mob-sm: 32px;
-$h3-mob-sm: 26px;
-$h4-mob-sm: 22px;
-$h5-mob-sm: 18px;
-$h6-mob-sm: 16px;
-$body-mob-sm:16px;
-$sub-mob-sm:14px;
-$caption1-mob-sm: 12px;
-$caption2-mob-sm: 10px;
-
 /* CHANGE BODY FONT HERE ----- */
 
 /*

@@ -1,0 +1,116 @@
+body {
+    font-weight: 300;
+    -webkit-font-smoothing: antialiased;
+}
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    font-weight:400;
+    line-height: 1.25;
+    color:black;
+    -webkit-font-smoothing: antialiased;
+    & .strong,b,strong {
+        font-weight: 300!important;
+    }
+}
+// .container .dark--theme {
+//     .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+//         color:pink;
+//     }
+// }
+.h1,h1 {
+    font-size: $h1;
+    font-weight: 300;
+    @media(max-width:$lg-break){
+        font-size: $h1-mob-lg!important;
+        font-weight: 500!important;
+    }
+    @media(max-width:$sm-break){
+        font-size: $h1-mob-sm!important;
+    }
+    line-height: 1;
+    letter-spacing: -1.3px;
+    text-transform: none;
+    
+    .theme--dark & {
+        color: white
+    }
+}
+.h2, h2 {
+    font-size: $h2;
+    @media(max-width:$lg-break){
+        font-size: $h2-mob-lg!important;
+    }
+    @media(max-width:$sm-break){
+        font-size: $h2-mob-sm!important;
+    }
+    .theme--dark & {
+        color: white
+    }
+}
+.h3, h3 {
+    font-size: $h3;
+    @media(max-width:$lg-break){
+        font-size: $h3-mob-lg!important;
+    }
+    @media(max-width:$sm-break){
+        font-size: $h3-mob-sm!important;
+    }
+    letter-spacing: 0;
+    .theme--dark & {
+        color: white
+    }
+}
+.h4, h4 {
+    font-size:$h4;
+    @media(max-width:$lg-break){
+        font-size: $h4-mob-lg!important;
+    }
+    @media(max-width:$sm-break){
+        font-size: $h4-mob-sm!important;
+    }
+    .theme--dark & {
+        color: white
+    }
+}
+.h5, h5 {
+    font-size:$h5;
+    @media(max-width:$lg-break){
+        font-size: $h5-mob-lg!important;
+    }
+    @media(max-width:$sm-break){
+        font-size: $h5-mob-sm!important;
+    }
+    font-weight: 500;
+    .theme--dark & {
+        color: white
+    }
+}
+.h6, h6 {
+    font-size:$body;
+    font-weight: 500;
+    .theme--dark & {
+        color: white
+    }
+}
+
+p {
+    font-size: 16px;
+    b, strong {
+        font-weight:700;
+    }
+}
+
+a:not(soe-link-button a, a.nav-link, a.navbar-brand) {
+    text-decoration: none;
+    border-bottom: 1.4px solid;
+    color: inherit;
+    font-weight: 400;
+
+    & .highlight {
+        color: initial;
+    }
+
+    &:hover {
+        color:$swinburne-red;
+        text-decoration: none;
+    }
+}

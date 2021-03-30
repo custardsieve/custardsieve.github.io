@@ -1,6 +1,9 @@
 .theme--page-details-tall {
     &> .container {
 
+        @media (min-width:640px) {
+            background-color: white !important;
+        }
         &:before {
 
             background-color: white !important;

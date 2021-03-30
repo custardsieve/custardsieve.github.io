@@ -650,26 +650,26 @@ body.page:not(.v2) .media.with-large-icon > .pull-left {
   background-color: rgba(255, 255, 255, 0.85) !important;
 }
 
-#test-1.theme--page-details-tall > .container, #test-1 .theme--page-details-narrow > .container, #test-2.theme--page-details-tall > .container, #test-2 .theme--page-details-narrow > .container, #test-3.theme--page-details-tall > .container, #test-3 .theme--page-details-narrow > .container {
+#test-1.theme--page-details-tall > .container, #test-1 .theme--page-details-narrow > .container, #test-2.theme--page-details-tall > .container, #test-2 .theme--page-details-narrow > .container, #test-3.theme--page-details-tall > .container, #test-3 .theme--page-details-narrow > .container, #test-4.theme--page-details-tall > .container, #test-4 .theme--page-details-narrow > .container, #test-5.theme--page-details-tall > .container, #test-5 .theme--page-details-narrow > .container, #test-6.theme--page-details-tall > .container, #test-6 .theme--page-details-narrow > .container {
   background-color: white;
 }
 
 @media (min-width: 640px) {
-  #test-1.theme--page-details-tall > .container, #test-1 .theme--page-details-narrow > .container, #test-2.theme--page-details-tall > .container, #test-2 .theme--page-details-narrow > .container, #test-3.theme--page-details-tall > .container, #test-3 .theme--page-details-narrow > .container {
+  #test-1.theme--page-details-tall > .container, #test-1 .theme--page-details-narrow > .container, #test-2.theme--page-details-tall > .container, #test-2 .theme--page-details-narrow > .container, #test-3.theme--page-details-tall > .container, #test-3 .theme--page-details-narrow > .container, #test-4.theme--page-details-tall > .container, #test-4 .theme--page-details-narrow > .container, #test-5.theme--page-details-tall > .container, #test-5 .theme--page-details-narrow > .container, #test-6.theme--page-details-tall > .container, #test-6 .theme--page-details-narrow > .container {
     background-color: white !important;
   }
 }
 
 @media (min-width: 1024px) {
-  #test-1.theme--page-details-tall > .container, #test-1 .theme--page-details-narrow > .container, #test-2.theme--page-details-tall > .container, #test-2 .theme--page-details-narrow > .container, #test-3.theme--page-details-tall > .container, #test-3 .theme--page-details-narrow > .container {
+  #test-1.theme--page-details-tall > .container, #test-1 .theme--page-details-narrow > .container, #test-2.theme--page-details-tall > .container, #test-2 .theme--page-details-narrow > .container, #test-3.theme--page-details-tall > .container, #test-3 .theme--page-details-narrow > .container, #test-4.theme--page-details-tall > .container, #test-4 .theme--page-details-narrow > .container, #test-5.theme--page-details-tall > .container, #test-5 .theme--page-details-narrow > .container, #test-6.theme--page-details-tall > .container, #test-6 .theme--page-details-narrow > .container {
     background-color: transparent !important;
   }
 }
 
-#test-1.theme--page-details-tall > .container .description, #test-1 .theme--page-details-narrow > .container .description, #test-2.theme--page-details-tall > .container .description, #test-2 .theme--page-details-narrow > .container .description, #test-3.theme--page-details-tall > .container .description, #test-3 .theme--page-details-narrow > .container .description {
+#test-1.theme--page-details-tall > .container .description, #test-1 .theme--page-details-narrow > .container .description, #test-2.theme--page-details-tall > .container .description, #test-2 .theme--page-details-narrow > .container .description, #test-3.theme--page-details-tall > .container .description, #test-3 .theme--page-details-narrow > .container .description, #test-4.theme--page-details-tall > .container .description, #test-4 .theme--page-details-narrow > .container .description, #test-5.theme--page-details-tall > .container .description, #test-5 .theme--page-details-narrow > .container .description, #test-6.theme--page-details-tall > .container .description, #test-6 .theme--page-details-narrow > .container .description {
   color: black !important;
 }
 
-#test-1.theme--page-details-tall > .container:before, #test-1 .theme--page-details-narrow > .container:before, #test-2.theme--page-details-tall > .container:before, #test-2 .theme--page-details-narrow > .container:before, #test-3.theme--page-details-tall > .container:before, #test-3 .theme--page-details-narrow > .container:before {
+#test-1.theme--page-details-tall > .container:before, #test-1 .theme--page-details-narrow > .container:before, #test-2.theme--page-details-tall > .container:before, #test-2 .theme--page-details-narrow > .container:before, #test-3.theme--page-details-tall > .container:before, #test-3 .theme--page-details-narrow > .container:before, #test-4.theme--page-details-tall > .container:before, #test-4 .theme--page-details-narrow > .container:before, #test-5.theme--page-details-tall > .container:before, #test-5 .theme--page-details-narrow > .container:before, #test-6.theme--page-details-tall > .container:before, #test-6 .theme--page-details-narrow > .container:before {
   background-color: white !important;
 }

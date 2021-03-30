@@ -626,5 +626,5 @@ body.page:not(.v2) .media.with-large-icon > .pull-left {
 }
 
 .theme--page-details-tall > .container {
-  background-color: white;
+  background-color: white !important;
 }

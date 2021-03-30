@@ -1,6 +1,6 @@
 .theme--page-details-tall {
     &> .container {
-        background-color: $hero-white;
+        background-color: white;
         
         @media (min-width:640px) {
             background-color: $hero-white!important;

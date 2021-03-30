@@ -1,9 +1,9 @@
 .theme--page-details-tall {
     &> .container {
-        background-color: rgba(255,255,255,0.80);
+        background-color: $hero-white;
         
         @media (min-width:640px) {
-            background-color: rgba(255,255,255,0.80)!important;
+            background-color: $hero-white!important;
         }
         @media (min-width: 1024px) {
             background-color: transparent!important;
@@ -12,7 +12,7 @@
             color:black!important;
         }
         &:before {
-            background-color: white !important;
+            background-color: $hero-white!important;
         }
     }
 }

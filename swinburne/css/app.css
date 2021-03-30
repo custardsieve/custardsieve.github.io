@@ -167,6 +167,7 @@ a {
   line-height: 1.25;
   -webkit-font-smoothing: antialiased;
   font-weight: 300;
+  color: black;
 }
 
 .h1 .strong, .h1 b, .h1 strong, .h2 .strong, .h2 b, .h2 strong, .h3 .strong, .h3 b, .h3 strong, .h4 .strong, .h4 b, .h4 strong, .h5 .strong, .h5 b, .h5 strong, .h6 .strong, .h6 b, .h6 strong, h1 .strong, h1 b, h1 strong, h2 .strong, h2 b, h2 strong, h3 .strong, h3 b, h3 strong, h4 .strong, h4 b, h4 strong, h5 .strong, h5 b, h5 strong, h6 .strong, h6 b, h6 strong {

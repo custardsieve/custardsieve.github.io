@@ -625,6 +625,6 @@ body.page:not(.v2) .media.with-large-icon > .pull-left {
   color: #343642;
 }
 
-.theme--page-details-tall > .container {
+.theme--page-details-tall > .container:before {
   background-color: white !important;
 }

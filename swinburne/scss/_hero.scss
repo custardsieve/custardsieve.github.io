@@ -1,5 +1,9 @@
 .theme--page-details-tall {
     &> .container {
-        background-color: white!important;
+
+        &:before {
+
+            background-color: white !important;
+        }
     }
 }

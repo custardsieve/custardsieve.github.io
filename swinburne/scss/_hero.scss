@@ -16,3 +16,25 @@
         }
     }
 }
+#test {
+    &-1, &-2, &-3 {
+        .theme--page-details-tall {
+            &> .container {
+                background-color: white;
+                
+                @media (min-width:640px) {
+                    background-color: white!important;
+                }
+                @media (min-width: 1024px) {
+                    background-color: transparent!important;
+                }
+                & .description {
+                    color:black!important;
+                }
+                &:before {
+                    background-color: white!important;
+                }
+            }
+        }
+    }
+}

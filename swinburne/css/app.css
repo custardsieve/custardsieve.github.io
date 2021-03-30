@@ -626,15 +626,19 @@ body.page:not(.v2) .media.with-large-icon > .pull-left {
   color: #343642;
 }
 
-@media (min-width: 1024px) {
-  .theme--page-details-tall > .container {
-    background-color: transparent !important;
-  }
+.theme--page-details-tall > .container {
+  background-color: white;
 }
 
 @media (min-width: 640px) {
   .theme--page-details-tall > .container {
     background-color: white !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .theme--page-details-tall > .container {
+    background-color: transparent !important;
   }
 }
 

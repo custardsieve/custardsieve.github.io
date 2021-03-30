@@ -1,13 +1,13 @@
 .theme--page-details-tall {
     &> .container {
-
-        @media (min-width: 1024px) {
-            background-color: transparent!important;
-        }
+        background-color: white;
+        
         @media (min-width:640px) {
             background-color: white !important;
         }
-
+        @media (min-width: 1024px) {
+            background-color: transparent!important;
+        }
         & .description {
             color:black!important;
         }

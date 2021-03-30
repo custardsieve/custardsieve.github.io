@@ -3,16 +3,15 @@
         background-color: white;
         
         @media (min-width:640px) {
-            background-color: white !important;
+            background-color: rgba(255,255,255,0.80)!important;
         }
         @media (min-width: 1024px) {
-            background-color: transparent!important;
+            background-color: rgba(255,255,255,0.80)!important;
         }
         & .description {
             color:black!important;
         }
         &:before {
-
             background-color: white !important;
         }
     }

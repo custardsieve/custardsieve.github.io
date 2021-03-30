@@ -626,27 +626,27 @@ body.page:not(.v2) .media.with-large-icon > .pull-left {
   color: #343642;
 }
 
-.theme--page-details-tall > .container {
+.theme--page-details-tall > .container, .theme--page-details-narrow > .container {
   background-color: white;
 }
 
 @media (min-width: 640px) {
-  .theme--page-details-tall > .container {
+  .theme--page-details-tall > .container, .theme--page-details-narrow > .container {
     background-color: rgba(255, 255, 255, 0.85) !important;
   }
 }
 
 @media (min-width: 1024px) {
-  .theme--page-details-tall > .container {
+  .theme--page-details-tall > .container, .theme--page-details-narrow > .container {
     background-color: transparent !important;
   }
 }
 
-.theme--page-details-tall > .container .description {
+.theme--page-details-tall > .container .description, .theme--page-details-narrow > .container .description {
   color: black !important;
 }
 
-.theme--page-details-tall > .container:before {
+.theme--page-details-tall > .container:before, .theme--page-details-narrow > .container:before {
   background-color: rgba(255, 255, 255, 0.85) !important;
 }
 

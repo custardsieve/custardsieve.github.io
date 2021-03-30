@@ -627,7 +627,7 @@ body.page:not(.v2) .media.with-large-icon > .pull-left {
 }
 
 .theme--page-details-tall > .container {
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.8);
 }
 
 @media (min-width: 640px) {
@@ -638,7 +638,7 @@ body.page:not(.v2) .media.with-large-icon > .pull-left {
 
 @media (min-width: 1024px) {
   .theme--page-details-tall > .container {
-    background-color: rgba(255, 255, 255, 0.8) !important;
+    background-color: transparent !important;
   }
 }
 

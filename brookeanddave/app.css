@@ -3,13 +3,18 @@ html {
   -moz-osx-font-smoothing: grayscale;
 }
 
+hr {
+  border-width: 0;
+  font-size: 22px;
+}
+
 h1 {
   font-size: 44px;
 }
 
 body {
   background-color: black;
-  padding: 64px 16px;
+  padding: 34px 16px;
   color: white;
   font-family: -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }

@@ -1,6 +1,7 @@
 body {
+    margin: 0;
+    padding: 32px 16px;
     background-color: $color--body;
-    padding: 34px 16px;
     color: $color--body-contrast;
     font-family: $font-stack;
 }

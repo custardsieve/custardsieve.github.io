@@ -9,13 +9,16 @@ hr {
 }
 
 h1 {
+  margin: 0;
+  padding: 0;
   font-size: 44px;
 }
 
 body {
-  background-color: black;
-  padding: 34px 16px;
-  color: white;
+  margin: 0;
+  padding: 32px 16px;
+  background-color: #91BCFD;
+  color: #1A2434;
   font-family: -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 

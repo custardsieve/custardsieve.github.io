@@ -1,5 +1,5 @@
-$color--body:black;
-$color--body-contrast:white;
+$color--body:#91BCFD;
+$color--body-contrast:#1A2434;
 
 $font-stack: -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 
@@ -13,5 +13,7 @@ hr {
 }
 
 h1 {
+    margin:0;
+    padding: 0;
     font-size: 44px;
 }

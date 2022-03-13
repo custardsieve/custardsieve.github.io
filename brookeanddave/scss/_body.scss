@@ -1,0 +1,15 @@
+body {
+    background-color: $color--body;
+    padding: 64px 16px;
+    color: $color--body-contrast;
+    font-family: $font-stack;
+}
+
+#main {
+    display: flex;
+    width: 100%;
+}
+
+span {
+    display: none;
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brooke and Dave</title>
+    <link rel="stylesheet" href="app.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        var spanCount = 0;
+        $( document ).ready(function() {
+
+
+            $('html').click(function() {
+                let span = $('span');
+                // let span = $('span:nth-child(' + spanCount + ')');
+                $(span[spanCount]).css('display','inline-block');
+                console.log(span[spanCount]);
+                spanCount++;
+                return spanCount;
+            }); //body click
+
+
+        }); //document ready
+    </script>
+</head>
+<body>
+    <section id="main">
+        <h1>Hey Brooke, <br> <span>The 🌏&nbsp;</span><span>&nbsp;may 🐝</span><span>&nbsp;🦐🦐.</span>
+            <br>
+        <span>But 💁‍♀️&nbsp;</span><span>my ❤️&nbsp;</span><span>have 👨🏼‍🏫&nbsp;</span><span>what I 🤔 to 🐝 💯</span>
+        </h1>
+    </section>
+</body>
+</html>

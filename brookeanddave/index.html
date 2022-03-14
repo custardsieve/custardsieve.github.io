@@ -13,11 +13,16 @@
 
 
             $('html').click(function() {
+                if (spanCount == 12) {
+                    $('#b').css('display','none');
+                    $('#c').css('display','block');
+                    return
+                }
                 let span = $('span');
                 if (spanCount == 1) {$('.a').css('display', 'none')};
                 $(span[spanCount]).css('display','inline-block');
-                console.log(span[spanCount]);
                 spanCount++;
+                console.log(spanCount);
                 return spanCount;
             }); //body click
 
@@ -27,7 +32,7 @@
 </head>
 <body>
     <section id="main">
-        <h1><span class="a">Please turn 🔅🔆 ⬆</span>
+        <h1 id="b"><span class="a">Please turn 🔅🔆 ⬆</span>
             <span>Hey Brookey,</span>
             <span><hr>The 🌏 </span>
             <span>may 🐝  </span>
@@ -40,6 +45,7 @@
             <span>than the ❤️‍🔥 I feel</span>
             <span>for 💁‍♀️.</span>
             <code>__TAP</code></h1>
+        <h1 id="c">Happy 🎂🎉&nbsp;&nbsp;  💁‍♀️</h1>
     </section>
 </body>
 </html>

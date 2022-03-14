@@ -8,9 +8,34 @@ body {
 
 #main {
     display: flex;
+    flex-direction: column;
     width: 100%;
 }
 
 span {
     display: none;
+
+    &.a {
+        display: inline-block;
+        font-size: 24px;
+    }
+}
+
+code {
+    display: inline-flex;
+    margin-left: 10px;
+    font-family: inherit;
+    font-size: 10px;
+    font-weight: 100;
+    // color: white;
+    line-height: 24px;
+    animation: blink 3s ease-in infinite;
+}
+@keyframes blink {
+    0% {
+        opacity: 0;
+    }
+    30% {
+        opacity: 1;
+    }
 }

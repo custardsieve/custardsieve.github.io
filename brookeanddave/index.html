@@ -14,7 +14,7 @@
 
             $('html').click(function() {
                 let span = $('span');
-                // let span = $('span:nth-child(' + spanCount + ')');
+                if (spanCount == 1) {$('.a').css('display', 'none')};
                 $(span[spanCount]).css('display','inline-block');
                 console.log(span[spanCount]);
                 spanCount++;
@@ -27,8 +27,19 @@
 </head>
 <body>
     <section id="main">
-        <h1><span class="a">Please turn 🔅🔆 ⬆</span><span> Hey Brookey, </span><span><hr>The 🌏 </span><span>may 🐝  🦞🦞, <hr> 
-            but 💁‍♀️, my 💖, have 🧑🏻‍🏫 what 🤔 to 🐝 💯: there is 🚫 💪 than the ❤️‍🔥 I feel for 💁‍♀️.</span><code>__TAP</code></h1>
+        <h1><span class="a">Please turn 🔅🔆 ⬆</span>
+            <span>Hey Brookey,</span>
+            <span><hr>The 🌏 </span>
+            <span>may 🐝  </span>
+            <span>🦞🦞,<hr></span>  
+            <span>but 💁‍♀️,</span>
+            <span>my 💖,</span>
+            <span>have 🧑🏻‍🏫</span>
+            <span>what 🤔 to 🐝 💯:</span>
+            <span>there is 🚫 💪</span>
+            <span>than the ❤️‍🔥 I feel</span>
+            <span>for 💁‍♀️.</span>
+            <code>__TAP</code></h1>
     </section>
 </body>
 </html>
